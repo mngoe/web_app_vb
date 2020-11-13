@@ -421,13 +421,13 @@
                                 <li><a id="FindFamily" class="candisable" href="FindFamily.aspx">
                                     <asp:Label ID="SubFindfamily" runat="server" Text='<%$ Resources:Resource,L_FAMILY %>'></asp:Label>
                                     </a></li>
-                                <li><a id="FindInsuree" class="candisable" href="FindInsuree.aspx">
+                                <li><a id="FindInsuree" class="candisable" href="FindInsuree.aspx" Style="display: none">
                                     <asp:Label ID="SubFindInsuree" runat="server" Text='<%$ Resources:Resource,L_INSUREES %>'></asp:Label>
                                     </a></li>
-                                <li><a id="FindPolicy" class="candisable" href="FindPolicy.aspx">
+                                <li><a id="FindPolicy" class="candisable" href="FindPolicy.aspx" Style="display: none">
                                     <asp:Label ID="SubFindPolicy" runat="server" Text='<%$ Resources:Resource,L_POLICIES %>'></asp:Label>
                                     </a></li>
-                                <li><a id="FindPremium" class="candisable" href="FindPremium.aspx">
+                                <li><a id="FindPremium" class="candisable" href="FindPremium.aspx" Style="display: none">
                                     <asp:Label ID="SubFindPremium" runat="server" Text='<%$ Resources:Resource,L_PREMIUMS %>'></asp:Label>
                                     </a></li>
                                 <li><a id="FindPayment" class="candisable" href="FindPayment.aspx">
