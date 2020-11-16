@@ -132,6 +132,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
      <asp:HiddenField ID="hfOfflineHFIDFlag" runat="server" Value="0" />
      <div align="center" >
  		     <img src="Images/logo.png" alt="IMIS" style="max-width: 150px; padding-top:10%; padding-bottom:15px" />
+          	 <img src="Images/customer-logo.png" alt="customer-logo" style="max-width: 150px; padding-top:10%; padding-bottom:15px" />
  	   </div>
  	   <div align="center">
         <table class="Login">
