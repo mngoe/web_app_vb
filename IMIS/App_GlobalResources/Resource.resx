@@ -59,10 +59,10 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="L_INSUREES" xml:space="preserve">
-		<value>Insurees</value>
+		<value>Beneficiary Detail</value>
 	</data>
 	<data name="L_POLICIES" xml:space="preserve">
-		<value>Policies</value>
+		<value>Select Health Program</value>
 	</data>
 	<data name="B_ADDINSUREE" xml:space="preserve">
 		<value>Add Insuree</value>
@@ -89,16 +89,16 @@
 		<value>Given names</value>
 	</data>
 	<data name="L_VILLAGE" xml:space="preserve">
-		<value>Village</value>
+		<value>Health Area</value>
 	</data>
 	<data name="L_WARD" xml:space="preserve">
 		<value>Municipality</value>
 	</data>
 	<data name="L_DISTRICT" xml:space="preserve">
-		<value>District</value>
+		<value>Health District</value>
 	</data>
 	<data name="L_CHFID" xml:space="preserve">
-		<value>Insurance Number</value>
+		<value>TARV/CPN Code</value>
 	</data>
 	<data name="L_POVERTY" xml:space="preserve">
 		<value>Poverty Status</value>
@@ -125,7 +125,7 @@
 		<value>Identification Number</value>
 	</data>
 	<data name="B_ADDFAMILY" xml:space="preserve">
-		<value>Add Family/Group</value>
+		<value>Add Beneficiary</value>
 	</data>
 	<data name="B_DELETEFAMILY" xml:space="preserve">
 		<value>Delete Family/Group</value>
@@ -137,19 +137,19 @@
 		<value>Delete Policy</value>
 	</data>
 	<data name="L_FAMILY" xml:space="preserve">
-		<value>Families/Groups</value>
+		<value>List Beneficiaries</value>
 	</data>
 	<data name="L_FOUNDFAMILY" xml:space="preserve">
-		<value>Families/Groups Found</value>
+		<value>List Beneficiaries Found</value>
 	</data>
 	<data name="M_NOPOLICIES" xml:space="preserve">
 		<value>No Current Policies.</value>
 	</data>
 	<data name="L_FAMILYPANEL" xml:space="preserve">
-		<value>Family/Group Details</value>
+		<value>Beneficiary Details</value>
 	</data>
 	<data name="M_NOFAMILIES" xml:space="preserve">
-		<value>No Families/Groups found</value>
+		<value>No List Beneficiaries found</value>
 	</data>
 	<data name="V_BIRTHDATE" xml:space="preserve">
 		<value>Please select the Birth date.</value>
@@ -218,7 +218,7 @@
 		<value>Find</value>
 	</data>
 	<data name="L_ADDFAMILY" xml:space="preserve">
-		<value>Add Family/Group</value>
+		<value>Add Beneficiary</value>
 	</data>
 	<data name="L_HFACILITIES" xml:space="preserve">
 		<value>Health Facilities</value>
@@ -317,7 +317,7 @@
 		<value>Administration</value>
 	</data>
 	<data name="L_INSUREESANDPOLICIES" xml:space="preserve">
-		<value>Insurees and Policies</value>
+		<value>Registration</value>
 	</data>
 	<data name="L_ITEMCODE" xml:space="preserve">
 		<value>Item Code</value>
@@ -962,7 +962,7 @@
 		<value>General</value>
 	</data>
 	<data name="L_POLICYSTATUS" xml:space="preserve">
-		<value>Policy Status</value>
+		<value>Program Status</value>
 	</data>
 	<data name="L_REMUNERATEDHEALTHCARE" xml:space="preserve">
 		<value>Remunerated Health Care</value>
@@ -1106,7 +1106,7 @@
 		<value>Non-Hospital</value>
 	</data>
 	<data name="L_POLICYDETAILS" xml:space="preserve">
-		<value>Policy Details</value>
+		<value>Health Program</value>
 	</data>
 	<data name="M_NODISTRICTS" xml:space="preserve">
 		<value>No Districts found</value>
@@ -2996,7 +2996,7 @@
 		<value>Adj.Qty</value>
 	</data>
 	<data name="R_CHFID" xml:space="preserve">
-		<value>Insurance Number</value>
+		<value>TARV/CPN Code</value>
 	</data>
 	<data name="R_CLAIMADMINNAME" xml:space="preserve">
 		<value>Claim Admin</value>
@@ -4532,7 +4532,7 @@
 		<value>Insuree</value>
 	</data>
 	<data name="R_INSUREEANDPOLICIES" xml:space="preserve">
-		<value>Insurees and Policies</value>
+		<value>Registration</value>
 	</data>
 	<data name="R_INSUREESWITHOUTPHOTOS" xml:space="preserve">
 		<value>Insurees without Photos</value>
@@ -4891,7 +4891,7 @@ adults/children)
 		<value>Gender</value>
 	</data>
 	<data name="L_SEARCHFORCHFNUMBER" xml:space="preserve">
-		<value>Search  Insurance Number</value>
+		<value>Search  TARV/CPN Code</value>
 	</data>
 	<data name="T_CHARITY" xml:space="preserve">
 		<value>Charity</value>

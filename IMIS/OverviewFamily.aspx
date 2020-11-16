@@ -139,7 +139,7 @@ title='<%$ Resources:Resource,L_FAMILY%>'%>
 
 </script>
 
-    <table class="catlabel">
+<table class="catlabel">
          <tr>
             <td >
                 <asp:Label  ID="L_POLICYHOLDER" runat="server" Text='<%$ Resources:Resource,L_POLICYHOLDER %>'></asp:Label>   
@@ -302,11 +302,13 @@ title='<%$ Resources:Resource,L_FAMILY%>'%>
                     <Columns>
                         <asp:CommandField  SelectText ="Select" ShowSelectButton="true" ItemStyle-CssClass = "HideButton" HeaderStyle-CssClass ="HideButton" >  <HeaderStyle CssClass="HideButton" /> <ItemStyle CssClass="HideButton" />  </asp:CommandField>
                         <asp:HyperLinkField DataNavigateUrlFields="InsureeUUID,FamilyUUID" DataNavigateUrlFormatString="Insuree.aspx?i={0}&f={1}" DataTextField="CHFID" HeaderText='<%$ Resources:Resource,L_CHFID %>' HeaderStyle-Width="60px"/>
-                        <asp:BoundField DataField="LastName" HeaderStyle-Width="110px" HeaderText='<%$ Resources:Resource,L_LASTNAME %>' SortExpression="LastName">   </asp:BoundField>
-                        <asp:BoundField DataField="OtherNames" HeaderStyle-Width="110px" HeaderText='<%$ Resources:Resource,L_OTHERNAMES %>' SortExpression="OtherNames"> </asp:BoundField>
+                        <%--<asp:BoundField DataField="LastName" HeaderStyle-Width="110px" HeaderText='<%$ Resources:Resource,L_LASTNAME %>' SortExpression="LastName">   </asp:BoundField>--%>
+                        <%--<asp:BoundField DataField="OtherNames" HeaderStyle-Width="110px" HeaderText='<%$ Resources:Resource,L_OTHERNAMES %>' SortExpression="OtherNames"> </asp:BoundField>--%>
                         <asp:BoundField DataField="Gender" HeaderStyle-Width="50px" HeaderText='<%$ Resources:Resource,L_GENDER %>' SortExpression="Gender"> </asp:BoundField>
                         <asp:BoundField DataField="DOB" DataFormatString="{0:d}"  HeaderStyle-Width="70px" HeaderText='<%$ Resources:Resource,L_BIRTHDATE %>' SortExpression="DOB"> </asp:BoundField>
-                        <asp:CheckBoxField DataField="CardIssued" HeaderStyle-Width="50px" HeaderText='<%$ Resources:Resource,L_CARD %>' SortExpression="CardIssued"> </asp:CheckBoxField>
+                        <%--<asp:CheckBoxField DataField="CardIssued" HeaderStyle-Width="50px" HeaderText='<%$ Resources:Resource,L_CARD %>' SortExpression="CardIssued"> </asp:CheckBoxField>--%>
+                        
+                        
                     </Columns>
                     <SelectedRowStyle CssClass="srs" />
                     <PagerStyle CssClass="pgr" />
