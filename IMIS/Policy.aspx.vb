@@ -107,6 +107,7 @@ Partial Public Class Policy
             txtPoverty.Text = If(efamily.Poverty Is Nothing, "", If(efamily.Poverty = True, "Yes", "No"))
             txtHeadCHFID.Text = efamily.tblInsuree.CHFID
             txtHeadLastName.Text = efamily.tblInsuree.LastName
+            txtBirthDate.Text = efamily.tblInsuree.DOB
             txtHeadOtherNames.Text = efamily.tblInsuree.OtherNames
             txtConfirmationType.Text = efamily.ConfirmationType
             txtConfirmationNo1.Text = efamily.ConfirmationNo

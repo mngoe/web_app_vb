@@ -1,4 +1,4 @@
-<%-- Copyright (c) 2016-2017 Swiss Agency for Development and Cooperation (SDC)
+ <%-- Copyright (c) 2016-2017 Swiss Agency for Development and Cooperation (SDC)
 
 The program users must agree to the following terms:
 
@@ -318,14 +318,14 @@ In case of dispute arising out or in relation to the use of the program, it is s
                             <td class="DataEntry">
                                 <asp:TextBox ID="txtCHFID" runat="server" AutoPostBack="True" CssClass="numbersOnly" MaxLength="12" Width="150px"></asp:TextBox>
 
-                                <asp:RequiredFieldValidator ID="RequiredFieldCHFID0" runat="server" ControlToValidate="txtCHFID" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic"
+                                <%--<asp:RequiredFieldValidator ID="RequiredFieldCHFID0" runat="server" ControlToValidate="txtCHFID" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic"
                                         Text='*'>
-                                </asp:RequiredFieldValidator>
+                                </asp:RequiredFieldValidator>--%>
                                 <td></td>
                                 <td></td>
                             </td>
                             <td class="FormLabel"></td>
-                            <td rowspan="18" valign="top">
+                            <td rowspan="18" valign="top" Style="display: none">
                                 <asp:UpdatePanel ID="upImage" runat="server">
                                     <ContentTemplate>
                                         <asp:Image ID="Image1" runat="server" Width="200px" Height="200px" ImageAlign="Middle" onerror="NoImage(this)" />
@@ -334,32 +334,32 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                 <asp:Button runat="server" ID="btnBrowse" Text='<%$ Resources:Resource,B_BROWSE%>' />
                             </td>
                         </tr>
-                        <tr>
+                        <tr Style="display: none">
                             <td class="FormLabel">
                                 <asp:Label ID="L_OTHERNAMES0" runat="server" Text="<%$ Resources:Resource,L_OTHERNAMES %>">
                                 </asp:Label>
                             </td>
                             <td class="DataEntry">
                                 <asp:TextBox ID="txtOtherNames" runat="server"   MaxLength="100" Width="150px"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldOtherNames1" runat="server" ControlToValidate="txtOtherNames" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic"
+                                <%--<asp:RequiredFieldValidator ID="RequiredFieldOtherNames1" runat="server" ControlToValidate="txtOtherNames" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic"
                                         Text='*'>
-                                </asp:RequiredFieldValidator>
+                                </asp:RequiredFieldValidator>--%>
                                  
                             </td>
                             <td></td>
                             <td></td>
                             
                         </tr>
-                        <tr>
+                        <tr Style="display: none">
                             <td class="FormLabel">
                                 <asp:Label ID="L_LASTNAME0" runat="server" Text="<%$ Resources:Resource,L_LASTNAME %>">
                                 </asp:Label>
                             </td>
                             <td class="DataEntry">
                                 <asp:TextBox ID="txtLastName" runat="server"   MaxLength="100" Width="150px"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldLastName2" runat="server" ControlToValidate="txtLastName" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic"
+                                <%--<asp:RequiredFieldValidator ID="RequiredFieldLastName2" runat="server" ControlToValidate="txtLastName" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic"
                                         Text='*'>
-                                </asp:RequiredFieldValidator>
+                                </asp:RequiredFieldValidator>--%>
                                  
                             </td>
                             <td></td>
@@ -642,7 +642,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                     <asp:Panel ID="pnlImages" runat="server" Width="500px" Height="450px" BackColor="White" ScrollBars="Auto">
                         <asp:DataList ID="dlImages" runat="server" RepeatColumns="4" RepeatDirection="Horizontal" DataKeyField="ImagePath" OnSelectedIndexChanged="dlImages_SelectedIndexChanged"> 
                             <ItemTemplate>
-                                <table width="100px" style="height:100px">
+                                <table width="100px" style="height:100px"  Style="display: none">
                                     <tr>
                                         <td align="center">
                                             On: <%#Eval("TakenDate")%>
@@ -650,7 +650,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img alt="" width="100px" height="100px" src='Images\Submitted\<%#eval("ImagePath") %>' />
+                                            <img alt="" width="100px" height="100px" src='Images\Submitted\<%#Eval("ImagePath") %>' />
                                         </td>
                                     </tr>
                                     <tr>

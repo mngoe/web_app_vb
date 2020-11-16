@@ -82,25 +82,23 @@ In case of dispute arising out or in relation to the use of the program, it is s
                         <td class="ReadOnlyText">
                             <asp:Label ID="txtRegion" runat="server" />
                         </td>
-                         <td class="FormLabel">
+                         <td class="FormLabel" Style="display: none">
                              <asp:Label ID="L_CONFIRMATIONNO0" runat="server" Text="<%$ Resources:Resource, L_CONFIRMATIONTYPE %>"></asp:Label>
                          </td>
-                         <td class="ReadOnlyText">
+                         <td class="ReadOnlyText" Style="display: none">
                              <asp:Label ID="txtConfirmationType" runat="server" />
                          </td>
                     </tr>
                     
                     <tr>
                       
-                         <td class="FormLabel">
-                            <asp:Label 
-                                ID="lblHeadLastName"
-                                runat="server" 
-                                Text='<%$ Resources:Resource,L_LASTNAME %>'>
-                            </asp:Label>
+                         <td class="FormLabel" >
+                             <asp:Label ID="L_BIRTHDATE" runat="server" Text="<%$ Resources:Resource,L_BIRTHDATE %>">
+                                </asp:Label>
                         </td>
                         <td class="ReadOnlyText">
-                        <asp:label ID="txtHeadLastName" runat="server"  />
+                            <asp:label ID="txtBirthDate" runat="server" />
+                            <asp:label ID="txtHeadLastName" runat="server" Style="display: none" />
                         </td>
                             <td class="FormLabel">
                                 <asp:Label ID="L_DISTRICT" runat="server" Text="<%$ Resources:Resource,L_DISTRICT %>"></asp:Label>
@@ -109,10 +107,10 @@ In case of dispute arising out or in relation to the use of the program, it is s
                             <asp:Label ID="txtDistrict" runat="server" />
                         </td>
                       
-                         <td class="FormLabel">
+                         <td class="FormLabel" Style="display: none">
                              <asp:Label ID="L_CONFIRMATIONNO" runat="server" Text="<%$ Resources:Resource, L_CONFIRMATIONNO %>"></asp:Label>
                          </td>
-                         <td class="ReadOnlyText" style="vertical-align:top;padding-top:5px;">
+                         <td class="ReadOnlyText" Style="display: none">
                              <asp:Label ID="txtConfirmationNo1" runat="server" style="direction: ltr" />
                          </td>
                       
@@ -121,14 +119,14 @@ In case of dispute arising out or in relation to the use of the program, it is s
                         
                      
                          <td class="FormLabel">
-                            <asp:Label 
+                            <%--<asp:Label 
                                 ID="lblHeadOtherNames"
                                 runat="server" 
                                 Text='<%$ Resources:Resource,L_OTHERNAMES %>'>
-                            </asp:Label>
+                            </asp:Label>--%>
                         </td>
                         <td class="ReadOnlyText">
-                            <asp:Label ID="txtHeadOtherNames" runat="server" width="150px" />
+                            <asp:Label ID="txtHeadOtherNames" runat="server" width="150px" Style="display: none" />
                         </td>
                           <td class="FormLabel">
                               <asp:Label ID="L_WARD" runat="server" Text="<%$ Resources:Resource,L_WARD %>"></asp:Label>
@@ -137,23 +135,23 @@ In case of dispute arising out or in relation to the use of the program, it is s
                             <asp:Label ID="txtWard" runat="server"></asp:Label>
                         </td>
                        
-                         <td class="FormLabel">
+                         <td class="FormLabel" Style="display: none">
                              <asp:Label ID="L_ADDRESS0" runat="server" Text="<%$ Resources:Resource, L_PARMANENTADDRESS %>"></asp:Label>
                          </td>
                        
-                         <td class="ReadOnlyText" rowspan="2" style="vertical-align:top;padding-top:5px;">
+                         <td class="ReadOnlyText" Style="display: none" rowspan="2" style="vertical-align:top;padding-top:5px;">
                              <asp:Label ID="txtPermanentAddress" runat="server"></asp:Label>
                          </td>
                        
                     </tr>
                     <tr>
                        
-                        <td class="FormLabel">
-                            <asp:Label ID="lblPoverty" runat="server" Text="<%$ Resources:Resource,L_POVERTY %>">
+                        <td class="FormLabel" >
+                            <asp:Label ID="lblPoverty" runat="server" Style="display: none" Text="<%$ Resources:Resource,L_POVERTY %>">
                             </asp:Label>
                         </td>
                         <td class="ReadOnlyText">
-                            <asp:Label ID="txtPoverty" runat="server"></asp:Label>
+                            <asp:Label ID="txtPoverty" runat="server" Style="display: none"></asp:Label>
                         </td>
                          <td class="FormLabel">
                              <asp:Label ID="L_VILLAGE" runat="server" Text="<%$ Resources:Resource,L_VILLAGE %>"></asp:Label>
@@ -161,7 +159,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                         <td class="ReadOnlyText">
                             <asp:Label ID="txtVillage" runat="server"></asp:Label>
                         </td>
-                        <td class="ReadOnlyText">&nbsp;</td>
+                        <td class="ReadOnlyText" Style="display: none">&nbsp;</td>
                     </tr>
                 </table>     
                     

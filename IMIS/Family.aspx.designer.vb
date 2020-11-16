@@ -374,15 +374,6 @@ Partial Public Class Family
     Protected WithEvents txtCHFID As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle RequiredFieldCHFID0.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents RequiredFieldCHFID0 As Global.System.Web.UI.WebControls.RequiredFieldValidator
-
-    '''<summary>
     '''Contrôle upImage.
     '''</summary>
     '''<remarks>
@@ -428,15 +419,6 @@ Partial Public Class Family
     Protected WithEvents txtOtherNames As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Contrôle RequiredFieldOtherNames1.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents RequiredFieldOtherNames1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
-
-    '''<summary>
     '''Contrôle L_LASTNAME0.
     '''</summary>
     '''<remarks>
@@ -453,15 +435,6 @@ Partial Public Class Family
     '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
     '''</remarks>
     Protected WithEvents txtLastName As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Contrôle RequiredFieldLastName2.
-    '''</summary>
-    '''<remarks>
-    '''Champ généré automatiquement.
-    '''Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-    '''</remarks>
-    Protected WithEvents RequiredFieldLastName2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''Contrôle L_BIRTHDATE.
