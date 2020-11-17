@@ -333,7 +333,7 @@ Public Class FamilyDAL
         Dim sSQL As String = ""
         sSQL += " SELECT TOP 1 F.isOffline,F.ValidityTo,F.FamilyId, ISNULL(L.VillageID,0) VillageID,  ISNULL(L.WardID,0) WardID,L.RegionId, L.RegionName, ISNULL(L.DistrictID,0) DistrictID, DistrictName,WardName,VillageName"
         sSQL += ",FT.FamilyType, ISNULL(FT.AltLanguage, FT.FamilyType) AltLanguage,"
-        sSQL += " F.FamilyAddress,F.Poverty, CT.ConfirmationType, CT.ConfirmationTypeCode, LastName,Othernames,Phone, CHFID,I.InsureeID,I.isOffline As InsureeIsOffline,"
+        sSQL += " F.FamilyAddress,F.Poverty, CT.ConfirmationType, CT.ConfirmationTypeCode, LastName,Othernames,Phone,DOB, CHFID,I.InsureeID,I.isOffline As InsureeIsOffline,"
         sSQL += " F.Ethnicity, ConfirmationNo FROM tblInsuree I"
         sSQL += " INNER JOIN tblFamilies F On ishead = 1 And I.ValidityTo Is NULL And I.FamilyId = isnull(F.LegacyID,F.FamilyID)"
         sSQL += " INNER JOIN uvwLocations L On ISNULL(F.LocationId,0) = ISNULL(L.LocationId,0)"
@@ -350,6 +350,7 @@ Public Class FamilyDAL
         If Not dr Is Nothing Then
             eInsurees.InsureeID = dr("InsureeID")
             eInsurees.CHFID = dr("CHFID")
+            eInsurees.DOB = dr("DOB")
             eInsurees.LastName = dr("LastName")
             eInsurees.OtherNames = dr("Othernames")
             If Not dr("Phone") Is DBNull.Value Then
