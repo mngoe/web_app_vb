@@ -139,7 +139,7 @@ title='<%$ Resources:Resource,L_FAMILY%>'%>
 
 </script>
 
-<table class="catlabel">
+<table class="catlabel" Style="display: none">
          <tr>
             <td >
                 <asp:Label  ID="L_POLICYHOLDER" runat="server" Text='<%$ Resources:Resource,L_POLICYHOLDER %>'></asp:Label>   
@@ -157,7 +157,7 @@ title='<%$ Resources:Resource,L_FAMILY%>'%>
                         </asp:CommandField>--%>
     </table> 
     <asp:Panel ID="L_FAMILYPANEL" runat="server"  height="100px" 
-             CssClass="panel" >
+             CssClass="panel" Style="display: none" >
            
                <table >
                     <tr>
