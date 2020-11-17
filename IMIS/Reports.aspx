@@ -344,6 +344,8 @@ In case of dispute arising out or in relation to the use of the program, it is s
             }
             else if (tid == 23) {
                 $criterias = $(".chr")
+            } else if (tid == 24) {
+                $criterias = $(".sr");
             }
             if ($criterias != null) {
                 $criterias.fadeIn(animationSpeed, function () {

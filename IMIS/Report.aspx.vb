@@ -438,6 +438,33 @@ Partial Public Class Report
                         ds.Value = dt
                         rpt.DataSources.Add(ds)
 
+                    Case "sp"
+                        Dim dt As DataTable
+                        dt = DirectCast(Session("report"), DataTable)
+                        rpt.ReportPath = "Reports\rptServicePerformance.rdlc"
+                        ds.Name = "DataSet_StatusofRegister"
+                        Page.Title = imisgen.getMessage("T_SERVICEPERF")
+
+                        Dim Param(13) As ReportParameter
+                        Param(0) = New ReportParameter("paramSubtitle", IMIS_EN.eReports.SubTitle)
+                        Param(1) = New ReportParameter("paramSRMainTitle", imisgen.getMessage("T_SERVICEPERF", False))
+                        Param(2) = New ReportParameter("paramSPServiceName", imisgen.getMessage("L_SERVICES", False))
+                        Param(3) = New ReportParameter("paramSRNoofUsers", imisgen.getMessage("L_NOOFUSERS", False))
+                        Param(4) = New ReportParameter("paramSRNoofInsuranceProducts", imisgen.getMessage("L_NOOFINSURANCEPRODUCTS", False))
+                        Param(5) = New ReportParameter("paramSRNoofHealthFacilities", imisgen.getMessage("L_NOOFHEALTHFACILITIES", False))
+                        Param(6) = New ReportParameter("paramSRNoofServicePricelists", imisgen.getMessage("L_NOOFSERVICEPRICELIST", False))
+                        Param(7) = New ReportParameter("paramSRNoofItemPricelists", imisgen.getMessage("L_NOOFITEMPRICELIST", False))
+                        Param(8) = New ReportParameter("paramSRNoofMedicalItems", imisgen.getMessage("L_NOOFMEDICALITEMS", False))
+                        Param(9) = New ReportParameter("paramSRNoofServices", imisgen.getMessage("L_NOOFSERVICES", False))
+                        Param(10) = New ReportParameter("paramSRNoofPayers", imisgen.getMessage("L_NOOFPAYERS", False))
+                        Param(11) = New ReportParameter("paramSRDistrictName", imisgen.getMessage("L_DistrictName", False))
+                        Param(12) = New ReportParameter("paramSRTotal", imisgen.getMessage("L_TOTAL", False))
+                        Param(13) = New ReportParameter("paramSRPrintedOn", imisgen.getMessage("L_PRINTEDON", False))
+
+                        rpt.SetParameters(Param)
+                        ds.Value = dt
+                        rpt.DataSources.Add(ds)
+
                     Case "iwp"
                         Dim dt As DataTable
                         dt = DirectCast(Session("report"), DataTable)

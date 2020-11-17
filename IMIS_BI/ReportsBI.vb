@@ -111,6 +111,11 @@ Public Class ReportsBI
         Dim BL As New IMIS_BL.ReportBL
         Return BL.GetStatusofRegisters(DistrictID)
     End Function
+
+    Public Function GetServicePerformanceData(ByVal DistrictID As Integer) As DataTable
+        Dim BL As New IMIS_BL.ReportBL
+        Return BL.GetServicePerformanceData(DistrictID)
+    End Function
     Public Function GetInsureesWithoutPhotos(ByVal OfficerId As Integer, ByVal DistrictID As Integer) As DataTable
         Dim BL As New IMIS_BL.ReportBL
         Return BL.GetInsureesWithoutPhotos(OfficerId, DistrictID)

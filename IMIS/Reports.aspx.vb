@@ -1463,6 +1463,35 @@ Partial Public Class Reports
         End If
         Return True
     End Function
+
+
+    Private Sub GetServicePerformanceData()
+        Dim sSubTitle As String = "" 'imisgen.getMessage("R_ALL") & " " & imisgen.getMessage("L_DISTRICT")
+        'If ddlRegion.SelectedIndex > 0 Then sSubTitle = LocationName
+
+        Dim LocationId As Integer?
+        If Val(ddlDistrictWoNational.SelectedValue) > 0 Then
+            LocationId = Val(ddlDistrictWoNational.SelectedValue)
+        Else
+            LocationId = Val(ddlRegionWoNational.SelectedValue)
+        End If
+
+        If Val(ddlRegionWoNational.SelectedValue) = 0 Then
+            sSubTitle = imisgen.getMessage("L_REGION") & ": " & imisgen.getMessage("T_ALL")
+        End If
+
+        If Val(ddlRegionWoNational.SelectedValue) <> 0 Then
+            sSubTitle = imisgen.getMessage("L_REGION") & ": " & ddlRegionWoNational.SelectedItem.Text
+        End If
+        If Val(ddlDistrictWoNational.SelectedValue) > 0 Then
+            sSubTitle += "  |   " & imisgen.getMessage("L_DISTRICT") & ": " & ddlDistrictWoNational.SelectedItem.Text
+        End If
+
+        IMIS_EN.eReports.SubTitle = sSubTitle
+        dt = reports.GetServicePerformanceData(LocationId)
+    End Sub
+
+
     Private Function getHFName(ByVal Code As String)
         Select Case Code
             Case "H"
@@ -1664,6 +1693,10 @@ Partial Public Class Reports
                 If Not ClaimHistoryReport() Then Exit Sub
                 Session("Report") = dt
                 url = "Report.aspx?r=chr&tid=23"
+            ElseIf SelectedValueID = 24 Then
+                GetServicePerformanceData()
+                Session("Report") = dt
+                url = "Report.aspx?r=sp&tid=24"
             End If
 
 

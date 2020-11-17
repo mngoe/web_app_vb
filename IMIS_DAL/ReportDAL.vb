@@ -199,6 +199,19 @@ Public Class ReportDAL
         Return data.Filldata()
     End Function
 
+
+    Public Function GetServicePerformanceData(ByVal LocationId As Integer) As DataTable
+        Dim sSQL As String = ""
+        Dim data As New ExactSQL
+
+        sSQL += " SELECT  ServName,ServPrice from tblServices"
+
+        data.setSQLCommand(sSQL, CommandType.Text, timeout:=0)
+
+        data.params("@LocationID", SqlDbType.Int, If(LocationId = -1, Nothing, LocationId))
+        Return data.Filldata()
+    End Function
+
     'Corrected
     Public Function GetInsureesWithoutPhotos(ByVal OfficerId As Integer, ByVal LocationId As Integer) As DataTable
         Dim sSQL As String = ""

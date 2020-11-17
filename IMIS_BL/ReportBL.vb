@@ -136,6 +136,7 @@ Public Class ReportBL
         dict.Add(getMessage("L_CONTROLNUMBERASSIGNMENT"), IMIS_EN.Enums.Rights.ReportsControlNumberAssignment) 'Id = 21
         dict.Add(getMessage("L_OVERVIEWOFCOMMISSIONS"), IMIS_EN.Enums.Rights.ReportsOverviewOfCommissions) 'Id = 22
         dict.Add(getMessage("L_CLAIMHISTORYREPORT"), IMIS_EN.Enums.Rights.ReportsClaimHistoryReport) 'Id = 23
+        dict.Add(getMessage("L_LISTSERVICE"), IMIS_EN.Enums.Rights.ReportsClaimHistoryReport) 'Id = 24
         Dim dr As DataRow
         Dim index As Integer = 1
         For Each Rtype As String In dict.Keys
@@ -157,6 +158,12 @@ Public Class ReportBL
         Dim DAL As New IMIS_DAL.ReportDAL
         Return DAL.GetStatusofRegisters(DistrictID)
     End Function
+
+    Public Function GetServicePerformanceData(ByVal DistrictID As Integer) As DataTable
+        Dim DAL As New IMIS_DAL.ReportDAL
+        Return DAL.GetServicePerformanceData(DistrictID)
+    End Function
+
     Public Function GetInsureesWithoutPhotos(ByVal OfficerId As Integer, ByVal DistrictID As Integer) As DataTable
         Dim DAL As New IMIS_DAL.ReportDAL
         Dim dt As DataTable = DAL.GetInsureesWithoutPhotos(OfficerId, DistrictID)
