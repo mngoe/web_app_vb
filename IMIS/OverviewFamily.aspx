@@ -307,6 +307,10 @@ title='<%$ Resources:Resource,L_FAMILY%>'%>
                         <asp:BoundField DataField="Gender" HeaderStyle-Width="50px" HeaderText='<%$ Resources:Resource,L_GENDER %>' SortExpression="Gender"> </asp:BoundField>
                         <asp:BoundField DataField="DOB" DataFormatString="{0:d}"  HeaderStyle-Width="70px" HeaderText='<%$ Resources:Resource,L_BIRTHDATE %>' SortExpression="DOB"> </asp:BoundField>
                         <%--<asp:CheckBoxField DataField="CardIssued" HeaderStyle-Width="50px" HeaderText='<%$ Resources:Resource,L_CARD %>' SortExpression="CardIssued"> </asp:CheckBoxField>--%>
+                        <asp:BoundField DataField="RegionName" HeaderStyle-Width="110px" HeaderText='<%$ Resources:Resource,L_REGION %>' SortExpression="RegionName"> </asp:BoundField>
+                        <asp:BoundField DataField="DistrictName" HeaderStyle-Width="110px" HeaderText='<%$ Resources:Resource,L_DISTRICT %>' SortExpression="DistrictName"> </asp:BoundField>
+                        <asp:BoundField DataField="WardName" HeaderStyle-Width="110px" HeaderText='<%$ Resources:Resource,L_WARD %>' SortExpression="WardName"> </asp:BoundField>
+                        <asp:BoundField DataField="VillageName" HeaderStyle-Width="110px" HeaderText='<%$ Resources:Resource,L_VILLAGE %>' SortExpression="VillageName"> </asp:BoundField>
                         
                         
                     </Columns>

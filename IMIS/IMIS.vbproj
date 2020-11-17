@@ -173,6 +173,7 @@
     <Content Include="HealthFacility.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Images\Add.gif" />
+    <Content Include="Images\customer-logo.png" />
     <Content Include="Images\Erase.png" />
     <Content Include="Images\GoLtr.bmp" />
     <Content Include="Images\Help book.bmp" />
@@ -1091,7 +1092,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties BuildVersion_StartDate="2012/1/1" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UseGlobalSettings="True" BuildVersion_DetectChanges="False" />
+      <UserProperties BuildVersion_DetectChanges="False" BuildVersion_UseGlobalSettings="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_StartDate="2012/1/1" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

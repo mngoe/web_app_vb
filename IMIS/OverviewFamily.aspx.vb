@@ -42,6 +42,7 @@ Partial Public Class OverviewFamily
     Private policyBI As New IMIS_BI.PolicyBI
     Private premiumBI As New IMIS_BI.PremiumBI
     Private productBI As New IMIS_BI.ProductBI
+    Private Insuree As New IMIS_BI.FindInsureeBI
     Private Sub FormatForm()
         Dim Adjustibility As String = ""
      
@@ -411,7 +412,14 @@ Partial Public Class OverviewFamily
     Private Sub loadGrid(ByRef gv As GridView, ByRef dt As DataTable)
         Dim x As Integer = 0
         Dim Rows() As DataRow
+        With dt
+            .Columns.Add("RegionName", GetType(String))
+            .Columns.Add("DistrictName", GetType(String))
+            .Columns.Add("WardName", GetType(String))
+            .Columns.Add("VillageName", GetType(String))
+        End With
         Dim dv As DataView = dt.DefaultView
+
         Try
             If Not IsPostBack = True Then
 
@@ -419,8 +427,21 @@ Partial Public Class OverviewFamily
 
                     Rows = dt.Select("InsureeID=" & eInsuree.InsureeID)
                     dv.Sort = "CHFID"
+                    eFamily.FamilyID = FamilyId
+                    eFamily.FamilyUUID = FamilyUUID
+                    OverviewFamily.GetFamilyHeadInfo(eFamily)
+                    dv(0)("RegionName") = eFamily.RegionName
+                    dv(0)("DistrictName") = eFamily.DistrictName
+                    dv(0)("VillageName") = eFamily.VillageName
+                    dv(0)("WardName") = eFamily.WardName
                     If Rows.Length > 0 Then
                         x = dv.Find(Rows(0).Item("CHFID"))
+                        For i As Integer = 0 To Rows.Length
+                            dv(i)("RegionName") = eFamily.RegionName
+                            dv(i)("DistrictName") = eFamily.DistrictName
+                            dv(i)("VillageName") = eFamily.VillageName
+                            dv(i)("WardName") = eFamily.WardName
+                        Next
                     End If
 
                 ElseIf gv.ID = "gvPolicies" Then
@@ -443,9 +464,6 @@ Partial Public Class OverviewFamily
                 Else
                     Return
                 End If
-
-
-
             End If
             gv.DataSource = dv
             gv.SelectedIndex = x
