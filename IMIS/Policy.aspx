@@ -324,7 +324,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                    <td>
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                 <ContentTemplate>
-                   <asp:Panel ID="PlnBody3" runat="server" ScrollBars="Auto" CssClass="panel" GroupingText="" >
+                   <asp:Panel ID="PlnBody3" runat="server" ScrollBars="Auto" CssClass="panel" GroupingText="" Style="display: none" >
                      <table>
                     <tr>
                     <td> &nbsp;</td>
@@ -368,7 +368,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                     <table>
                     <tr>                    
                     <td>
-                     <asp:Panel ID="PnlBody4" runat="server"  ScrollBars="Auto" CssClass="panel" GroupingText="" >    
+                     <asp:Panel ID="PnlBody4" runat="server"  ScrollBars="Auto" CssClass="panel" GroupingText="" Style="display: none" >    
                         <table>
                         <tr>
                         <td> &nbsp;</td>                           
