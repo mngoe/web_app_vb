@@ -443,15 +443,6 @@ Partial Public Class OverviewFamily
                             eFamily.FamilyID = FamilyId
                             eFamily.FamilyUUID = FamilyUUID
                             OverviewFamily.GetFamilyHeadInfo(eFamily)
-                            'aInsuree = Assuree.FindInsureeByCHFID(dr("CHFID"))
-                            'dr("RegionName") = aInsuree.CurrentRegion Or eFamily.RegionName
-                            'dr("DistrictName") = aInsuree.CurDistrict Or eFamily.DistrictName
-                            'dr("VillageName") = aInsuree.CurrentVillage Or eFamily.VillageName
-                            'dr("WardName") = aInsuree.CurWard Or eFamily.WardName
-                            'dr("RegionName") = eInsuree.CurrentRegion Or eFamily.RegionName
-                            'dr("DistrictName") = eInsuree.CurDistrict Or eFamily.DistrictName
-                            'dr("VillageName") = eInsuree.CurrentVillage Or eFamily.VillageName
-                            'dr("WardName") = eInsuree.CurWard Or eFamily.WardName
                             dr("RegionName") = eFamily.RegionName
                             dr("DistrictName") = eFamily.DistrictName
                             dr("VillageName") = eFamily.VillageName
