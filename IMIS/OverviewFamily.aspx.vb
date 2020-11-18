@@ -419,6 +419,7 @@ Partial Public Class OverviewFamily
             .Columns.Add("VillageName", GetType(String))
         End With
         Dim dv As DataView = dt.DefaultView
+        Dim Assuree As New IMIS_BL.InsureeBL
 
         Try
             If Not IsPostBack = True Then
@@ -436,11 +437,25 @@ Partial Public Class OverviewFamily
                     dv(0)("WardName") = eFamily.WardName
                     If Rows.Length > 0 Then
                         x = dv.Find(Rows(0).Item("CHFID"))
-                        For i As Integer = 0 To Rows.Length
-                            dv(i)("RegionName") = eFamily.RegionName
-                            dv(i)("DistrictName") = eFamily.DistrictName
-                            dv(i)("VillageName") = eFamily.VillageName
-                            dv(i)("WardName") = eFamily.WardName
+                    End If
+                    If dt.Rows.Count > 0 Then
+                        For Each dr As DataRow In dt.Rows
+                            eFamily.FamilyID = FamilyId
+                            eFamily.FamilyUUID = FamilyUUID
+                            OverviewFamily.GetFamilyHeadInfo(eFamily)
+                            'aInsuree = Assuree.FindInsureeByCHFID(dr("CHFID"))
+                            'dr("RegionName") = aInsuree.CurrentRegion Or eFamily.RegionName
+                            'dr("DistrictName") = aInsuree.CurDistrict Or eFamily.DistrictName
+                            'dr("VillageName") = aInsuree.CurrentVillage Or eFamily.VillageName
+                            'dr("WardName") = aInsuree.CurWard Or eFamily.WardName
+                            'dr("RegionName") = eInsuree.CurrentRegion Or eFamily.RegionName
+                            'dr("DistrictName") = eInsuree.CurDistrict Or eFamily.DistrictName
+                            'dr("VillageName") = eInsuree.CurrentVillage Or eFamily.VillageName
+                            'dr("WardName") = eInsuree.CurWard Or eFamily.WardName
+                            dr("RegionName") = eFamily.RegionName
+                            dr("DistrictName") = eFamily.DistrictName
+                            dr("VillageName") = eFamily.VillageName
+                            dr("WardName") = eFamily.WardName
                         Next
                     End If
 
