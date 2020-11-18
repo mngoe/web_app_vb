@@ -160,8 +160,8 @@ Public Class PolicyDAL
     End Function
     Public Sub InsertPolicy(ByVal ePolicy As IMIS_EN.tblPolicy)
         Dim data As New ExactSQL
-        Dim sSQL As String = "INSERT INTO tblPolicy(FamilyID, EnrollDate, StartDate, EffectiveDate, ExpiryDate, ProdID, OfficerID,PolicyStage,isOffline, AuditUserID,RenewalOrder)" &
-            " VALUES (@FamilyID, @EnrollDate, @StartDate, @EffectiveDate, @ExpiryDate, @ProdID, @OfficerID,@PolicyStage,@isOffline, @AuditUserID, @RenewalOrder); select @PolicyID = scope_identity()"
+        Dim sSQL As String = "INSERT INTO tblPolicy(FamilyID, EnrollDate, StartDate, EffectiveDate, ExpiryDate, ProdID, OfficerID,PolicyStage,isOffline, AuditUserID,RenewalOrder,PolicyStatus)" &
+            " VALUES (@FamilyID, @EnrollDate, @StartDate, @EffectiveDate, @ExpiryDate, @ProdID, @OfficerID,@PolicyStage,@isOffline, @AuditUserID, @RenewalOrder, @PolicyStatus); select @PolicyID = scope_identity()"
 
         data.setSQLCommand(sSQL, CommandType.Text)
         data.params("@PolicyID", SqlDbType.Int, ePolicy.PolicyID, ParameterDirection.Output)
@@ -176,6 +176,7 @@ Public Class PolicyDAL
         data.params("@isOffline", SqlDbType.Bit, ePolicy.isOffline)
         data.params("@AuditUserID", SqlDbType.Int, ePolicy.AuditUserID)
         data.params("@RenewalOrder", SqlDbType.Int, ePolicy.RenewalOrder)
+        data.params("@PolicyStatus", SqlDbType.Int, 2)
         data.ExecuteCommand()
         ePolicy.PolicyID = data.sqlParameters("@PolicyID")
         'getPolicyValue(ePolicy)
