@@ -442,24 +442,28 @@ Partial Public Class Report
                         Dim dt As DataTable
                         dt = DirectCast(Session("report"), DataTable)
                         rpt.ReportPath = "Reports\rptServicePerformance.rdlc"
-                        ds.Name = "DataSet_StatusofRegister"
+                        ds.Name = "DataSet_ServicePerformance"
                         Page.Title = imisgen.getMessage("T_SERVICEPERF")
 
-                        Dim Param(13) As ReportParameter
+                        Dim Param(17) As ReportParameter
                         Param(0) = New ReportParameter("paramSubtitle", IMIS_EN.eReports.SubTitle)
-                        Param(1) = New ReportParameter("paramSRMainTitle", imisgen.getMessage("T_SERVICEPERF", False))
-                        Param(2) = New ReportParameter("paramSPServiceName", imisgen.getMessage("L_SERVICES", False))
-                        Param(3) = New ReportParameter("paramSRNoofUsers", imisgen.getMessage("L_NOOFUSERS", False))
-                        Param(4) = New ReportParameter("paramSRNoofInsuranceProducts", imisgen.getMessage("L_NOOFINSURANCEPRODUCTS", False))
-                        Param(5) = New ReportParameter("paramSRNoofHealthFacilities", imisgen.getMessage("L_NOOFHEALTHFACILITIES", False))
-                        Param(6) = New ReportParameter("paramSRNoofServicePricelists", imisgen.getMessage("L_NOOFSERVICEPRICELIST", False))
-                        Param(7) = New ReportParameter("paramSRNoofItemPricelists", imisgen.getMessage("L_NOOFITEMPRICELIST", False))
-                        Param(8) = New ReportParameter("paramSRNoofMedicalItems", imisgen.getMessage("L_NOOFMEDICALITEMS", False))
-                        Param(9) = New ReportParameter("paramSRNoofServices", imisgen.getMessage("L_NOOFSERVICES", False))
-                        Param(10) = New ReportParameter("paramSRNoofPayers", imisgen.getMessage("L_NOOFPAYERS", False))
-                        Param(11) = New ReportParameter("paramSRDistrictName", imisgen.getMessage("L_DistrictName", False))
-                        Param(12) = New ReportParameter("paramSRTotal", imisgen.getMessage("L_TOTAL", False))
-                        Param(13) = New ReportParameter("paramSRPrintedOn", imisgen.getMessage("L_PRINTEDON", False))
+                        Param(1) = New ReportParameter("paramSRRegion", IMIS_EN.eReports.region)
+                        Param(2) = New ReportParameter("paramSRDistrict", IMIS_EN.eReports.district)
+                        Param(3) = New ReportParameter("paramSRDateBegin", IMIS_EN.eReports.date_begin)
+                        Param(4) = New ReportParameter("paramSRDateEnd", IMIS_EN.eReports.date_end)
+                        Param(5) = New ReportParameter("paramSRMainTitle", imisgen.getMessage("T_SERVICEPERF", False))
+                        Param(6) = New ReportParameter("paramSRNoofUsers", imisgen.getMessage("L_NOOFUSERS", False))
+                        Param(7) = New ReportParameter("paramSRNoofInsuranceProducts", imisgen.getMessage("L_NOOFINSURANCEPRODUCTS", False))
+                        Param(8) = New ReportParameter("paramSRNoofHealthFacilities", imisgen.getMessage("L_NOOFHEALTHFACILITIES", False))
+                        Param(9) = New ReportParameter("paramSRNoofServicePricelists", imisgen.getMessage("L_NOOFSERVICEPRICELIST", False))
+                        Param(10) = New ReportParameter("paramSRNoofItemPricelists", imisgen.getMessage("L_NOOFITEMPRICELIST", False))
+                        Param(11) = New ReportParameter("paramSRNoofMedicalItems", imisgen.getMessage("L_NOOFMEDICALITEMS", False))
+                        Param(12) = New ReportParameter("paramSRNoofServices", imisgen.getMessage("L_NOOFSERVICES", False))
+                        Param(13) = New ReportParameter("paramSRNoofPayers", imisgen.getMessage("L_NOOFPAYERS", False))
+                        Param(14) = New ReportParameter("paramSRDistrictName", imisgen.getMessage("L_DistrictName", False))
+                        Param(15) = New ReportParameter("paramSRTotal", imisgen.getMessage("L_TOTAL", False))
+                        Param(16) = New ReportParameter("paramSRPrintedOn", imisgen.getMessage("L_PRINTEDON", False))
+                        Param(17) = New ReportParameter("paramSRHFCode", IMIS_EN.eReports.hf_code)
 
                         rpt.SetParameters(Param)
                         ds.Value = dt

@@ -1466,6 +1466,11 @@ Partial Public Class Reports
 
 
     Private Sub GetServicePerformanceData()
+        Dim RangeFrom As DateTime
+        Dim RangeTo As DateTime
+        Dim region As String
+        Dim district As String
+        Dim hf_code As String
         Dim sSubTitle As String = "" 'imisgen.getMessage("R_ALL") & " " & imisgen.getMessage("L_DISTRICT")
         'If ddlRegion.SelectedIndex > 0 Then sSubTitle = LocationName
 
@@ -1480,14 +1485,32 @@ Partial Public Class Reports
             sSubTitle = imisgen.getMessage("L_REGION") & ": " & imisgen.getMessage("T_ALL")
         End If
 
-        If Val(ddlRegionWoNational.SelectedValue) <> 0 Then
+        If Val(ddlRegionWoNational.SelectedValue) > 0 Then
             sSubTitle = imisgen.getMessage("L_REGION") & ": " & ddlRegionWoNational.SelectedItem.Text
+            region = ddlRegionWoNational.SelectedItem.Text
+            IMIS_EN.eReports.region = region.ToUpper()
         End If
         If Val(ddlDistrictWoNational.SelectedValue) > 0 Then
             sSubTitle += "  |   " & imisgen.getMessage("L_DISTRICT") & ": " & ddlDistrictWoNational.SelectedItem.Text
+            district = ddlDistrictWoNational.SelectedItem.Text
+            IMIS_EN.eReports.district = district.ToUpper()
+        End If
+        If IsDate(Date.ParseExact(txtSTARTData.Text, "dd/MM/yyyy", Nothing)) Then
+            RangeFrom = Date.ParseExact(txtSTARTData.Text, "dd/MM/yyyy", Nothing)
+            IMIS_EN.eReports.date_begin = RangeFrom
         End If
 
+        If IsDate(Date.ParseExact(txtENDData.Text, "dd/MM/yyyy", Nothing)) Then
+            RangeTo = Date.ParseExact(txtENDData.Text, "dd/MM/yyyy", Nothing)
+            IMIS_EN.eReports.date_end = RangeTo
+        End If
+        If ddlHF.SelectedIndex > 0 Then
+            sSubTitle += " | " & imisgen.getMessage("L_OFFLINEHFID") & " : " & ddlHF.SelectedItem.Text
+            hf_code = ddlHF.SelectedItem.Text
+            IMIS_EN.eReports.hf_code = hf_code.ToUpper()
+        End If
         IMIS_EN.eReports.SubTitle = sSubTitle
+        '''dt = reports.GetServicePerformanceData(LocationId, RangeFrom, RangeTo, If(ddlHF.SelectedValue.Trim = String.Empty, 0, ddlHF.SelectedValue))
         dt = reports.GetServicePerformanceData(LocationId)
     End Sub
 

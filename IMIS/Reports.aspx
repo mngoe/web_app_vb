@@ -345,7 +345,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
             else if (tid == 23) {
                 $criterias = $(".chr")
             } else if (tid == 24) {
-                $criterias = $(".sr");
+                $criterias = $(".sp");
             }
             if ($criterias != null) {
                 $criterias.fadeIn(animationSpeed, function () {
@@ -455,7 +455,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                     <li style="display: none">
                                         <asp:HiddenField ID="hfVisibleRegion" Value="" runat="server" />
                                     </li>
-                                    <li class="pc ua pco mf co perc fio pi rnw rp cp  cna chr">
+                                    <li class="pc ua pco mf co perc fio pi rnw rp cp  cna chr sp">
                                         <asp:Label ID="lblSTART" runat="server" Text='<%$ Resources:Resource,L_DATEFROM %>' CssClass="FormLabel"></asp:Label>
 
                                         <asp:TextBox ID="txtSTARTData" runat="server" size="10" Width="80px" class="dateInput">
@@ -486,7 +486,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <asp:DropDownList ID="ddlQuarter" runat="server" Width="80px" AutoPostBack="true"></asp:DropDownList>
                                     </li>
 
-                                    <li class="pc ua pco mf co perc fio pi rnw rp cp cna chr">
+                                    <li class="pc ua pco mf co perc fio pi rnw rp cp cna chr sp">
                                         <asp:Label ID="lblEND" runat="server" Text='<%$ Resources:Resource,L_DATETO %>' CssClass="FormLabel"></asp:Label>
                                         <asp:TextBox ID="txtENDData" Width="80px" runat="server" Size="10" class=" dateInput">
                                         </asp:TextBox>
@@ -511,7 +511,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         </asp:DropDownList>
                                     </li>
 
-                                    <li class="poi  pc pco mf rnw co sr fio pi poiC iwp oc chr">
+                                    <li class="poi  pc pco mf rnw co sr fio pi poiC iwp oc chr sp">
                                         <asp:Label ID="lblRegionWoNational" runat="server" Text='<%$ Resources:Resource,L_REGION%>' CssClass="FormLabel"></asp:Label>
                                         <asp:DropDownList ID="ddlRegionWoNational" runat="server"
                                             AutoPostBack="True">
@@ -526,7 +526,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
 
                                     </li>
 
-                                    <li class="poi pc pco mf rnw co sr fio pi poiC iwp oc chr">
+                                    <li class="poi pc pco mf rnw co sr fio pi poiC iwp oc chr sp">
                                         <asp:Label ID="Label1" runat="server" Text='<%$ Resources:Resource,L_DISTRICT%>' CssClass="FormLabel"></asp:Label>
                                         <asp:DropDownList ID="ddlDistrictWoNational" runat="server"
                                             AutoPostBack="True">
@@ -566,7 +566,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <asp:DropDownList ID="ddlAction" runat="server"></asp:DropDownList>
                                     </li>
 
-                                    <li class="doi co poiC chr">
+                                    <li class="doi co poiC chr sp">
                                         <asp:Label ID="lblHFCode" runat="server" Text='<%$ Resources:Resource,L_HFCODE%>' CssClass="FormLabel"></asp:Label>
                                         <asp:DropDownList ID="ddlHF" runat="server"></asp:DropDownList>
 

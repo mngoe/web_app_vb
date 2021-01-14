@@ -102,4 +102,10 @@ Public Class eReports
     Public Shared Property WeightNumberInsuredFamilies As Double
     Public Shared Property WeightAdjustedAmount As Double
     Public Shared Property WeightNumberVisits As Double
+    '''propriétes pour variable simple sur le rapport
+    Public Shared Property region As String
+    Public Shared Property district As String
+    Public Shared Property hf_code As String
+    Public Shared Property date_begin As Global.System.Nullable(Of Date)
+    Public Shared Property date_end  As Global.System.Nullable(Of Date)
 End Class
