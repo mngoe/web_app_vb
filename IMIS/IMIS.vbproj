@@ -915,7 +915,7 @@
     </Content>
     <Content Include="Reports\rptProdProcessBatch.rdlc" />
     <Content Include="Reports\rptProductSales.rdlc" />
-    <Content Include="Reports\rptStatusofRegisters.rdlc">
+    <Content Include="Reports\rptServicePerformance.rdlc">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Reports\rptUserActivityReport.rdlc" />
