@@ -557,9 +557,13 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <asp:DropDownList ID="ddlProductStrict" runat="server" AutoPostBack="true">
                                         </asp:DropDownList>
                                     </li>
-                                    <li class="fio">
+                                    <li class="fio sp">
                                         <asp:Label ID="lblWard" runat="server" Text="<%$ Resources:Resource,L_WARD%>" CssClass="FormLabel"></asp:Label>
                                         <asp:DropDownList ID="ddlWards" AutoPostBack="true" runat="server"></asp:DropDownList>
+                                    </li>
+                                    <li class="fio sp">
+                                        <asp:Label ID="lblVillage" runat="server" Text="<%$ Resources:Resource,L_VILLAGE%>" CssClass="FormLabel"></asp:Label>
+                                        <asp:DropDownList ID="ddlVillages" runat="server" AutoPostBack="true"></asp:DropDownList>
                                     </li>
                                     <li class="ua">
                                         <asp:Label ID="lblAction" runat="server" Text="<%$ Resources:Resource,L_ACTION%>" CssClass="FormLabel"></asp:Label>
@@ -575,10 +579,6 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                     <li class="pc ps">
                                         <asp:Label ID="lblPaymentType" runat="server" Text="<%$ Resources:Resource,L_PAYMENTTYPE%>" CssClass="FormLabel"></asp:Label>
                                         <asp:DropDownList ID="ddlPaymentType" runat="server"></asp:DropDownList>
-                                    </li>
-                                    <li class="fio">
-                                        <asp:Label ID="lblVillage" runat="server" Text="<%$ Resources:Resource,L_VILLAGE%>" CssClass="FormLabel"></asp:Label>
-                                        <asp:DropDownList ID="ddlVillages" runat="server" AutoPostBack="true"></asp:DropDownList>
                                     </li>
                                     <li class="ua">
                                         <asp:Label ID="lblEntity" runat="server" Text="Entity" CssClass="FormLabel"></asp:Label>

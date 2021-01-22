@@ -105,6 +105,8 @@ Public Class eReports
     '''propriétes pour variable simple sur le rapport
     Public Shared Property region As String
     Public Shared Property district As String
+    Public Shared Property municipality As String
+    Public Shared Property area As String
     Public Shared Property hf_code As String
     Public Shared Property date_begin As Global.System.Nullable(Of Date)
     Public Shared Property date_end  As Global.System.Nullable(Of Date)

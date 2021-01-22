@@ -1470,6 +1470,8 @@ Partial Public Class Reports
         Dim RangeTo As DateTime
         Dim region As String
         Dim district As String
+        Dim municipality As String
+        Dim area As String
         Dim hf_code As String
         Dim sSubTitle As String = "" 'imisgen.getMessage("R_ALL") & " " & imisgen.getMessage("L_DISTRICT")
         'If ddlRegion.SelectedIndex > 0 Then sSubTitle = LocationName
@@ -1489,11 +1491,23 @@ Partial Public Class Reports
             sSubTitle = imisgen.getMessage("L_REGION") & ": " & ddlRegionWoNational.SelectedItem.Text
             region = ddlRegionWoNational.SelectedItem.Text
             IMIS_EN.eReports.region = region.ToUpper()
+            LocationId = ddlRegionWoNational.SelectedValue
         End If
         If Val(ddlDistrictWoNational.SelectedValue) > 0 Then
             sSubTitle += "  |   " & imisgen.getMessage("L_DISTRICT") & ": " & ddlDistrictWoNational.SelectedItem.Text
             district = ddlDistrictWoNational.SelectedItem.Text
             IMIS_EN.eReports.district = district.ToUpper()
+            LocationId = ddlDistrictWoNational.SelectedValue
+        End If
+        If Val(ddlWards.SelectedValue) > 0 Then
+            municipality = ddlWards.SelectedItem.Text
+            IMIS_EN.eReports.municipality = municipality.ToUpper()
+            LocationId = ddlWards.SelectedValue
+        End If
+        If Val(ddlVillages.SelectedValue) > 0 Then
+            area = ddlVillages.SelectedItem.Text
+            IMIS_EN.eReports.area = area.ToUpper()
+            LocationId = ddlVillages.SelectedValue
         End If
         If IsDate(Date.ParseExact(txtSTARTData.Text, "dd/MM/yyyy", Nothing)) Then
             RangeFrom = Date.ParseExact(txtSTARTData.Text, "dd/MM/yyyy", Nothing)

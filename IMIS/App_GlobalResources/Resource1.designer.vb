@@ -15041,5 +15041,159 @@ Namespace Resources
                 Return ResourceManager.GetString("X_MANUAL", resourceCulture)
             End Get
         End Property
+        '''<summary>
+        ''' Variables de texte pour rapport SERVICEPERFORMANCE
+        '''</summary>
+        Friend Shared ReadOnly Property T_RDPH_RFHP() As String
+            Get
+                Return ResourceManager.GetString("T_RDPH_RFHP", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_HEALTHDISTRICT() As String
+            Get
+                Return ResourceManager.GetString("T_HEALTHDISTRICT", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_HEALTHMUNICIPALITY() As String
+            Get
+                Return ResourceManager.GetString("T_HEALTHMUNICIPALITY", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_HEALTHAREA() As String
+            Get
+                Return ResourceManager.GetString("T_HEALTHAREA", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_NAMEHEALTHFACILITY() As String
+            Get
+                Return ResourceManager.GetString("T_NAMEHEALTHFACILITY", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_ADRESSPHONE() As String
+            Get
+                Return ResourceManager.GetString("T_ADRESSPHONE", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_PERIODMONTH() As String
+            Get
+                Return ResourceManager.GetString("T_PERIODMONTH", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_TOTALPOPULATION() As String
+            Get
+                Return ResourceManager.GetString("T_TOTALPOPULATION", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_NUMPLHIV() As String
+            Get
+                Return ResourceManager.GetString("T_NUMPLHIV", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_DATEINVOICING() As String
+            Get
+                Return ResourceManager.GetString("T_DATEINVOICING", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_HIVAIDSSERVICES() As String
+            Get
+                Return ResourceManager.GetString("T_HIVAIDSSERVICES", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_QUANTITYREPORTED() As String
+            Get
+                Return ResourceManager.GetString("T_QUANTITYREPORTED", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_DESCQUANTITYREPORTED() As String
+            Get
+                Return ResourceManager.GetString("T_DESCQUANTITYREPORTED", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_QUANTITYVALIDATED() As String
+            Get
+                Return ResourceManager.GetString("T_QUANTITYVALIDATED", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_DESCQUANTITYVALIDATED() As String
+            Get
+                Return ResourceManager.GetString("T_DESCQUANTITYVALIDATED", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_UNITCOST() As String
+            Get
+                Return ResourceManager.GetString("T_UNITCOST", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_DESCUNITCOST() As String
+            Get
+                Return ResourceManager.GetString("T_DESCUNITCOST", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_TOTALAMOUNT() As String
+            Get
+                Return ResourceManager.GetString("T_TOTALAMOUNT", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_DESCTOTALAMOUNT() As String
+            Get
+                Return ResourceManager.GetString("T_DESCTOTALAMOUNT", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_SUBTOTAL1() As String
+            Get
+                Return ResourceManager.GetString("T_SUBTOTAL1", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_SUBTOTAL2() As String
+            Get
+                Return ResourceManager.GetString("T_SUBTOTAL2", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_TOTALFIGURES() As String
+            Get
+                Return ResourceManager.GetString("T_TOTALFIGURES", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_TOTALLETTERS() As String
+            Get
+                Return ResourceManager.GetString("T_TOTALLETTERS", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_REPORTEDAT() As String
+            Get
+                Return ResourceManager.GetString("T_REPORTEDAT", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_VERIFIEDAT() As String
+            Get
+                Return ResourceManager.GetString("T_VERIFIEDAT", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_VALIDATEDON() As String
+            Get
+                Return ResourceManager.GetString("T_VALIDATEDON", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_HEADOFHF() As String
+            Get
+                Return ResourceManager.GetString("T_HEADOFHF", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_AUDITORCVA() As String
+            Get
+                Return ResourceManager.GetString("T_AUDITORCVA", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_HEADHF() As String
+            Get
+                Return ResourceManager.GetString("T_HEADHF", resourceCulture)
+            End Get
+        End Property
+        Friend Shared ReadOnly Property T_VALIDATIONCOMMITTEE() As String
+            Get
+                Return ResourceManager.GetString("T_VALIDATIONCOMMITTEE", resourceCulture)
+            End Get
+        End Property
+
     End Class
 End Namespace

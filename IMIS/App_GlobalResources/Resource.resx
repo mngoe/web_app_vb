@@ -5111,4 +5111,95 @@ adults/children)
   <data name="T_SERVICEPERF" xml:space="preserve">
     <value>Service Performances</value>
   </data>
+  <!-- Resources changes for SERVICEPERFORMANCE report -->
+  <data name="T_RDPH_RFHP" xml:space="preserve">
+    <value>RDPH/RFHP</value>
+  </data>
+  <data name="T_HEALTHDISTRICT" xml:space="preserve">
+    <value>Health District</value>
+  </data>
+  <data name="T_HEALTHMUNICIPALITY" xml:space="preserve">
+    <value>Health Municipality</value>
+  </data>
+  <data name="T_HEALTHAREA" xml:space="preserve">
+    <value>Health Area</value>
+  </data>
+  <data name="T_NAMEHEALTHFACILITY" xml:space="preserve">
+    <value>Name of Health Facility</value>
+  </data>
+  <data name="T_ADRESSPHONE" xml:space="preserve">
+    <value>Adress (Phone)</value>
+  </data>
+  <data name="T_PERIODMONTH" xml:space="preserve">
+    <value>Period (Month)</value>
+  </data>
+  <data name="T_TOTALPOPULATION" xml:space="preserve">
+    <value>Total Population</value>
+  </data>
+  <data name="T_NUMPLHIV" xml:space="preserve">
+    <value>Number of PLHIV in the Health Area/District</value>
+  </data>
+  <data name="T_DATEINVOICING" xml:space="preserve">
+    <value>Date of Invoicing</value>
+  </data>
+  <data name="T_HIVAIDSSERVICES" xml:space="preserve">
+    <value>FREE HIV/AIDS SERVICES</value>
+  </data>
+  <data name="T_QUANTITYREPORTED" xml:space="preserve">
+    <value>Quantity Reported</value>
+  </data>
+  <data name="T_DESCQUANTITYREPORTED" xml:space="preserve">
+    <value>by the HF</value>
+  </data>
+  <data name="T_QUANTITYVALIDATED" xml:space="preserve">
+    <value>Quantity Validated</value>
+  </data>
+  <data name="T_DESCQUANTITYVALIDATED" xml:space="preserve">
+    <value>by CVA</value>
+  </data>
+  <data name="T_UNITCOST" xml:space="preserve">
+    <value>Unit Cost</value>
+  </data>
+  <data name="T_DESCUNITCOST" xml:space="preserve">
+    <value>(CF AF)</value>
+  </data>
+  <data name="T_TOTALAMOUNT" xml:space="preserve">
+    <value>TOTAL AMOUNT</value>
+  </data>
+  <data name="T_DESCTOTALAMOUNT" xml:space="preserve">
+    <value>FOR EACH CATEGORY OF SERVICE DECLARED</value>
+  </data>
+  <data name="T_SUBTOTAL1" xml:space="preserve">
+    <value>Sub-Total 1</value>
+  </data>
+  <data name="T_SUBTOTAL2" xml:space="preserve">
+    <value>Sub-Total 2</value>
+  </data>
+  <data name="T_TOTALFIGURES" xml:space="preserve">
+    <value>Total Amount in Figures</value>
+  </data>
+  <data name="T_TOTALLETTERS" xml:space="preserve">
+    <value>Total Amount in Letters:</value>
+  </data>
+  <data name="T_REPORTEDAT" xml:space="preserve">
+    <value>Reported at _________ the ..../..../20__</value>
+  </data>
+  <data name="T_VERIFIEDAT" xml:space="preserve">
+    <value>Verified at ________ the ..../..../20__</value>
+  </data>
+  <data name="T_VALIDATEDON" xml:space="preserve">
+    <value>Validated on the ________</value>
+  </data>
+  <data name="T_HEADOFHF" xml:space="preserve">
+    <value>Head of Healthcare Facilities (HHF)</value>
+  </data>
+  <data name="T_AUDITORCVA" xml:space="preserve">
+    <value>The Auditor CVA</value>
+  </data>
+  <data name="T_HEADHF" xml:space="preserve">
+    <value>The Head HF</value>
+  </data>
+  <data name="T_VALIDATIONCOMMITTEE" xml:space="preserve">
+    <value>The validation Committee</value>
+  </data>
 </root>
