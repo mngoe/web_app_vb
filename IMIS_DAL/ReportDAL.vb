@@ -200,15 +200,33 @@ Public Class ReportDAL
     End Function
 
 
-    Public Function GetServicePerformanceData(ByVal LocationId As Integer) As DataTable
+    Public Function GetServicePerformanceData(ByVal AreaID As Integer, ByVal DistrictID As Integer, ByVal RegionID As Integer, ByVal DateFrom as DateTime, ByVal DateTo as DateTime) As DataTable
         Dim sSQL As String = ""
+        Dim location As Integer?
         Dim data As New ExactSQL
-
-        sSQL += " SELECT  ServName,ServPrice from tblServices"
-
+        '''sSQL += " SELECT  ServName,ServPrice from tblServices"
+        sSQL += "SELECT tCS.QtyProvided, tCS.QtyApproved, tCS.PriceAsked, tS.ServName FROM tblClaimServices as tCS, tblServices as tS, tblClaim as tC"
+        sSQL += " WHERE"
+        sSQL += " tCS.ClaimID in (SELECT ClaimID FROM tblClaim WHERE"
+        sSQL += " CONVERT(DATE,DateFrom) >= @FromDate and CONVERT(DATE,DateTo) <= @DateTo)"
+        location = Nothing
+        If RegionID <> Nothing Then
+            location = RegionID
+        End If
+        If DistrictID <> Nothing Then
+            location = DistrictID
+        End If
+        If AreaID <> Nothing Then
+            location = AreaID
+        End If
+        If location <> Nothing Then
+            sSQL += " and"
+            sSQL += " tC.InsureeID in (SELECT InsureeID FROM tblFamilies WHERE LocationID=@LocationID)"
+        End If
         data.setSQLCommand(sSQL, CommandType.Text, timeout:=0)
-
-        data.params("@LocationID", SqlDbType.Int, If(LocationId = -1, Nothing, LocationId))
+        data.params("@FromDate", SqlDbType.Date, DateFrom)
+        data.params("@DateTo", SqlDbType.Date, DateTo)
+        data.params("@LocationID", SqlDbType.Int, location)
         Return data.Filldata()
     End Function
 

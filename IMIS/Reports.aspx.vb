@@ -1477,6 +1477,10 @@ Partial Public Class Reports
         'If ddlRegion.SelectedIndex > 0 Then sSubTitle = LocationName
 
         Dim LocationId As Integer?
+        dim HfID As Integer?
+        dim AreaID As Integer?
+        dim DistrictID As Integer?
+        dim RegionID As Integer?
         If Val(ddlDistrictWoNational.SelectedValue) > 0 Then
             LocationId = Val(ddlDistrictWoNational.SelectedValue)
         Else
@@ -1491,41 +1495,36 @@ Partial Public Class Reports
             sSubTitle = imisgen.getMessage("L_REGION") & ": " & ddlRegionWoNational.SelectedItem.Text
             region = ddlRegionWoNational.SelectedItem.Text
             IMIS_EN.eReports.region = region.ToUpper()
-            LocationId = ddlRegionWoNational.SelectedValue
         End If
         If Val(ddlDistrictWoNational.SelectedValue) > 0 Then
             sSubTitle += "  |   " & imisgen.getMessage("L_DISTRICT") & ": " & ddlDistrictWoNational.SelectedItem.Text
             district = ddlDistrictWoNational.SelectedItem.Text
             IMIS_EN.eReports.district = district.ToUpper()
-            LocationId = ddlDistrictWoNational.SelectedValue
         End If
         If Val(ddlWards.SelectedValue) > 0 Then
             municipality = ddlWards.SelectedItem.Text
             IMIS_EN.eReports.municipality = municipality.ToUpper()
-            LocationId = ddlWards.SelectedValue
         End If
         If Val(ddlVillages.SelectedValue) > 0 Then
             area = ddlVillages.SelectedItem.Text
             IMIS_EN.eReports.area = area.ToUpper()
-            LocationId = ddlVillages.SelectedValue
         End If
-        If IsDate(Date.ParseExact(txtSTARTData.Text, "dd/MM/yyyy", Nothing)) Then
-            RangeFrom = Date.ParseExact(txtSTARTData.Text, "dd/MM/yyyy", Nothing)
-            IMIS_EN.eReports.date_begin = RangeFrom
-        End If
-
-        If IsDate(Date.ParseExact(txtENDData.Text, "dd/MM/yyyy", Nothing)) Then
-            RangeTo = Date.ParseExact(txtENDData.Text, "dd/MM/yyyy", Nothing)
-            IMIS_EN.eReports.date_end = RangeTo
-        End If
+        RangeFrom = If(IsDate(txtSTARTData.Text), Date.ParseExact(txtSTARTData.Text, "dd/MM/yyyy", Nothing), Nothing)
+        IMIS_EN.eReports.date_begin = RangeFrom
+        RangeTo = If(IsDate(txtENDData.Text), Date.ParseExact(txtENDData.Text, "dd/MM/yyyy", Nothing), Nothing)
+        IMIS_EN.eReports.date_end = RangeTo
         If ddlHF.SelectedIndex > 0 Then
             sSubTitle += " | " & imisgen.getMessage("L_OFFLINEHFID") & " : " & ddlHF.SelectedItem.Text
             hf_code = ddlHF.SelectedItem.Text
             IMIS_EN.eReports.hf_code = hf_code.ToUpper()
         End If
         IMIS_EN.eReports.SubTitle = sSubTitle
-        '''dt = reports.GetServicePerformanceData(LocationId, RangeFrom, RangeTo, If(ddlHF.SelectedValue.Trim = String.Empty, 0, ddlHF.SelectedValue))
-        dt = reports.GetServicePerformanceData(LocationId)
+        AreaID = If(Val(ddlVillages.SelectedValue) > 0, CInt(Val(ddlVillages.SelectedValue)), Nothing)
+        DistrictID = If(Val(ddlDistrictWoNational.SelectedValue) > 0, CInt(Val(ddlDistrictWoNational.SelectedValue)), Nothing)
+        RegionID = If(Val(ddlRegionWoNational.SelectedValue) > 0, CInt(Val(ddlRegionWoNational.SelectedValue)), Nothing)
+        HfID = If(Val(ddlHF.SelectedValue) > 0, CInt(ddlHF.SelectedValue), Nothing)
+        dt = reports.GetServicePerformanceData(AreaID, DistrictID, RegionID, RangeFrom, RangeTo)
+        '''dt = reports.GetServicePerformanceData(LocationId)
     End Sub
 
 

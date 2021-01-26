@@ -159,9 +159,9 @@ Public Class ReportBL
         Return DAL.GetStatusofRegisters(DistrictID)
     End Function
 
-    Public Function GetServicePerformanceData(ByVal DistrictID As Integer) As DataTable
+    Public Function GetServicePerformanceData(ByVal AreaID As Integer, ByVal DistrictID As Integer, ByVal RegionID As Integer, ByVal DateFrom as DateTime, ByVal DateTo as DateTime) As DataTable
         Dim DAL As New IMIS_DAL.ReportDAL
-        Return DAL.GetServicePerformanceData(DistrictID)
+        Return DAL.GetServicePerformanceData(AreaID, DistrictID, RegionID, DateFrom, DateTo)
     End Function
 
     Public Function GetInsureesWithoutPhotos(ByVal OfficerId As Integer, ByVal DistrictID As Integer) As DataTable
