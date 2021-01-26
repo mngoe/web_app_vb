@@ -200,11 +200,10 @@ Public Class ReportDAL
     End Function
 
 
-    Public Function GetServicePerformanceData(ByVal AreaID As Integer, ByVal DistrictID As Integer, ByVal RegionID As Integer, ByVal DateFrom as DateTime, ByVal DateTo as DateTime) As DataTable
+    Public Function GetServicePerformanceData(ByVal AreaID As Integer, ByVal DistrictID As Integer, ByVal RegionID As Integer, ByVal DateFrom As DateTime, ByVal DateTo As DateTime) As DataTable
         Dim sSQL As String = ""
         Dim location As Integer?
         Dim data As New ExactSQL
-        '''sSQL += " SELECT  ServName,ServPrice from tblServices"
         sSQL += "SELECT tCS.QtyProvided, tCS.QtyApproved, tCS.PriceAsked, tS.ServName FROM tblClaimServices as tCS, tblServices as tS, tblClaim as tC"
         sSQL += " WHERE"
         sSQL += " tCS.ClaimID in (SELECT ClaimID FROM tblClaim WHERE"

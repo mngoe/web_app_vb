@@ -445,7 +445,7 @@ Partial Public Class Report
                         ds.Name = "DataSet_ServicePerformance"
                         Page.Title = imisgen.getMessage("T_SERVICEPERF")
 
-                        Dim Param(41) As ReportParameter
+                        Dim Param(42) As ReportParameter
                         Param(0) = New ReportParameter("paramSubtitle", IMIS_EN.eReports.SubTitle)
                         Param(1) = New ReportParameter("paramSRRegion", IMIS_EN.eReports.region)
                         Param(2) = New ReportParameter("paramSRDistrict", IMIS_EN.eReports.district)
@@ -497,6 +497,7 @@ Partial Public Class Report
                         Param(39) = New ReportParameter("paramSRLabAuditorCVA", imisgen.getMessage("T_AUDITORCVA", False))
                         Param(40) = New ReportParameter("paramSRLabHeadHF", imisgen.getMessage("T_HEADHF", False))
                         Param(41) = New ReportParameter("paramSRLabValidCommettee", imisgen.getMessage("T_VALIDATIONCOMMITTEE", False))
+                        Param(42) = New ReportParameter("paramSRDateToday", DateTime.Now.ToString("dd/MM/yyyy HH:mm"))
 
                         rpt.SetParameters(Param)
                         ds.Value = dt
