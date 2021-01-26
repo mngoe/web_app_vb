@@ -204,11 +204,12 @@ Public Class ReportDAL
         Dim sSQL As String = ""
         Dim location As Integer?
         Dim data As New ExactSQL
+        '''sSQL += " SELECT  ServName,ServPrice from tblServices"
         sSQL += "SELECT tCS.QtyProvided, tCS.QtyApproved, tCS.PriceAsked, tS.ServName FROM tblClaimServices as tCS, tblServices as tS, tblClaim as tC"
         sSQL += " WHERE"
         sSQL += " tCS.ClaimID in (SELECT ClaimID FROM tblClaim WHERE"
-        sSQL += " CONVERT(DATE,DateFrom) >= @FromDate and CONVERT(DATE,DateTo) <= @DateTo)"
-        location = Nothing
+        sSQL += " DateFrom >= @FromDate and DateTo <= @DateTo)"
+        '''location = Nothing
         If RegionID <> Nothing Then
             location = RegionID
         End If
@@ -218,7 +219,7 @@ Public Class ReportDAL
         If AreaID <> Nothing Then
             location = AreaID
         End If
-        If location <> Nothing Then
+        If location <> Nothing or location > 0 Then
             sSQL += " and"
             sSQL += " tC.InsureeID in (SELECT InsureeID FROM tblFamilies WHERE LocationID=@LocationID)"
         End If
