@@ -1544,7 +1544,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!QtyProvided.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0;- #,0</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1577,7 +1579,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!QtyApproved.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0;(#,0)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1609,7 +1613,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!PriceAsked.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0;(#,0)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1641,7 +1647,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!TotalAmount.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0;(#,0)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1717,7 +1725,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Sum(Fields!TotalAmount.Value)</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0;(#,0)</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>

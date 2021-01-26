@@ -205,7 +205,13 @@ Public Class ReportDAL
         Dim location As Integer?
         Dim data As New ExactSQL
         '''sSQL += " SELECT  ServName,ServPrice from tblServices"
-        sSQL += "SELECT SUM(tCS.QtyProvided) as QtyProvided, SUM(tCS.QtyApproved) as QtyApproved, tCS.PriceAsked, tS.ServName, SUM(tCS.QtyProvided * tCS.PriceAsked) as TotalAmount FROM tblClaimServices as tCS, tblServices as tS, tblClaim as tC"
+        sSQL += "SELECT"
+        sSQL += " ISNULL(sum(tCS.QtyProvided),0) as QtyProvided,"
+        sSQL += " ISNULL(sum(tCS.QtyApproved),0) as QtyApproved,"
+        sSQL += " ISNULL(tCS.PriceAsked,0.0) as PriceAsked,"
+        sSQL += " SUM( ISNULL(tCS.QtyProvided,0) * ISNULL(tCS.PriceAsked,0)) as TotalAmount,"
+        sSQL += " tS.ServName"
+        sSQL += " FROM tblClaimServices as tCS, tblServices as tS, tblClaim as tC"
         sSQL += " WHERE"
         sSQL += " tCS.ClaimID in (SELECT ClaimID FROM tblClaim WHERE"
         sSQL += " DateFrom >= CAST(@FromDate AS Date) and DateTo <= CAST(@DateTo AS Date))"
