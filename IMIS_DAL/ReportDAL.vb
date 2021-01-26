@@ -205,10 +205,10 @@ Public Class ReportDAL
         Dim location As Integer?
         Dim data As New ExactSQL
         '''sSQL += " SELECT  ServName,ServPrice from tblServices"
-        sSQL += "SELECT tCS.QtyProvided, tCS.QtyApproved, tCS.PriceAsked, tS.ServName FROM tblClaimServices as tCS, tblServices as tS, tblClaim as tC"
+        sSQL += "SELECT SUM(tCS.QtyProvided) as QtyProvided, SUM(tCS.QtyApproved) as QtyApproved, tCS.PriceAsked, tS.ServName, SUM(tCS.QtyProvided * tCS.PriceAsked) as TotalAmount FROM tblClaimServices as tCS, tblServices as tS, tblClaim as tC"
         sSQL += " WHERE"
         sSQL += " tCS.ClaimID in (SELECT ClaimID FROM tblClaim WHERE"
-        sSQL += " DateFrom >= @FromDate and DateTo <= @DateTo)"
+        sSQL += " DateFrom >= CAST(@FromDate AS Date) and DateTo <= CAST(@DateTo AS Date))"
         '''location = Nothing
         If RegionID <> Nothing Then
             location = RegionID
@@ -223,6 +223,7 @@ Public Class ReportDAL
             sSQL += " and"
             sSQL += " tC.InsureeID in (SELECT InsureeID FROM tblFamilies WHERE LocationID=@LocationID)"
         End If
+        sSQL += " GROUP BY tS.ServName, tCS.PriceAsked"
         data.setSQLCommand(sSQL, CommandType.Text, timeout:=0)
         data.params("@FromDate", SqlDbType.Date, DateFrom)
         data.params("@DateTo", SqlDbType.Date, DateTo)

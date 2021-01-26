@@ -1524,14 +1524,6 @@ Partial Public Class Reports
         RegionID = If(Val(ddlRegionWoNational.SelectedValue) > 0, CInt(Val(ddlRegionWoNational.SelectedValue)), Nothing)
         HfID = If(Val(ddlHF.SelectedValue) > 0, CInt(ddlHF.SelectedValue), Nothing)
         dt = reports.GetServicePerformanceData(AreaID, DistrictID, RegionID, RangeFrom, RangeTo)
-        '''Affichage de quelque données dans l'observateur d'evenements
-        imisgen.Log(AreaID)
-        imisgen.Log(DistrictID)
-        imisgen.Log(RegionID)
-        imisgen.Log(RangeFrom)
-        imisgen.Log(RangeTo)
-        imisgen.Log("dt")
-        imisgen.Log(dt.Rows.Count)
     End Sub
 
 
