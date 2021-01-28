@@ -168,7 +168,7 @@ Public Class PolicyDAL
         data.params("@FamilyId", SqlDbType.Int, ePolicy.tblFamilies.FamilyID)
         data.params("@EnrollDate", SqlDbType.SmallDateTime, ePolicy.EnrollDate)
         data.params("@StartDate", SqlDbType.SmallDateTime, ePolicy.StartDate)
-        data.params("@EffectiveDate", SqlDbType.SmallDateTime, Nothing, ParameterDirection.Input) ' if(ePolicy.EffectiveDate Is Nothing, SqlTypes.SqlDateTime.Null, ePolicy.EffectiveDate))
+        data.params("@EffectiveDate", SqlDbType.SmallDateTime, ePolicy.StartDate) ' if(ePolicy.EffectiveDate Is Nothing, SqlTypes.SqlDateTime.Null, ePolicy.EffectiveDate))
         data.params("@ExpiryDate", SqlDbType.SmallDateTime, if(ePolicy.ExpiryDate Is Nothing, SqlTypes.SqlDateTime.Null, ePolicy.ExpiryDate))
         data.params("@ProdID", SqlDbType.Int, ePolicy.tblProduct.ProdID)
         data.params("@OfficerID", SqlDbType.Int, ePolicy.tblOfficer.OfficerID)
@@ -176,7 +176,7 @@ Public Class PolicyDAL
         data.params("@isOffline", SqlDbType.Bit, ePolicy.isOffline)
         data.params("@AuditUserID", SqlDbType.Int, ePolicy.AuditUserID)
         data.params("@RenewalOrder", SqlDbType.Int, ePolicy.RenewalOrder)
-        data.params("@PolicyStatus", SqlDbType.Int, 2)
+        data.params("@PolicyStatus", SqlDbType.Int, 2) 'Forcer l'activation des police a la creation par défaut effectiveDate sera = a la startDate
         data.ExecuteCommand()
         ePolicy.PolicyID = data.sqlParameters("@PolicyID")
         'getPolicyValue(ePolicy)
