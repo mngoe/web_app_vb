@@ -294,7 +294,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
             $table.find("li").add("div.oc").fadeOut(0, function () {
                 $(this).hide();
             });
-            if (tid == 1 || tid == 8) {
+            /*if (tid == 1 || tid == 8) {
                 $criterias = $(".poi");
             } else if (tid == 2) {
                 $criterias = $(".poiC");
@@ -345,6 +345,9 @@ In case of dispute arising out or in relation to the use of the program, it is s
             else if (tid == 23) {
                 $criterias = $(".chr")
             } else if (tid == 24) {
+                $criterias = $(".sp");
+            }*/
+            if (tid == 1) {
                 $criterias = $(".sp");
             }
             if ($criterias != null) {
@@ -573,8 +576,6 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                     <li class="doi co poiC chr sp">
                                         <asp:Label ID="lblHFCode" runat="server" Text='<%$ Resources:Resource,L_HFCODE%>' CssClass="FormLabel"></asp:Label>
                                         <asp:DropDownList ID="ddlHF" runat="server"></asp:DropDownList>
-
-
                                     </li>
                                     <li class="pc ps">
                                         <asp:Label ID="lblPaymentType" runat="server" Text="<%$ Resources:Resource,L_PAYMENTTYPE%>" CssClass="FormLabel"></asp:Label>

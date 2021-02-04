@@ -56,7 +56,8 @@ Partial Public Class Reports
         RoleID = imisgen.getRoleId(Session("User"))
         If IsPostBack Then Return
         RunPageSecurity()
-        selectedReport = 1 ' first report type selected by default
+        '''selectedReport = 1 ' first report type selected by default
+        selectedReport = 24 '''on selection notre rapport par défaut
         'Try
         FillRegions()
         FillRegionsWoNational()
