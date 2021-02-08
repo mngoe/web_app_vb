@@ -1298,6 +1298,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1578,7 +1579,11 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!QtyApproved.Value</Value>
+                                  <Value>=Switch(
+    Fields!QtyApproved.Value = 0 AND Fields!PriceAsked.Value = 0, 0, 
+    Fields!PriceAsked.Value = 0, Fields!QtyApproved.Value/1,
+	Fields!PriceAsked.Value &gt;0, Fields!QtyApproved.Value/Fields!PriceAsked.Value
+    )</Value>
                                   <Style>
                                     <Format>#,0;(#,0)</Format>
                                   </Style>

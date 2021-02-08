@@ -1556,9 +1556,15 @@ Partial Public Class Reports
             CacheCriteria()
 
             Dim SelectedValueID As Integer = lstboxReportSelector.SelectedValue
+            'If SelectedValueID = 1 Then
+            '    If Val(ddlProduct.SelectedValue) = 0 Then
+            '        lblMsg.Text = imisgen.getMessage("M_PLEASESELECTAPRODUCT")
+            '        Return
+            '    End If
+            'End If
             If SelectedValueID = 1 Then
-                If Val(ddlProduct.SelectedValue) = 0 Then
-                    lblMsg.Text = imisgen.getMessage("M_PLEASESELECTAPRODUCT")
+                If Val(ddlHF.SelectedValue) = 0 Then
+                    lblMsg.Text = imisgen.getMessage("M_PLEASESELECTHEALTHFACILITY")
                     Return
                 End If
             End If
@@ -1637,99 +1643,104 @@ Partial Public Class Reports
             '****************
 
 
+            'If SelectedValueID = 1 Then
+            '    If Not GetIndicatorsReportData(1) Then Exit Sub
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=pip&tid=1"
+            'ElseIf SelectedValueID = 2 Then
+            '    GetPrimaryIndicatorsClaimsData()
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=pic&tid=2"
+            'ElseIf SelectedValueID = 3 Then
+            '    CreateDerivedIndicators()
+            '    Session("Report") = ds
+            '    url = "Report.aspx?r=di&tid=3"
+            'ElseIf SelectedValueID = 4 Then
+            '    GetPremiumCollectionReport(4)
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=pc&tid=4"
+            'ElseIf SelectedValueID = 5 Then
+            '    GetPremiumCollectionReport(5)
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=p&tid=5"
+            'ElseIf SelectedValueID = 6 Then
+            '    GetPremiumDistributionReport()
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=pd&tid=6"
+            'ElseIf SelectedValueID = 7 Then
+            '    GetUserActivityData()
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=ua&tid=7"
+            'ElseIf SelectedValueID = 8 Then
+            '    GetIndicatorsReportData(2)
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=epi&tid=8"
+            'ElseIf SelectedValueID = 9 Then
+            '    GetStatusofRegistersData()
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=sr&tid=9"
+            'ElseIf SelectedValueID = 10 Then
+            '    GetInsureesWithoutphotos()
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=iwp&tid=10"
+            'ElseIf SelectedValueID = 11 Then
+            '    GetPaymentCategoryOverview()
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=pco&tid=11"
+            'ElseIf SelectedValueID = 12 Then
+            '    If Not GetMatchingFunds() Then Exit Sub
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=mf&tid=12"
+            'ElseIf SelectedValueID = 13 Then
+            '    If Not GetClaimOverview() Then Exit Sub
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=co&tid=13"
+            'ElseIf SelectedValueID = 14 Then
+            '    If Not GetPercentageReferral() Then Exit Sub
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=pr&tid=14"
+            'ElseIf SelectedValueID = 15 Then
+            '    If Not GetFamiliesInsureesOverview() Then Exit Sub
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=fio&tid=15"
+            'ElseIf SelectedValueID = 16 Then
+            '    If Not GetPendingInsurees() Then Exit Sub
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=pi&tid=16"
+            'ElseIf SelectedValueID = 17 Then
+            '    If Not GetRenewals() Then Exit Sub
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=rnw&tid=17"
+            'ElseIf SelectedValueID = 18 Then
+            '    If Not getCapitationPayment() Then Exit Sub
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=ca&tid=18"
+            'ElseIf SelectedValueID = 19 Then
+            '    If Not getRejectedPhoto() Then Exit Sub
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=rp&tid=19"
+            'ElseIf SelectedValueID = 20 Then
+            '    If Not getContributionPayment() Then Exit Sub
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=cp&tid=20"
+            'ElseIf SelectedValueID = 21 Then
+            '    If Not getControlNumberAssignment() Then Exit Sub
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=cna&tid=21"
+            'ElseIf SelectedValueID = 22 Then
+            '    If Not OverviewOfCommissions() Then Exit Sub
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=oc&tid=22"
+            'ElseIf SelectedValueID = 23 Then
+            '    If Not ClaimHistoryReport() Then Exit Sub
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=chr&tid=23"
+            'ElseIf SelectedValueID = 24 Then
+            '    GetServicePerformanceData()
+            '    Session("Report") = dt
+            '    url = "Report.aspx?r=sp&tid=24"
+            'End If
             If SelectedValueID = 1 Then
-                If Not GetIndicatorsReportData(1) Then Exit Sub
-                Session("Report") = dt
-                url = "Report.aspx?r=pip&tid=1"
-            ElseIf SelectedValueID = 2 Then
-                GetPrimaryIndicatorsClaimsData()
-                Session("Report") = dt
-                url = "Report.aspx?r=pic&tid=2"
-            ElseIf SelectedValueID = 3 Then
-                CreateDerivedIndicators()
-                Session("Report") = ds
-                url = "Report.aspx?r=di&tid=3"
-            ElseIf SelectedValueID = 4 Then
-                GetPremiumCollectionReport(4)
-                Session("Report") = dt
-                url = "Report.aspx?r=pc&tid=4"
-            ElseIf SelectedValueID = 5 Then
-                GetPremiumCollectionReport(5)
-                Session("Report") = dt
-                url = "Report.aspx?r=p&tid=5"
-            ElseIf SelectedValueID = 6 Then
-                GetPremiumDistributionReport()
-                Session("Report") = dt
-                url = "Report.aspx?r=pd&tid=6"
-            ElseIf SelectedValueID = 7 Then
-                GetUserActivityData()
-                Session("Report") = dt
-                url = "Report.aspx?r=ua&tid=7"
-            ElseIf SelectedValueID = 8 Then
-                GetIndicatorsReportData(2)
-                Session("Report") = dt
-                url = "Report.aspx?r=epi&tid=8"
-            ElseIf SelectedValueID = 9 Then
-                GetStatusofRegistersData()
-                Session("Report") = dt
-                url = "Report.aspx?r=sr&tid=9"
-            ElseIf SelectedValueID = 10 Then
-                GetInsureesWithoutphotos()
-                Session("Report") = dt
-                url = "Report.aspx?r=iwp&tid=10"
-            ElseIf SelectedValueID = 11 Then
-                GetPaymentCategoryOverview()
-                Session("Report") = dt
-                url = "Report.aspx?r=pco&tid=11"
-            ElseIf SelectedValueID = 12 Then
-                If Not GetMatchingFunds() Then Exit Sub
-                Session("Report") = dt
-                url = "Report.aspx?r=mf&tid=12"
-            ElseIf SelectedValueID = 13 Then
-                If Not GetClaimOverview() Then Exit Sub
-                Session("Report") = dt
-                url = "Report.aspx?r=co&tid=13"
-            ElseIf SelectedValueID = 14 Then
-                If Not GetPercentageReferral() Then Exit Sub
-                Session("Report") = dt
-                url = "Report.aspx?r=pr&tid=14"
-            ElseIf SelectedValueID = 15 Then
-                If Not GetFamiliesInsureesOverview() Then Exit Sub
-                Session("Report") = dt
-                url = "Report.aspx?r=fio&tid=15"
-            ElseIf SelectedValueID = 16 Then
-                If Not GetPendingInsurees() Then Exit Sub
-                Session("Report") = dt
-                url = "Report.aspx?r=pi&tid=16"
-            ElseIf SelectedValueID = 17 Then
-                If Not GetRenewals() Then Exit Sub
-                Session("Report") = dt
-                url = "Report.aspx?r=rnw&tid=17"
-            ElseIf SelectedValueID = 18 Then
-                If Not getCapitationPayment() Then Exit Sub
-                Session("Report") = dt
-                url = "Report.aspx?r=ca&tid=18"
-            ElseIf SelectedValueID = 19 Then
-                If Not getRejectedPhoto() Then Exit Sub
-                Session("Report") = dt
-                url = "Report.aspx?r=rp&tid=19"
-            ElseIf SelectedValueID = 20 Then
-                If Not getContributionPayment() Then Exit Sub
-                Session("Report") = dt
-                url = "Report.aspx?r=cp&tid=20"
-            ElseIf SelectedValueID = 21 Then
-                If Not getControlNumberAssignment() Then Exit Sub
-                Session("Report") = dt
-                url = "Report.aspx?r=cna&tid=21"
-            ElseIf SelectedValueID = 22 Then
-                If Not OverviewOfCommissions() Then Exit Sub
-                Session("Report") = dt
-                url = "Report.aspx?r=oc&tid=22"
-            ElseIf SelectedValueID = 23 Then
-                If Not ClaimHistoryReport() Then Exit Sub
-                Session("Report") = dt
-                url = "Report.aspx?r=chr&tid=23"
-            ElseIf SelectedValueID = 24 Then
                 GetServicePerformanceData()
                 Session("Report") = dt
                 url = "Report.aspx?r=sp&tid=24"

@@ -206,15 +206,22 @@ Public Class ReportDAL
         Dim data As New ExactSQL
         '''sSQL += " SELECT  ServName,ServPrice from tblServices"
         sSQL += "SELECT"
-        sSQL += " ISNULL(sum(tCS.QtyProvided),0) as QtyProvided,"
-        sSQL += " ISNULL(sum(tCS.QtyApproved),0) as QtyApproved,"
-        sSQL += " ISNULL(tCS.PriceAsked,0.0) as PriceAsked,"
-        sSQL += " SUM( ISNULL(tCS.QtyProvided,0) * ISNULL(tCS.PriceAsked,0)) as TotalAmount,"
-        sSQL += " tS.ServName"
-        sSQL += " FROM tblClaimServices as tCS, tblServices as tS, tblClaim as tC"
+        sSQL += " S.ServName,"
+        sSQL += " ISNULL(CS.PriceAsked,0) as PriceAsked,"
+        sSQL += " SUM(ISNULL(CS.QtyProvided,0)) as QtyProvided,"
+        'sSQL += " SUM(ISNULL(CS.PriceApproved,0))Approved,"
+        sSQL += " SUM(ISNULL(CS.PriceValuated,0)) as QtyApproved,"
+        'sSQL += " SUM(ISNULL(CS.RemuneratedAmount,0))Remunerated,"
+        sSQL += " SUM(ISNULL(CS.QtyProvided,0) * ISNULL(CS.PriceAsked,0)) as TotalAmount"
+        sSQL += " FROM tblClaim C"
+        sSQL += " LEFT OUTER JOIN tblClaimServices CS ON C.ClaimId = CS.ClaimID"
+        sSQL += " LEFT OUTER JOIN tblServices S ON CS.ServiceId = S.ServiceId"
         sSQL += " WHERE"
-        sSQL += " tCS.ClaimID in (SELECT ClaimID FROM tblClaim WHERE"
-        sSQL += " DateFrom >= CAST(@FromDate AS Date) and DateTo <= CAST(@DateTo AS Date))"
+        '''sSQL += " C.ValidityTo IS NULL"
+        '''sSQL += " AND CS.ValidityTo IS NULL AND"
+        sSQL += " C.DateFrom >= CAST(@FromDate AS Date) and C.DateTo <= CAST(@DateTo AS Date)"
+        sSQL += " AND S.ServName IS NOT NULL"
+        sSQL += " AND CS.ClaimServiceID NOT IN (SELECT CSC.LegacyID FROM tblClaimServices as CSC WHERE CSC.LegacyID IS NOT NULL)"
         '''location = Nothing
         If RegionID <> Nothing Then
             location = RegionID
@@ -226,10 +233,9 @@ Public Class ReportDAL
             location = AreaID
         End If
         If location <> Nothing or location > 0 Then
-            sSQL += " and"
-            sSQL += " tC.InsureeID in (SELECT InsureeID FROM tblFamilies WHERE LocationID=@LocationID)"
+            sSQL += " AND C.InsureeID in (SELECT InsureeID FROM tblFamilies WHERE LocationID=@LocationID)"
         End If
-        sSQL += " GROUP BY tS.ServName, tCS.PriceAsked"
+        sSQL += " GROUP BY S.ServName, CS.PriceAsked"
         data.setSQLCommand(sSQL, CommandType.Text, timeout:=0)
         data.params("@FromDate", SqlDbType.Date, DateFrom)
         data.params("@DateTo", SqlDbType.Date, DateTo)
