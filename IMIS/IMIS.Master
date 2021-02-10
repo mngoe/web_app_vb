@@ -690,7 +690,7 @@
                                                                               Text='<%$ Resources:Resource,L_AGE %>'>
                                                                             </asp:Label>
                                                                            </td>
-                                                                        <td class="SearchLabel">
+                                                                        <td class="SearchLabel" Style="display: none">
                                                                             <asp:Label
                                                                                 ID="L_FSPREGION"
                                                                                 runat="server"
@@ -698,7 +698,7 @@
                                                                                 Text='<%$ Resources:Resource,L_FSPREGION %>'>
                                                                             </asp:Label>
                                                                         </td>
-                                                                        <td class="SearchDetails">
+                                                                        <td class="SearchDetails" Style="display: none">
                                                                             <asp:Label ID="regionalFSP" Text='<%#Eval("RegionOfFSP")%>' runat="server"></asp:Label>
                                                                         </td>
                                                                     </tr>
@@ -729,7 +729,7 @@
                                                                                 Text='<%$ Resources:Resource,L_AGE %>'>
                                                                             </asp:Label>
                                                                         </td>
-                                                                        <td class="SearchLabel">
+                                                                        <td class="SearchLabel" Style="display: none">
                                                                             <asp:Label
                                                                                 ID="L_FSPDISTRICT"
                                                                                 runat="server"
@@ -737,7 +737,7 @@
                                                                                 Text='<%$ Resources:Resource,L_FSPDISTRICT %>'>
                                                                             </asp:Label>
                                                                         </td>
-                                                                        <td class="SearchDetails">
+                                                                        <td class="SearchDetails" Style="display: none">
                                                                             <asp:Label ID="district_of_fsp" Text='<%#Eval("DistrictOfFSP")%>' runat="server"></asp:Label>
                                                                         </td>
                                                                     </tr>
@@ -761,14 +761,14 @@
                                                                         </td>
                                                                         <td class="ReadOnlyText" align="left">
                                                                            <asp:Label ID="age" Text='<%#Eval("Age")%>' runat="server"></asp:Label>
-                                                                         <td class="SearchLabel">
+                                                                         <td class="SearchLabel" Style="display: none">
                                                                             <asp:Label
                                                                                 ID="L_FSPLEVEL"
                                                                                 runat="server"
                                                                                 Text='<%$ Resources:Resource,L_FSPLEVEL %>'>
                                                                             </asp:Label>
                                                                         </td>
-                                                                        <td class="ReadOnlyText">
+                                                                        <td class="ReadOnlyText" Style="display: none">
                                                                              <asp:Label ID="hfLevel" Text='<%#Eval("HFLevel")%>' runat="server"></asp:Label>
                                                                         </td>
                                                                     </tr>
@@ -792,14 +792,14 @@
                                                                             </asp:Label>
                                                                         </td>
                                                                         <td class="SearchDetails"></td>
-                                                                        <td class="SearchLabel">
+                                                                        <td class="SearchLabel" Style="display: none">
                                                                             <asp:Label
                                                                                 ID="L_FSP"
                                                                                 runat="server"
                                                                                 Text='<%$ Resources:Resource,L_FSP %>'>
                                                                             </asp:Label>
                                                                         </td>
-                                                                        <td class="SearchDetails">
+                                                                        <td class="SearchDetails" Style="display: none">
                                                                              <asp:Label ID="fsp" Text='<%#Eval("FirstServicePoint")%>' runat="server"></asp:Label>
                                                                         </td>
                                                                     </tr>
@@ -827,10 +827,10 @@
                                                             <asp:BoundField DataField="ProductName" HeaderText="<%$ Resources:Resource,L_PRODUCTNAME %>" />
                                                             <asp:BoundField DataField="ExpiryDate" DataFormatString="{0:d}" HeaderText="<%$ Resources:Resource,L_EXPIREDATE %>" />
                                                             <asp:BoundField DataField="PolicyStatus" HeaderText="<%$ Resources:Resource,L_STATUS %>" ItemStyle-HorizontalAlign="Center" />
-                                                            <asp:BoundField DataField="Ded1" HeaderText="<%$ Resources:Resource,L_HDEDUCTION %>" ItemStyle-HorizontalAlign="Right" />
-                                                            <asp:BoundField DataField="Ded2" HeaderText="<%$ Resources:Resource,L_NHDEDUCTION %>" ItemStyle-HorizontalAlign="Right" />
-                                                            <asp:BoundField DataField="Ceiling1" HeaderText="<%$ Resources:Resource,L_HCEILING %>" ItemStyle-HorizontalAlign="Right" />
-                                                            <asp:BoundField DataField="Ceiling2" HeaderText="<%$ Resources:Resource,L_NHCEILING %>" ItemStyle-HorizontalAlign="Right" />
+                                                            <%--<asp:BoundField DataField="Ded1" HeaderText="<%$ Resources:Resource,L_HDEDUCTION %>" ItemStyle-HorizontalAlign="Right"/>--%>
+                                                            <%--<asp:BoundField DataField="Ded2" HeaderText="<%$ Resources:Resource,L_NHDEDUCTION %>" ItemStyle-HorizontalAlign="Right"/>--%>
+                                                            <%--<asp:BoundField DataField="Ceiling1" HeaderText="<%$ Resources:Resource,L_HCEILING %>" ItemStyle-HorizontalAlign="Right"/>--%>
+                                                            <%--<asp:BoundField DataField="Ceiling2" HeaderText="<%$ Resources:Resource,L_NHCEILING %>" ItemStyle-HorizontalAlign="Right"/>--%>
                                                         </Columns>
                                                     </asp:GridView>
                                                 </td>
