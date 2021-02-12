@@ -1646,7 +1646,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!TotalAmount.Value</Value>
+                                  <Value>=Fields!QtyApproved.Value * Fields!PriceAsked.Value</Value>
                                   <Style>
                                     <Format>#,0;(#,0)</Format>
                                   </Style>
@@ -1724,7 +1724,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!TotalAmount.Value)</Value>
+                                  <Value>=Sum(Fields!QtyApproved.Value*Fields!PriceAsked.Value)</Value>
                                   <Style>
                                     <Format>#,0;(#,0)</Format>
                                   </Style>

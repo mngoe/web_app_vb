@@ -56,8 +56,8 @@ Partial Public Class Reports
         RoleID = imisgen.getRoleId(Session("User"))
         If IsPostBack Then Return
         RunPageSecurity()
-        '''selectedReport = 1 ' first report type selected by default
-        selectedReport = 24 '''on selection notre rapport par défaut
+        selectedReport = 1 ' first report type selected by default
+        'selectedReport = 24 '''on selection notre rapport par défaut
         'Try
         FillRegions()
         FillRegionsWoNational()
@@ -1556,25 +1556,26 @@ Partial Public Class Reports
             CacheCriteria()
 
             Dim SelectedValueID As Integer = lstboxReportSelector.SelectedValue
-            'If SelectedValueID = 1 Then
-            '    If Val(ddlProduct.SelectedValue) = 0 Then
-            '        lblMsg.Text = imisgen.getMessage("M_PLEASESELECTAPRODUCT")
-            '        Return
-            '    End If
-            'End If
             If SelectedValueID = 1 Then
+                If Val(ddlProduct.SelectedValue) = 0 Then
+                    lblMsg.Text = imisgen.getMessage("M_PLEASESELECTAPRODUCT")
+                    Return
+                End If
+            End If
+            '''If SelectedValueID = 24 Then
+            If SelectedValueID = 10 Then
                 If Val(ddlHF.SelectedValue) = 0 Then
                     lblMsg.Text = imisgen.getMessage("M_PLEASESELECTHEALTHFACILITY")
                     Return
                 End If
             End If
 
-            If SelectedValueID = 6 Then
-                If Val(ddlProductStrict.SelectedValue) = 0 Then
-                    lblMsg.Text = imisgen.getMessage("M_PLEASESELECTAPRODUCT")
-                    Return
-                End If
-            End If
+            'If SelectedValueID = 6 Then
+            '    If Val(ddlProductStrict.SelectedValue) = 0 Then
+            '        lblMsg.Text = imisgen.getMessage("M_PLEASESELECTAPRODUCT")
+            '        Return
+            '    End If
+            'End If
             If SelectedValueID = 3 Then
                 If Val(ddlRegion.SelectedValue) = 0 Then
                     lblMsg.Text = imisgen.getMessage("M_PLEASESELECTAREGION")
@@ -1582,7 +1583,7 @@ Partial Public Class Reports
                 End If
             End If
 
-            If SelectedValueID = 2 Or SelectedValueID = 22 Then
+            If SelectedValueID = 2 Or SelectedValueID = 22 Or SelectedValueID = 10 Then
                 If Val(ddlRegionWoNational.SelectedValue) = 0 Then
                     lblMsg.Text = imisgen.getMessage("M_PLEASESELECTAREGION")
                     Return
@@ -1609,7 +1610,8 @@ Partial Public Class Reports
                 End If
             End If
 
-            If SelectedValueID = 23 Then
+            '''If SelectedValueID = 23 Then
+            If SelectedValueID = 9 Then
                 If txtInsuranceNumber.Text = "" Then
                     lblMsg.Text = imisgen.getMessage("L_PLEASEENTERINSURANCENUMBER")
                     Return
@@ -1619,7 +1621,8 @@ Partial Public Class Reports
                     Return
                 End If
             End If
-            If SelectedValueID = 13 Then
+            '''If SelectedValueID = 13 Then
+            If SelectedValueID = 6 Then
                 If ddlScope.SelectedIndex = 0 Then
                     lblMsg.Text = imisgen.getMessage("L_PLEASESELECTSCOPE")
                     Return
@@ -1642,7 +1645,49 @@ Partial Public Class Reports
 
             '****************
 
-
+            '''''''''ATTENTION
+            If SelectedValueID = 1 Then
+                If Not GetIndicatorsReportData(1) Then Exit Sub
+                Session("Report") = dt
+                url = "Report.aspx?r=pip&tid=1"
+            ElseIf SelectedValueID = 2 Then
+                GetPrimaryIndicatorsClaimsData()
+                Session("Report") = dt
+                url = "Report.aspx?r=pic&tid=2"
+            ElseIf SelectedValueID = 3 Then
+                CreateDerivedIndicators()
+                Session("Report") = ds
+                url = "Report.aspx?r=di&tid=3"
+            ElseIf SelectedValueID = 4 Then
+               GetUserActivityData()
+                Session("Report") = dt
+                url = "Report.aspx?r=ua&tid=7"
+            ElseIf SelectedValueID = 5 Then
+                GetStatusofRegistersData()
+                Session("Report") = dt
+                url = "Report.aspx?r=sr&tid=9"
+            ElseIf SelectedValueID = 6 Then
+                If Not GetClaimOverview() Then Exit Sub
+                Session("Report") = dt
+                url = "Report.aspx?r=co&tid=13"
+            ElseIf SelectedValueID = 7 Then
+                If Not GetFamiliesInsureesOverview() Then Exit Sub
+                Session("Report") = dt
+                url = "Report.aspx?r=fio&tid=15"
+            ElseIf SelectedValueID = 8 Then
+                GetIndicatorsReportData(2)
+                Session("Report") = dt
+                url = "Report.aspx?r=epi&tid=8"
+            ElseIf SelectedValueID = 9 Then
+               If Not ClaimHistoryReport() Then Exit Sub
+                Session("Report") = dt
+                url = "Report.aspx?r=chr&tid=23"
+            ElseIf SelectedValueID = 10 Then
+                 GetServicePerformanceData()
+                Session("Report") = dt
+                url = "Report.aspx?r=sp&tid=24"
+            End If
+            
             'If SelectedValueID = 1 Then
             '    If Not GetIndicatorsReportData(1) Then Exit Sub
             '    Session("Report") = dt
@@ -1740,11 +1785,6 @@ Partial Public Class Reports
             '    Session("Report") = dt
             '    url = "Report.aspx?r=sp&tid=24"
             'End If
-            If SelectedValueID = 1 Then
-                GetServicePerformanceData()
-                Session("Report") = dt
-                url = "Report.aspx?r=sp&tid=24"
-            End If
 
 
         Catch ex As Exception
