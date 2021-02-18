@@ -242,7 +242,7 @@ Public Class Family
             If dtCurrentRegion.Rows.Count = 1 Then
                 FillCurrentDistricts()
             End If
-            txtBirthDate.Text = "01/01/1900"
+            'txtBirthDate.Text = "01/01/1900"
             'ddlGender.SelectedValue = "O"
             If Not eFamily.FamilyID = 0 Then
                 Family.LoadFamily(eFamily)

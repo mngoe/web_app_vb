@@ -202,7 +202,7 @@
     <value>List Beneficiaries Found</value>
   </data>
   <data name="M_NOPOLICIES" xml:space="preserve">
-    <value>No Current Policies.</value>
+    <value>No Current Health Program.</value>
   </data>
   <data name="L_FAMILYPANEL" xml:space="preserve">
     <value>Beneficiary Details</value>
@@ -2383,7 +2383,7 @@
     <value>Browse</value>
   </data>
   <data name="L_POLICIESFOUND" xml:space="preserve">
-    <value>Policies Found</value>
+    <value>Health Program Found</value>
   </data>
   <data name="L_POLICYHOLDER_" xml:space="preserve">
     <value>Policy Holder</value>

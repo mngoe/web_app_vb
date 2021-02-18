@@ -62,7 +62,7 @@
 		<value>Assurés</value>
 	</data>
 	<data name="L_POLICIES" xml:space="preserve">
-		<value>Polices</value>
+		<value>Sélectionner un programme de santé</value>
 	</data>
 	<data name="B_ADDINSUREE" xml:space="preserve">
 		<value>Ajouter un assuré</value>
@@ -143,7 +143,7 @@
 		<value>Familles/Groupes trouvé(e)s</value>
 	</data>
 	<data name="M_NOPOLICIES" xml:space="preserve">
-		<value>Aucune police en cours</value>
+		<value>Aucun programme de santé en cours</value>
 	</data>
 	<data name="L_FAMILYPANEL" xml:space="preserve">
 		<value>Détails famille/groupe</value>
@@ -2324,7 +2324,7 @@
 		<value>Chercher</value>
 	</data>
 	<data name="L_POLICIESFOUND" xml:space="preserve">
-		<value>Polices trouvées</value>
+		<value>Programme de santé trouvés</value>
 	</data>
 	<data name="L_POLICYHOLDER_" xml:space="preserve">
 		<value>Titulaire de la police d'assurance</value>

@@ -143,7 +143,7 @@
 		<value>Households/Groups Found</value>
 	</data>
 	<data name="M_NOPOLICIES" xml:space="preserve">
-		<value>No Current Policies.</value>
+		<value>No Current Health Program.</value>
 	</data>
 	<data name="L_FAMILYPANEL" xml:space="preserve">
 		<value>Household/Group Details</value>
