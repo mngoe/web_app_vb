@@ -136,7 +136,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <td class="FormLabel">
                                             <asp:Label ID="L_CHF" runat="server" Text='<%$ Resources:Resource,L_CHFID %>'></asp:Label></td>
                                         <td class="DataEntry">
-                                            <asp:TextBox ID="txtCHFID" runat="server" MaxLength="12" Width="150px"></asp:TextBox></td>
+                                            <asp:TextBox ID="txtCHFID" runat="server" MaxLength = "250" Width="150px"></asp:TextBox></td>
                                         <td class="FormLabel">
                                             <asp:Label
                                                 ID="L_BIRTHDATEFROM"

@@ -730,7 +730,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                    <asp:Label ID="lblCHFID" runat="server" Text='<%$ Resources:Resource,L_CHFID %>' ></asp:Label>               
                </td>
                <td class ="DataEntry">
-                   <asp:Textbox ID="txtCHFIDData" runat="server" CssClass="check" size="11" MaxLength="12" 
+                   <asp:Textbox ID="txtCHFIDData" runat="server" CssClass="check" size="11" MaxLength = "250"
                        AutoPostBack ="true" Width="125px" ></asp:Textbox>
                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" 
                        runat="server" ErrorMessage="*" ControlToValidate="txtCHFIDData" 

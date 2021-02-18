@@ -105,7 +105,7 @@ title='<%$ Resources:Resource,L_Family%>'%>
                 <td class ="DataEntry">
                    <asp:TextBox 
                         ID="txtCHFID" 
-                        runat="server" maxlength="12">
+                        runat="server" MaxLength = "250">
                     </asp:TextBox>
                     </td>
                 <td class="FormLabel">

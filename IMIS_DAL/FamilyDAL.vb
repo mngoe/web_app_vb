@@ -136,7 +136,7 @@ Public Class FamilyDAL
         data.params("@ConfirmationNo", SqlDbType.NVarChar, 12, eFamily.ConfirmationNo)
 
 
-        data.params("@CHFID", SqlDbType.NVarChar, 12, eFamily.tblInsuree.CHFID)
+        data.params("@CHFID", SqlDbType.NVarChar, 250, eFamily.tblInsuree.CHFID)
         data.params("@LastName", SqlDbType.NVarChar, 100, eFamily.tblInsuree.LastName)
         data.params("@OtherNames", SqlDbType.NVarChar, 100, eFamily.tblInsuree.OtherNames)
         data.params("@DOB", SqlDbType.SmallDateTime, eFamily.tblInsuree.DOB)
@@ -306,7 +306,7 @@ Public Class FamilyDAL
         data.params("@DOBTo", SqlDbType.Date, eFamily.tblInsuree.DOBTo)
         data.params("@LastName", SqlDbType.NVarChar, 100, eFamily.tblInsuree.LastName & "%")
         data.params("@OtherNames", SqlDbType.NVarChar, 100, eFamily.tblInsuree.OtherNames & "%")
-        data.params("@CHFID", SqlDbType.NVarChar, 12, eFamily.tblInsuree.CHFID & "%")
+        data.params("@CHFID", SqlDbType.NVarChar, 250, eFamily.tblInsuree.CHFID & "%")
 
         data.params("@Gender", SqlDbType.Char, 1, eFamily.tblInsuree.Gender & "%")
         data.params("@Marital", SqlDbType.Char, 1, eFamily.tblInsuree.Marital & "%")

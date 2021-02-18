@@ -46,7 +46,7 @@ Public Class InsureeDAL
     Public Sub GetInsureesByCHFID(ByRef einsuree As IMIS_EN.tblInsuree)
         'HVH CHANGED relationhip !!
         data.setSQLCommand("select FamilyID,InsureeId,CHFID,LastName,OtherNames,ishead,isOffline,Relationship,Profession,Education,Email  from tblInsuree where  CHFID = @CHFID and validityto is null", CommandType.Text)
-        data.params("@CHFID", SqlDbType.NVarChar, 12, einsuree.CHFID)
+        data.params("@CHFID", SqlDbType.NVarChar, 250, einsuree.CHFID)
         'HVH CHANGED relationhip !!
         Dim dr As DataRow = data.Filldata()(0)
         If Not dr Is Nothing Then
@@ -188,7 +188,7 @@ Public Class InsureeDAL
         data.params("@DOBTo", SqlDbType.Date, eInsuree.DOBTo)
         data.params("@LastName", SqlDbType.NVarChar, 100, eInsuree.LastName)
         data.params("@OtherNames", SqlDbType.NVarChar, 100, eInsuree.OtherNames)
-        data.params("@CHFID", SqlDbType.NVarChar, 12, eInsuree.CHFID)
+        data.params("@CHFID", SqlDbType.NVarChar, 250, eInsuree.CHFID)
         data.params("@Gender", SqlDbType.Char, 1, eInsuree.Gender)
         data.params("@Marital", SqlDbType.Char, 1, eInsuree.Marital)
         data.params("@Phone", SqlDbType.NVarChar, 50, eInsuree.Phone)
@@ -294,7 +294,7 @@ Public Class InsureeDAL
 
         data.setSQLCommand(sSQL, CommandType.Text)
         data.params("@FamilyId", SqlDbType.Int, eInsuree.tblFamilies1.FamilyID)
-        data.params("@CHFID", SqlDbType.NVarChar, 12, eInsuree.CHFID)
+        data.params("@CHFID", SqlDbType.NVarChar, 250, eInsuree.CHFID)
         data.params("@LastName", SqlDbType.NVarChar, 100, eInsuree.LastName)
         data.params("@OtherNames", SqlDbType.NVarChar, 100, eInsuree.OtherNames)
         data.params("@DOB", SqlDbType.SmallDateTime, eInsuree.DOB)
@@ -333,7 +333,7 @@ Public Class InsureeDAL
                            " UPDATE [tblInsuree] SET [CHFID] = @CHFID,[LastName] = @LastName,[OtherNames] = @OtherNames,[DOB] = @DOB,[Gender] = @Gender ,[Marital] = @Marital,[passport] = @passport,[Phone] = @Phone,[PhotoDate] = @PhotoDate,[CardIssued] = @CardIssued,isOffline=@isOffline,[ValidityFrom] = GetDate(),[AuditUserID] = @AuditUserID ,[Relationship] = @Relationship, [Profession] = @Profession, [Education] = @Education,[Email] = @Email ,TypeOfId = @TypeOfId,HFID = @HFID, CurrentAddress = @CurrentAddress, CurrentVillage = @CurrentVillage, GeoLocation = @GeoLocation" & _
                            " WHERE InsureeId = @InsureeId", CommandType.Text)
         data.params("@InsureeID", SqlDbType.Int, eInsuree.InsureeID)
-        data.params("@CHFID", SqlDbType.NVarChar, 12, eInsuree.CHFID)
+        data.params("@CHFID", SqlDbType.NVarChar, 250, eInsuree.CHFID)
         data.params("@LastName", SqlDbType.NVarChar, 100, eInsuree.LastName)
         data.params("@OtherNames", SqlDbType.NVarChar, 100, eInsuree.OtherNames)
         data.params("@DOB", SqlDbType.SmallDateTime, eInsuree.DOB)
@@ -405,7 +405,7 @@ Public Class InsureeDAL
             data.setSQLCommand(sSQL, CommandType.Text)
 
             data.params("@InsureeID", SqlDbType.Int, ePhotos.InsureeID)
-            data.params("@CHFID", SqlDbType.NVarChar, 12, ePhotos.CHFID)
+            data.params("@CHFID", SqlDbType.NVarChar, 250, ePhotos.CHFID)
             data.params("@PhotoFolder", SqlDbType.NVarChar, 255, ePhotos.PhotoFolder)
             data.params("@PhotoFileName", SqlDbType.NVarChar, 255, ePhotos.PhotoFileName)
             data.params("@OfficerID", SqlDbType.Int, ePhotos.OfficerID)
@@ -452,7 +452,7 @@ Public Class InsureeDAL
         sSQL += " And D.ValidityTo Is NULL"
         sSQL += " And R.ValidityTo Is NULL"
         data.setSQLCommand(sSQL, CommandType.Text)
-        data.params("@CHFID", SqlDbType.NVarChar, 12, CHFID)
+        data.params("@CHFID", SqlDbType.NVarChar, 250, CHFID)
         data.params("@UpdatedFolder", SqlDbType.NVarChar, 100, UpdatedFolder)
         Return data.Filldata
 
@@ -528,7 +528,7 @@ Public Class InsureeDAL
     Public Function GetInsureeProductDetails(ByVal oDict As Dictionary(Of String, Object), ByVal CHFID As String, ByVal ItemCode As String, ByVal ServiceCode As String) As DataTable
         Dim Query As String = "uspServiceItemEnquiry"
         data.setSQLCommand(Query, CommandType.StoredProcedure)
-        data.params("@CHFID", SqlDbType.NVarChar, 12, CHFID)
+        data.params("@CHFID", SqlDbType.NVarChar, 250, CHFID)
         data.params("@ItemCode", SqlDbType.NVarChar, 6, ItemCode)
         data.params("@ServiceCode", SqlDbType.NVarChar, 6, ServiceCode)
         data.params("@MinDateService", SqlDbType.Date, Nothing, ParameterDirection.Output)

@@ -822,7 +822,7 @@ Title = '<%$ Resources:Resource,L_CLAIMOVERVIEW %>'%>
                 </td>
                 <td class="DataEntry">
                   <%--<asp:DropDownList ID="ddlClaimCode" runat="server" ></asp:DropDownList>--%>
-                    <asp:TextBox ID="txtCHFID" runat="server" maxlength="12"></asp:TextBox>
+                    <asp:TextBox ID="txtCHFID" runat="server" MaxLength = "250"></asp:TextBox>
                 </td>
                 <td class="FormLabel">
                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:Resource,L_CLAIMCODE%>"></asp:Label>

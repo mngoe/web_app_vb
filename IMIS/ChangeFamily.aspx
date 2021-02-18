@@ -338,7 +338,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                         </td>
                         <td class ="DataEntry">
                             <asp:TextBox ID="txtCHFIDToChange" runat="server"  Width="150px"  
-                                MaxLength = "12" AutoPostBack="false"></asp:TextBox>
+                                MaxLength = "250" AutoPostBack="false"></asp:TextBox>
                             
                         </td>
                         
@@ -384,7 +384,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                             <asp:Label ID="L_CHFID2" runat="server" Text='<%$ Resources:Resource,L_ENTERCHFIDOFINSUREE %>'></asp:Label>
                         </td>
                         <td class ="DataEntry">
-                            <asp:TextBox ID="txtCHFIDToMove" runat="server"  MaxLength = "12" 
+                            <asp:TextBox ID="txtCHFIDToMove" runat="server" MaxLength = "250"
                                 Width="130px" ></asp:TextBox>
                         </td>
                         <td>
