@@ -157,7 +157,7 @@
     <value>Health District</value>
   </data>
   <data name="L_CHFID" xml:space="preserve">
-    <value>TARV/CPN Code</value>
+    <value>Beneficiary's Code</value>
   </data>
   <data name="L_POVERTY" xml:space="preserve">
     <value>Poverty Status</value>
@@ -3055,7 +3055,7 @@
     <value>Adj.Qty</value>
   </data>
   <data name="R_CHFID" xml:space="preserve">
-    <value>TARV/CPN Code</value>
+    <value>Beneficiary's Code</value>
   </data>
   <data name="R_CLAIMADMINNAME" xml:space="preserve">
     <value>Claim Admin</value>
@@ -4950,7 +4950,7 @@ adults/children)
     <value>Gender</value>
   </data>
   <data name="L_SEARCHFORCHFNUMBER" xml:space="preserve">
-    <value>Search  TARV/CPN Code</value>
+    <value>Search Beneficiary's Code</value>
   </data>
   <data name="T_CHARITY" xml:space="preserve">
     <value>Charity</value>

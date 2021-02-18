@@ -98,7 +98,7 @@
 		<value>District de santé</value>
 	</data>
 	<data name="L_CHFID" xml:space="preserve">
-		<value>TARV/CPN Code</value>
+		<value>Code du bénéficiaire</value>
 	</data>
 	<data name="L_POVERTY" xml:space="preserve">
 		<value>Niveau de pauvreté</value>
@@ -158,7 +158,7 @@
 		<value>Veuillez mentionner si une carte de bénéficiaire a été délivrée</value>
 	</data>
 	<data name="V_CHFID" xml:space="preserve">
-		<value>Veuillez sélectionner un TARV/CPN Code</value>
+		<value>Veuillez sélectionner un Code du bénéficiaire</value>
 	</data>
 	<data name="V_DISTRICT" xml:space="preserve">
 		<value>Veuillez sélectionner un district</value>
@@ -317,7 +317,7 @@
 		<value>Admin</value>
 	</data>
 	<data name="L_INSUREESANDPOLICIES" xml:space="preserve">
-		<value>Assurés et polices</value>
+		<value>Enregistrements</value>
 	</data>
 	<data name="L_ITEMCODE" xml:space="preserve">
 		<value>Code produit méd.</value>
@@ -980,10 +980,10 @@
 		<value>Déplacer</value>
 	</data>
 	<data name="L_ENTERCHFIDOFINSUREE" xml:space="preserve">
-		<value>Entrer le TARV/CPN Code de l'assuré pour continuer</value>
+		<value>Entrer le Code du bénéficiaire de l'assuré pour continuer</value>
 	</data>
 	<data name="L_ENTERNEWHEADCHFID" xml:space="preserve">
-		<value>Entrer le TARV/CPN Code du nouveau chef de famille/groupe</value>
+		<value>Entrer le Code du bénéficiaire du nouveau chef de famille/groupe</value>
 	</data>
 	<data name="M_PREMIUMCOVEREDPROMPT" xml:space="preserve">
 		<value>Le tarif de la police est couvert &lt;br/&gt; Souhaitez-vous toujours ajouter un paiement?</value>
@@ -1028,19 +1028,19 @@
 		<value>La combinaison de la valeur plafond de la franchise renseignée n'est pas correcte</value>
 	</data>
 	<data name="M_CANNOTCHANGEFAMILYHEAD" xml:space="preserve">
-		<value>Le TARV/CPN Code sélectionné est déjà attribué au un chef de famille et ne peut pas être attribué au chef de famille/groupe</value>
+		<value>Le Code du bénéficiaire sélectionné est déjà attribué au un chef de famille et ne peut pas être attribué au chef de famille/groupe</value>
 	</data>
 	<data name="M_CHFNUMBERFEWCHARACTERS" xml:space="preserve">
-		<value>Le TARV/CPN Code est court, il devrait être de 9 caractères</value>
+		<value>Le Code du bénéficiaire est court, il devrait être de 9 caractères</value>
 	</data>
 	<data name="M_CHFNUMBERMEMBEREXISTS" xml:space="preserve">
-		<value>Le chef de famille/groupe avec ce TARV/CPN Code existe déjà dans le système</value>
+		<value>Le chef de famille/groupe avec ce Code du bénéficiaire existe déjà dans le système</value>
 	</data>
 	<data name="M_CHFNUMBERNOTEXISTS" xml:space="preserve">
-		<value>Le TARV/CPN Code sélectionné n'existe pas!</value>
+		<value>Le Code du bénéficiaire sélectionné n'existe pas!</value>
 	</data>
 	<data name="M_INVALIDCHFNUMBER" xml:space="preserve">
-		<value>Le TARV/CPN Code sélectionné n'est pas valide!</value>
+		<value>Le Code du bénéficiaire sélectionné n'est pas valide!</value>
 	</data>
 	<data name="L_ADULTPREMIUM" xml:space="preserve">
 		<value>Cotisation adulte</value>
@@ -1082,7 +1082,7 @@
 		<value>Recherche</value>
 	</data>
 	<data name="M_ENTERCHFNUMBER" xml:space="preserve">
-		<value>Veuillez entrer un TARV/CPN Code</value>
+		<value>Veuillez entrer un Code du bénéficiaire</value>
 	</data>
 	<data name="P_FINDUSERS" xml:space="preserve">
 		<value>Tableau de bord de l'utilisateur</value>
@@ -1121,7 +1121,7 @@
 		<value>Valeur de la police avec la date de souscription:</value>
 	</data>
 	<data name="M_NOTVALIDCHFNUMBER" xml:space="preserve">
-		<value>TARV/CPN Code invalide</value>
+		<value>Code du bénéficiaire invalide</value>
 	</data>
 	<data name="M_VILLAGESINWARD" xml:space="preserve">
 		<value>Veuillez d'abord supprimer le village dans la municipalité</value>
@@ -1679,7 +1679,7 @@
 		<value>Veuillez ajouter au moins un soin ou un produit médical pour continuer</value>
 	</data>
 	<data name="M_CHFIDNOTFOUND" xml:space="preserve">
-		<value>TARV/CPN Code introuvable!</value>
+		<value>Code du bénéficiaire introuvable!</value>
 	</data>
 	<data name="M_CLAIMCODEEXISTS" xml:space="preserve">
 		<value>Ce code de prestation existe déjà</value>
@@ -2057,7 +2057,7 @@
 		<value>Type de paiement</value>
 	</data>
 	<data name="M_CANNOTCHANGECHFNOISHEADFMLY" xml:space="preserve">
-		<value>Ne peut pas changer, le TARV/CPN Code sélectionné est déjà Chef de famille/groupe</value>
+		<value>Ne peut pas changer, le Code du bénéficiaire sélectionné est déjà Chef de famille/groupe</value>
 	</data>
 	<data name="M_FAMILYANDHEADOFFLY_" xml:space="preserve">
 		<value>Famille/Groupe et chef de famille/groupe</value>
@@ -2087,7 +2087,7 @@
 		<value>Cotisation non supprimée</value>
 	</data>
 	<data name="M_SELECTEDCHFNONOTEXIT" xml:space="preserve">
-		<value>Le TARV/CPN Code sélectionné n'existe pas!</value>
+		<value>Le Code du bénéficiaire sélectionné n'existe pas!</value>
 	</data>
 	<data name="L_AMOUNT" xml:space="preserve">
 		<value>Montant</value>
@@ -2996,7 +2996,7 @@
 		<value>Ajuster la quantité</value>
 	</data>
 	<data name="R_CHFID" xml:space="preserve">
-		<value>TARV/CPN Code</value>
+		<value>Code du bénéficiaire</value>
 	</data>
 	<data name="R_CLAIMADMINNAME" xml:space="preserve">
 		<value>Gestionnaire de la prestation</value>
@@ -4533,7 +4533,7 @@
 		<value>Assuré</value>
 	</data>
 	<data name="R_INSUREEANDPOLICIES" xml:space="preserve">
-		<value>Assurés et polices</value>
+		<value>Enregistrements</value>
 	</data>
 	<data name="R_INSUREESWITHOUTPHOTOS" xml:space="preserve">
 		<value>Assurés sans photos</value>
@@ -4890,7 +4890,7 @@
 		<value>Genre</value>
 	</data>
 	<data name="L_SEARCHFORCHFNUMBER" xml:space="preserve">
-		<value>Recherche du TARV/CPN Code</value>
+		<value>Recherche le Code du bénéficiaire</value>
 	</data>
 	<data name="T_CHARITY" xml:space="preserve">
 		<value>Charity</value>

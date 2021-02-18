@@ -318,9 +318,9 @@ In case of dispute arising out or in relation to the use of the program, it is s
                             <td class="DataEntry">
                                 <asp:TextBox ID="txtCHFID" runat="server" AutoPostBack="True" CssClass="numbersOnly" MaxLength = "250" Width="150px"></asp:TextBox>
 
-                                <%--<asp:RequiredFieldValidator ID="RequiredFieldCHFID0" runat="server" ControlToValidate="txtCHFID" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic"
+                                <asp:RequiredFieldValidator ID="RequiredFieldCHFID0" runat="server" ControlToValidate="txtCHFID" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic"
                                         Text='*'>
-                                </asp:RequiredFieldValidator>--%>
+                                </asp:RequiredFieldValidator>
                                 <td></td>
                                 <td></td>
                             </td>

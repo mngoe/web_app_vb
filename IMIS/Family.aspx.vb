@@ -243,6 +243,7 @@ Public Class Family
                 FillCurrentDistricts()
             End If
             'txtBirthDate.Text = "01/01/1900"
+            txtBirthDate.Text = "JJ/MM/AAAA"
             'ddlGender.SelectedValue = "O"
             If Not eFamily.FamilyID = 0 Then
                 Family.LoadFamily(eFamily)

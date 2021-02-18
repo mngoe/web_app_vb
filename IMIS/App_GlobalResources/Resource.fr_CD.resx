@@ -317,7 +317,7 @@
 		<value>Admin</value>
 	</data>
 	<data name="L_INSUREESANDPOLICIES" xml:space="preserve">
-		<value>Assurés et polices</value>
+		<value>Enregistrements</value>
 	</data>
 	<data name="L_ITEMCODE" xml:space="preserve">
 		<value>Code produit</value>
@@ -4533,7 +4533,7 @@
 		<value>Assuré</value>
 	</data>
 	<data name="R_INSUREEANDPOLICIES" xml:space="preserve">
-		<value>Assurés et polices</value>
+		<value>Enregistrements</value>
 	</data>
 	<data name="R_INSUREESWITHOUTPHOTOS" xml:space="preserve">
 		<value>Assurés sans photos</value>

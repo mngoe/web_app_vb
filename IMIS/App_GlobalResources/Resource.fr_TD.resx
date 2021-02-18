@@ -317,7 +317,7 @@
 		<value>Admin</value>
 	</data>
 	<data name="L_INSUREESANDPOLICIES" xml:space="preserve">
-		<value>Assurés et polices</value>
+		<value>Enregistrements</value>
 	</data>
 	<data name="L_ITEMCODE" xml:space="preserve">
 		<value>Code produit méd.</value>
@@ -3731,7 +3731,7 @@
 		<value>La valeur ne peut pas excéder 100%</value>
 	</data>
 	<data name="M_NOWARD" xml:space="preserve">
-		<value>Aucune Municipalité trouvée</value>
+		<value>Aucun Village/Quartier trouvée</value>
 	</data>
 	<data name="L_FSPREGION" xml:space="preserve">
 		<value>Région du PPS</value>
@@ -3860,13 +3860,13 @@
 		<value>Code de district inclus dans le fichier existe déjà dans la base de donnée</value>
 	</data>
 	<data name="M_DISTRICTCODENOTEXISTSINEXCELORDB" xml:space="preserve">
-		<value>Le code du district spécifié dans municipalité n'existe ni dans le fichier ni dans la base de donnée</value>
+		<value>Le code du district spécifié dans le village/quartier n'existe ni dans le fichier ni dans la base de donnée</value>
 	</data>
 	<data name="M_DUPLICATEDISTRICTCODEINEXCEL" xml:space="preserve">
 		<value>Il y a un code de district en double dans le fichier</value>
 	</data>
 	<data name="M_DUPLICATEMUNICIPALITYCODEINEXCEL" xml:space="preserve">
-		<value>Il y a une municipalité en double dans le fichier</value>
+		<value>Il y a un village/quartier en double dans le fichier</value>
 	</data>
 	<data name="M_DUPLICATEREGIONCODEINEXCEL" xml:space="preserve">
 		<value>Il y a un code de région en double dans le fichier</value>
@@ -3893,7 +3893,7 @@
 		<value>Nom ou Code de district manquant dans le fichier Excel</value>
 	</data>
 	<data name="M_MISSINGMUNICIPALITYCODEORNAMEINEXCEL" xml:space="preserve">
-		<value>Nom ou Code de municipalité manquant dans le fichier Excel</value>
+		<value>Nom ou Code du Village/Quartier manquant dans le fichier Excel</value>
 	</data>
 	<data name="M_MISSINGREGIONCODEORNAMEINEXCEL" xml:space="preserve">
 		<value>Nom ou Code de région manquant dans le fichier</value>
@@ -3902,10 +3902,10 @@
 		<value>Nom ou Code de village manquant dans le fichier Excel</value>
 	</data>
 	<data name="M_MUNICIPALITYCODEEXISTSINDB" xml:space="preserve">
-		<value>Code de municipalité du fichier déjà dans la base de donnée</value>
+		<value>Code du Village/Quartier du fichier déjà dans la base de donnée</value>
 	</data>
 	<data name="M_MUNICIPALITYCODENOTEXISTSINEXCELORDB" xml:space="preserve">
-		<value>Municipalité du ficher  Village n'existe ni dans la base de donnée in dans le fichier municipalité</value>
+		<value>Village/Quartier du ficher  Village n'existe ni dans la base de donnée in dans le fichier municipalité</value>
 	</data>
 	<data name="M_REGIONCODEEXISTSINDB" xml:space="preserve">
 		<value>Code de région dans le fichier existe déjà dans la base de donnée</value>
@@ -4533,7 +4533,7 @@
 		<value>Assuré</value>
 	</data>
 	<data name="R_INSUREEANDPOLICIES" xml:space="preserve">
-		<value>Assurés et polices</value>
+		<value>Enregistrements</value>
 	</data>
 	<data name="R_INSUREESWITHOUTPHOTOS" xml:space="preserve">
 		<value>Assurés sans photos</value>
