@@ -560,7 +560,7 @@
 		<value>Soumettre</value>
 	</data>
 	<data name="B_FEEDBACK" xml:space="preserve">
-		<value>Retours</value>
+		<value>Feedback</value>
 	</data>
 	<data name="B_REVIEW" xml:space="preserve">
 		<value>Vérification</value>
@@ -623,7 +623,7 @@
 		<value>Remboursé</value>
 	</data>
 	<data name="L_CLAIMFEEDBACK" xml:space="preserve">
-		<value>Retours d'information</value>
+		<value>Feedback</value>
 	</data>
 	<data name="L_CLAIMREVIEWSATUS" xml:space="preserve">
 		<value>Vérification</value>
@@ -683,16 +683,16 @@
 		<value>Médicament reçus</value>
 	</data>
 	<data name="L_FEEDBACK" xml:space="preserve">
-		<value>Retours d'information</value>
+		<value>Feedback</value>
 	</data>
 	<data name="L_FEEDBACKDATE" xml:space="preserve">
 		<value>Date du retour d'information</value>
 	</data>
 	<data name="L_FEEDBACKPAGETITLE" xml:space="preserve">
-		<value>Retours d'information</value>
+		<value>Feedback</value>
 	</data>
 	<data name="L_FEEDBACKSTATUS" xml:space="preserve">
-		<value>Statut du retour</value>
+		<value>Statut du feedback</value>
 	</data>
 	<data name="L_OVERALLASESSMENT" xml:space="preserve">
 		<value>Évaluation globale</value>
@@ -725,7 +725,7 @@
 		<value>Prestations trouvées</value>
 	</data>
 	<data name="L_FEEDBACKSELECTION" xml:space="preserve">
-		<value>Sél. pour retour</value>
+		<value>Sél. feedback</value>
 	</data>
 	<data name="M_NOCLAIMS" xml:space="preserve">
 		<value>Aucune prestation n'a été trouvée</value>
@@ -1631,7 +1631,7 @@
 		<value>Idle (en attente)</value>
 	</data>
 	<data name="T_FEEDBACKSELECT" xml:space="preserve">
-		<value>Sél. retour</value>
+		<value>Sél. feedback</value>
 	</data>
 	<data name="T_REVIEWSELECT" xml:space="preserve">
 		<value>Sél. vérification</value>
@@ -1664,7 +1664,7 @@
 		<value>Fait</value>
 	</data>
 	<data name="T_SELECTEDFORFEEDBACK" xml:space="preserve">
-		<value>Sél. pour retour</value>
+		<value>Sél. feedback</value>
 	</data>
 	<data name="L_VISITDATETO" xml:space="preserve">
 		<value>au</value>
@@ -1814,7 +1814,7 @@
 		<value>Souhaitez-vous soumettre les prestations?</value>
 	</data>
 	<data name="M_FEEDBACK" xml:space="preserve">
-		<value>Retours d'information</value>
+		<value>Feedback</value>
 	</data>
 	<data name="M_ITEMSDELETED" xml:space="preserve">
 		<value>Les produits médicaux ont été supprimés avec succès</value>
@@ -4518,7 +4518,7 @@
 		<value>Synthèse familles et assurés</value>
 	</data>
 	<data name="R_FEEDBACK" xml:space="preserve">
-		<value>Retours d'information</value>
+		<value>Feedback</value>
 	</data>
 	<data name="R_FILTER" xml:space="preserve">
 		<value>Filtre</value>

@@ -67,32 +67,34 @@ title='<%$ Resources:Resource,L_Family%>'%>
             <tr>
                 <td>
                    <table>
-            <tr>
+                    <tr style="display:none;">
                <td class="FormLabel">
                             <asp:Label 
                             ID="L_LASTNAME"
                             runat="server" 
                             Text='<%$ Resources:Resource,L_LASTNAME %>'>
                             </asp:Label>
-                        </td>
-                <td class ="DataEntry">
-                    <asp:TextBox ID="txtLastName" runat="server" style="direction: ltr"></asp:TextBox></td>
+                        </td style="display:none;">
+                <td class ="DataEntry" style="display:none;">
+                    <asp:TextBox ID="txtLastName" runat="server" style="direction: ltr"></asp:TextBox></td style="display:none;">
                 <td class="FormLabel">
                             <asp:Label 
                             ID="L_OTHERNAMES"
                             runat="server" 
                             Text='<%$ Resources:Resource,L_OTHERNAMES %>'>
                             </asp:Label>
-                        </td>
+                        </td style="display:none;">
                 <td class ="DataEntry">
-                    <asp:TextBox ID="txtOtherNames" runat="server"></asp:TextBox></td>
-                 <td class ="FormLabel">
+                    <asp:TextBox ID="txtOtherNames" runat="server"></asp:TextBox></td style="display:none;">
+                    <td></td style="display:none;">
+                    <td></td style="display:none;">
+                    <%--<td class ="FormLabel">
                      <asp:Label ID="L_REGION" runat="server" Text="<%$ Resources:Resource,L_REGION %>"></asp:Label>
                  </td>
                  <td class="DataEntry">
                      <asp:DropDownList ID="ddlRegion" runat="server" AutoPostBack="true" Width="150px">
                      </asp:DropDownList>
-                 </td>
+                 </td>--%>
             </tr>
             <tr>
                 <td class ="FormLabel">
@@ -136,12 +138,19 @@ title='<%$ Resources:Resource,L_Family%>'%>
                         PopupButtonID="btnDate" >
                     </ajax:CalendarExtender>
                 </td>
-              <td class="FormLabel">
+                <%--<td class="FormLabel">
                     <asp:Label ID="L_DISTRICT" runat="server" Text="<%$ Resources:Resource,L_DISTRICT %>">
                      </asp:Label>
                 </td>
                 <td class ="DataEntry">
                     <asp:DropDownList ID="ddlDistrict" runat="server" AutoPostBack="true" Width="150px">
+                    </asp:DropDownList>
+                </td>--%>
+                <td class ="FormLabel">
+                    <asp:Label ID="L_REGION" runat="server" Text="<%$ Resources:Resource,L_REGION %>"></asp:Label>
+                </td>
+                <td class="DataEntry">
+                    <asp:DropDownList ID="ddlRegion" runat="server" AutoPostBack="true" Width="150px">
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -187,12 +196,20 @@ title='<%$ Resources:Resource,L_Family%>'%>
                         PopupButtonID="btnDateTo" >
                     </ajax:CalendarExtender>
                 </td>
-                  <td class="FormLabel">
+                <%--<td class="FormLabel">
                       <asp:Label ID="L_WARD" runat="server" Text="<%$ Resources:Resource,L_WARD %>">
                     </asp:Label>
                 </td>
                 <td class="DataEntry">
                     <asp:DropDownList ID="ddlWard" runat="server" AutoPostBack="true" Width="150px">
+                    </asp:DropDownList>
+                </td>--%>
+                <td class="FormLabel">
+                    <asp:Label ID="L_DISTRICT" runat="server" Text="<%$ Resources:Resource,L_DISTRICT %>">
+                     </asp:Label>
+                </td>
+                <td class ="DataEntry">
+                    <asp:DropDownList ID="ddlDistrict" runat="server" AutoPostBack="true" Width="150px">
                     </asp:DropDownList>
                 </td>
                 
@@ -218,14 +235,22 @@ title='<%$ Resources:Resource,L_Family%>'%>
                     <asp:DropDownList ID="ddlPoverty" runat="server" Width="150px">
                     </asp:DropDownList>
                 </td>
-                 <td class="auto-style1" runat="server">
+                <%--<td class="auto-style1" runat="server">
                            <asp:Label ID="L_VILLAGE" runat="server" Text="<%$ Resources:Resource,L_VILLAGE %>">
                     </asp:Label>
                         </td>
                         <td class ="DataEntry"  runat="server">
                             <asp:DropDownList ID="ddlVillage" runat="server" Width="150px">
                             </asp:DropDownList>
-                        </td>
+                        </td>--%>
+                <td class="FormLabel">
+                    <asp:Label ID="L_WARD" runat="server" Text="<%$ Resources:Resource,L_WARD %>">
+                    </asp:Label>
+                </td>
+                <td class="DataEntry">
+                    <asp:DropDownList ID="ddlWard" runat="server" AutoPostBack="true" Width="150px">
+                    </asp:DropDownList>
+                </td>
              
             </tr>
                        <tr>
@@ -242,8 +267,14 @@ title='<%$ Resources:Resource,L_Family%>'%>
                            <td id="tdConfirmationNoTXT" runat="server">
                                <asp:TextBox ID="txtConfirmationNo" runat="server" MaxLength="12" Width="150px"></asp:TextBox>
                            </td>
-                           <td></td>
-                           <td></td>
+                           <td class="auto-style1" runat="server">
+                                    <asp:Label ID="L_VILLAGE" runat="server" Text="<%$ Resources:Resource,L_VILLAGE %>">
+                            </asp:Label>
+                                </td>
+                                <td class ="DataEntry"  runat="server">
+                                    <asp:DropDownList ID="ddlVillage" runat="server" Width="150px">
+                                    </asp:DropDownList>
+                                </td>
                        </tr>
         </table>
                 </td>
@@ -303,10 +334,10 @@ title='<%$ Resources:Resource,L_Family%>'%>
                         <HeaderStyle Width="100px" />
 
                     </asp:HyperLinkField>                
-                    <asp:BoundField DataField="LastName"  HeaderText='<%$ Resources:Resource,L_LASTNAME %>' SortExpression="LastName" ><HeaderStyle Width="130px"></HeaderStyle>
+                    <%--<asp:BoundField DataField="LastName"  HeaderText='<%$ Resources:Resource,L_LASTNAME %>' SortExpression="LastName" ><HeaderStyle Width="130px"></HeaderStyle>
                     </asp:BoundField> <asp:BoundField DataField="OtherNames"  HeaderText='<%$ Resources:Resource,L_OTHERNAMES %>'     SortExpression="OtherNames" ><HeaderStyle Width="130px"></HeaderStyle>
-                    </asp:BoundField>
-                     <asp:BoundField DataField="RegionName"  HeaderText='<%$ Resources:Resource,L_REGION %>'     SortExpression="RegionName" ><HeaderStyle Width="80px"></HeaderStyle>
+                    </asp:BoundField>--%>
+                    <asp:BoundField DataField="RegionName"  HeaderText='<%$ Resources:Resource,L_REGION %>'     SortExpression="RegionName" ><HeaderStyle Width="80px"></HeaderStyle>
                     </asp:BoundField>
                     <asp:BoundField DataField="DistrictName"  HeaderText='<%$ Resources:Resource,L_DISTRICT %>'     SortExpression="DistrictName" ><HeaderStyle Width="80px"></HeaderStyle>
                     </asp:BoundField>
