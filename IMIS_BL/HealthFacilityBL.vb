@@ -85,7 +85,6 @@ Public Class HealthFacilityBL
             dtbl.Rows.Add(dr)
         End If
 
-        dr = dtbl.NewRow
 
         'dr("Code") = "S"
         'dr("HFLevel") = imisgen.getMessage("T_SUBHEALTPOST")
@@ -100,20 +99,59 @@ Public Class HealthFacilityBL
         'dr("Code") = "C"
         'dr("HFLevel") = imisgen.getMessage("T_PRIMARYHEALTHCENTRE")
         'dtbl.Rows.Add(dr)
+        'dr = dtbl.NewRow
+        'dr("Code") = "H"
+        'dr("HFLevel") = imisgen.getMessage("T_HOSPITAL")
+        'dtbl.Rows.Add(dr)
 
+        'dr = dtbl.NewRow
+        'dr("Code") = "D"
+        'dr("HFLevel") = imisgen.getMessage("T_DISPENSARY")
+        'dtbl.Rows.Add(dr)
 
+        'dr = dtbl.NewRow
+        'dr("Code") = "C"
+        'dr("HFLevel") = imisgen.getMessage("T_HEALTHCENTRE")
+        'dtbl.Rows.Add(dr)
+
+        dr = dtbl.NewRow
+        dr("Code") = "H"
+        dr("HFLevel") = imisgen.getMessage("T_GENERAL_HOSPITAL")
+        dtbl.Rows.Add(dr)
+
+        dr = dtbl.NewRow
+        dr("Code") = "P"
+        dr("HFLevel") = imisgen.getMessage("T_CENTRAL_HOSPITAL")
+        dtbl.Rows.Add(dr)
+
+        dr = dtbl.NewRow
+        dr("Code") = "R"
+        dr("HFLevel") = imisgen.getMessage("T_REGIONAL_HOSPITAL")
+        dtbl.Rows.Add(dr)
+
+        dr = dtbl.NewRow
         dr("Code") = "D"
-        dr("HFLevel") = imisgen.getMessage("T_DISPENSARY")
+        dr("HFLevel") = imisgen.getMessage("T_DISTRICT_HOSPITAL")
         dtbl.Rows.Add(dr)
 
         dr = dtbl.NewRow
         dr("Code") = "C"
-        dr("HFLevel") = imisgen.getMessage("T_HEALTHCENTRE")
+        dr("HFLevel") = imisgen.getMessage("T_MEDICAL_HEALTHCENTRE")
         dtbl.Rows.Add(dr)
 
         dr = dtbl.NewRow
-        dr("Code") = "H"
-        dr("HFLevel") = imisgen.getMessage("T_HOSPITAL")
+        dr("Code") = "O"
+        dr("HFLevel") = imisgen.getMessage("T_CLINIC")
+        dtbl.Rows.Add(dr)
+
+        dr = dtbl.NewRow
+        dr("Code") = "I"
+        dr("HFLevel") = imisgen.getMessage("T_INTEGRATED_HEALTHCENTER")
+        dtbl.Rows.Add(dr)
+
+        dr = dtbl.NewRow
+        dr("Code") = "I"
+        dr("HFLevel") = imisgen.getMessage("T_LABORATORY")
         dtbl.Rows.Add(dr)
 
 

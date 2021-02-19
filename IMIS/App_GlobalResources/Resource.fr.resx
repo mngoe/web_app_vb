@@ -92,7 +92,7 @@
 		<value>Aire de santé</value>
 	</data>
 	<data name="L_WARD" xml:space="preserve">
-		<value>Municipalité</value>
+		<value>Village/Quartier</value>
 	</data>
 	<data name="L_DISTRICT" xml:space="preserve">
 		<value>District de santé</value>
@@ -182,7 +182,7 @@
 		<value>Veuillez sélectionner un village</value>
 	</data>
 	<data name="V_WARD" xml:space="preserve">
-		<value>Veuillez sélectionner une municipalité</value>
+		<value>Veuillez sélectionner un village/quartier</value>
 	</data>
 	<data name="B_ADDPREMIUM" xml:space="preserve">
 		<value>Ajouter une cotisation</value>
@@ -263,7 +263,7 @@
 		<value>Système</value>
 	</data>
 	<data name="L_FOUNDPRODUCTS" xml:space="preserve">
-		<value>Paquets de bénéfices trouvés</value>
+		<value>Paquets de services trouvés</value>
 	</data>
 	<data name="L_PRODUCTCODE" xml:space="preserve">
 		<value>Code</value>
@@ -272,13 +272,13 @@
 		<value>Nom</value>
 	</data>
 	<data name="L_PRODUCTS" xml:space="preserve">
-		<value>Paquet de bénéfices</value>
+		<value>Paquet de services</value>
 	</data>
 	<data name="L_USERS" xml:space="preserve">
 		<value>Utilisateurs</value>
 	</data>
 	<data name="M_NOPRODUCTS" xml:space="preserve">
-		<value>Aucun paquet de bénéfices trouvé</value>
+		<value>Aucun paquet de services trouvé</value>
 	</data>
 	<data name="M_NOUSERS" xml:space="preserve">
 		<value>Aucun utilisateur trouvé</value>
@@ -308,10 +308,10 @@
 		<value>Aucun soin</value>
 	</data>
 	<data name="V_PRODUCTCODE" xml:space="preserve">
-		<value>Veuillez sélectionner un code paquet de bénéfices</value>
+		<value>Veuillez sélectionner un code paquet de services</value>
 	</data>
 	<data name="V_PRODUCTNAME" xml:space="preserve">
-		<value>Veuillez sélectionner un nom du paquet de bénéfices</value>
+		<value>Veuillez sélectionner un nom du paquet de services</value>
 	</data>
 	<data name="L_ADMINISTRATION" xml:space="preserve">
 		<value>Admin</value>
@@ -368,7 +368,7 @@
 		<value>Nom</value>
 	</data>
 	<data name="L_PRODUCT" xml:space="preserve">
-		<value>Paquet de bénéfices</value>
+		<value>Paquet de services</value>
 	</data>
 	<data name="L_PRICE" xml:space="preserve">
 		<value>Tarif</value>
@@ -581,7 +581,7 @@
 		<value>Code de la maladie</value>
 	</data>
 	<data name="L_FBSTATUS" xml:space="preserve">
-		<value>Statut du retour d'information</value>
+		<value>Statut du Feedback</value>
 	</data>
 	<data name="L_FINDBATCHFORM" xml:space="preserve">
 		<value>Sélection des réponses par lot</value>
@@ -629,7 +629,7 @@
 		<value>Vérification</value>
 	</data>
 	<data name="L_CLAIMSFEEDBACK" xml:space="preserve">
-		<value>Prestations nécessitant un retour d'information</value>
+		<value>Prestations nécessitant un Feedback</value>
 	</data>
 	<data name="L_CLAIMSTATUS" xml:space="preserve">
 		<value>Statut prestation</value>
@@ -686,7 +686,7 @@
 		<value>Feedback</value>
 	</data>
 	<data name="L_FEEDBACKDATE" xml:space="preserve">
-		<value>Date du retour d'information</value>
+		<value>Date du Feedback</value>
 	</data>
 	<data name="L_FEEDBACKPAGETITLE" xml:space="preserve">
 		<value>Feedback</value>
@@ -1088,7 +1088,7 @@
 		<value>Tableau de bord de l'utilisateur</value>
 	</data>
 	<data name="M_WRONGCONVERSIONPRODUCTCODE" xml:space="preserve">
-		<value>La conversion du paquet de bénéfices ne peut être le même que le paquet de bénéfices actuel</value>
+		<value>La conversion du paquet de services ne peut être le même que le paquet de services actuel</value>
 	</data>
 	<data name="M_ERRORMESSAGE" xml:space="preserve">
 		<value>Cette action n'a pas pu être effectuée. Veuillez appeler votre centre d'assistance pour plus d'informations.</value>
@@ -1115,7 +1115,7 @@
 		<value>Aucun village trouvé</value>
 	</data>
 	<data name="M_NOWARDS" xml:space="preserve">
-		<value>Aucune Municipalité trouvée</value>
+		<value>Aucun Village/Quartier trouvée</value>
 	</data>
 	<data name="M_POLICYVALUECHANGE" xml:space="preserve">
 		<value>Valeur de la police avec la date de souscription:</value>
@@ -1124,10 +1124,10 @@
 		<value>Code du bénéficiaire invalide</value>
 	</data>
 	<data name="M_VILLAGESINWARD" xml:space="preserve">
-		<value>Veuillez d'abord supprimer le village dans la municipalité</value>
+		<value>Veuillez d'abord supprimer le village dans le village/quartier</value>
 	</data>
 	<data name="M_WARDSINDISTRICT" xml:space="preserve">
-		<value>Veuillez d'abord supprimer les municipalités dans le district</value>
+		<value>Veuillez d'abord supprimer les villages/quartiers dans le district</value>
 	</data>
 	<data name="M_CHANGEHEAD" xml:space="preserve">
 		<value> modifié avec succès par Chef de famille/ groupe</value>
@@ -1175,10 +1175,10 @@
 		<value>Rechercher la police</value>
 	</data>
 	<data name="P_FINDPRODUCT" xml:space="preserve">
-		<value>Tableau de bord des paquets de bénéfices</value>
+		<value>Tableau de bord des paquets de services</value>
 	</data>
 	<data name="P_PRODUCT" xml:space="preserve">
-		<value>Paquet de bénéfices</value>
+		<value>Paquet de services</value>
 	</data>
 	<data name="L_JOURNALON" xml:space="preserve">
 		<value>Journal sur </value>
@@ -1256,7 +1256,7 @@
 		<value>Dispensaire</value>
 	</data>
 	<data name="T_DISTRICTORGANIZATION" xml:space="preserve">
-		<value>Organisation du district</value>
+		<value>Parapublic</value>
 	</data>
 	<data name="T_DIVORCED" xml:space="preserve">
 		<value>Divorcé</value>
@@ -1268,7 +1268,7 @@
 		<value>Médicament</value>
 	</data>
 	<data name="T_GOVERNMENT" xml:space="preserve">
-		<value>Gouvernement</value>
+		<value>Public</value>
 	</data>
 	<data name="T_HEALTHCENTRE" xml:space="preserve">
 		<value>Centre de santé</value>
@@ -1322,7 +1322,7 @@
 		<value>Préventif</value>
 	</data>
 	<data name="T_PRIVATEORGANIZATION" xml:space="preserve">
-		<value>Organisation privée</value>
+		<value>Privé laïque</value>
 	</data>
 	<data name="T_REJECTED" xml:space="preserve">
 		<value>Rejeté</value>
@@ -1346,7 +1346,7 @@
 		<value>Sél. village </value>
 	</data>
 	<data name="T_SELECTAWARD" xml:space="preserve">
-		<value>Sél. municipalité</value>
+		<value>Sél. Village/Quartier</value>
 	</data>
 	<data name="T_SELECTDISTRICT" xml:space="preserve">
 		<value> Sél. district</value>
@@ -1382,7 +1382,7 @@
 		<value>Sélectionner la liste de tarifs</value>
 	</data>
 	<data name="T_SELECTPRODUCT" xml:space="preserve">
-		<value>Sél. paquet de bénéfices</value>
+		<value>Sél. paquet de services</value>
 	</data>
 	<data name="T_SELECTSERVICETYPE" xml:space="preserve">
 		<value>Sél. le type de soin </value>
@@ -1475,7 +1475,7 @@
 		<value>Distribution des cotisations</value>
 	</data>
 	<data name="L_PRODUCTSALES" xml:space="preserve">
-		<value>Ventes par paquet de bénéfices</value>
+		<value>Ventes par paquet de services</value>
 	</data>
 	<data name="L_RESTORE" xml:space="preserve">
 		<value>RESTAURER</value>
@@ -1571,7 +1571,7 @@
 		<value>Village en double trouvé. Importation annulée.</value>
 	</data>
 	<data name="M_DUPLICATEWARD" xml:space="preserve">
-		<value>Municipalité en double trouvée. Importation annulée.</value>
+		<value>Village/Quartier en double trouvée. Importation annulée.</value>
 	</data>
 	<data name="M_LOCATIONUPLOADED" xml:space="preserve">
 		<value>Les lieux ont été transférés avec succès. </value>
@@ -1697,7 +1697,7 @@
 		<value>La situation de cette prestation n'est pas RENSEIGNÉ et ne peut donc pas être supprimé</value>
 	</data>
 	<data name="M_CLAIMNOTFORFEEDBACKPROCESS" xml:space="preserve">
-		<value>Le statut de la prestation ne permet pas de demander un retour d'information</value>
+		<value>Le statut de la prestation ne permet pas de demander un Feedback</value>
 	</data>
 	<data name="M_CLAIMNOTFORREVIEWPROCESS" xml:space="preserve">
 		<value>Le statut de la prestation ne permet pas de le soumettre pour vérification</value>
@@ -1721,7 +1721,7 @@
 		<value>Veuillez entrer une quantité valide</value>
 	</data>
 	<data name="M_FEEDBACKSTATUSUPDATED" xml:space="preserve">
-		<value>Les retours d'information ont été mis à jour avec succès</value>
+		<value>Les Feedback ont été mis à jour avec succès</value>
 	</data>
 	<data name="M_FILLITEMQUANTITY" xml:space="preserve">
 		<value>Veuillez remplir la quantité de produits médicaux</value>
@@ -1736,7 +1736,7 @@
 		<value>Veuillez remplir la valeur du soin</value>
 	</data>
 	<data name="M_REVIEWFEEDBACKSTATUSUPDATED" xml:space="preserve">
-		<value>Les retours d'information et les vérifications ont été mis à jour avec succès</value>
+		<value>Les Feedback et les vérifications ont été mis à jour avec succès</value>
 	</data>
 	<data name="M_REVIEWSTATUSUPDATED" xml:space="preserve">
 		<value>Les statuts de vérification ont été mis à jour avec succès</value>
@@ -1751,7 +1751,7 @@
 		<value>Veuillez sélectionner le code produit médical</value>
 	</data>
 	<data name="M_SELECTREVIEWFEEDBACK" xml:space="preserve">
-		<value>Veuillez sélectionner vérification ou retours d'information pour continuer</value>
+		<value>Veuillez sélectionner vérification ou Feedback pour continuer</value>
 	</data>
 	<data name="M_VISITDATENOTAFTERCLAIMDATE" xml:space="preserve">
 		<value>La &quot;date de visite à partir de&quot; ne peut pas être ultérieure à la date de prestation</value>
@@ -1829,13 +1829,13 @@
 		<value>Il n'y a aucune prestation sélectionnée pour être traitée</value>
 	</data>
 	<data name="M_ONEMORECLMFDPENDING" xml:space="preserve">
-		<value>Un ou plusieurs prestations ont des retours d'information en attente.</value>
+		<value>Un ou plusieurs prestations ont des Feedback en attente.</value>
 	</data>
 	<data name="M_ONEMORECLMNOTREVIEWED" xml:space="preserve">
 		<value>Un ou plusieurs prestations n'ont pas été vérifiés.</value>
 	</data>
 	<data name="M_ONEMORENOTREVIEWEDFDPENDS" xml:space="preserve">
-		<value>Un ou plusieurs prestations n'ont pas été vérifiés et des retours d'information sont en attente.</value>
+		<value>Un ou plusieurs prestations n'ont pas été vérifiés et des Feedback sont en attente.</value>
 	</data>
 	<data name="M_REVIEW" xml:space="preserve">
 		<value>Vérification</value>
@@ -1859,7 +1859,7 @@
 		<value>Veuillez sélectionner un district, un code de établissement de santé et un gestionnaire de prestation pour pouvoir ajouter un prestation</value>
 	</data>
 	<data name="M_VALIDATEFEEDBACKSAVE" xml:space="preserve">
-		<value>Aucune modification n'a été apportée au retour d'information de cette prestation, veuillez apporter des modifications pour enregistrer ou appuyer sur le bouton annuler</value>
+		<value>Aucune modification n'a été apportée au Feedback de cette prestation, veuillez apporter des modifications pour enregistrer ou appuyer sur le bouton annuler</value>
 	</data>
 	<data name="M_VALIDATESUBMITCLAIMS" xml:space="preserve">
 		<value>Il n'y a aucune prestation sélectionnée pour être soumise</value>
@@ -1931,7 +1931,7 @@
 		<value>Souhaitez-vous continuer avec le</value>
 	</data>
 	<data name="L_FEEDBACKPROMPT" xml:space="preserve">
-		<value>Saisi de retours d'information</value>
+		<value>Saisi de Feedback</value>
 	</data>
 	<data name="M_WRONGITEMCODENAME" xml:space="preserve">
 		<value>La combinaison code produit et dénomination, dans un ou plusieurs produits médicaux, n'existe pas.</value>
@@ -1940,10 +1940,10 @@
 		<value>La combinaison du code du soin et de son nom dans une ou plusieurs soins n'existe pas</value>
 	</data>
 	<data name="M_FEEDBACKSAVEDSUCCESSFULLY" xml:space="preserve">
-		<value>Le retour d'information a été enregistré avec succès et l'état de la prestation est mis à jour pour être envoyé</value>
+		<value>Le Feedback a été enregistré avec succès et l'état de la prestation est mis à jour pour être envoyé</value>
 	</data>
 	<data name="M_FEEDBACKUPDATEDSUCCESSFULLY" xml:space="preserve">
-		<value>Le retour d'information a été mis à jour avec succès</value>
+		<value>Le Feedback a été mis à jour avec succès</value>
 	</data>
 	<data name="M_MANNUALNOUPDATE" xml:space="preserve">
 		<value>Aucune modification n'a été apportée à cette prestation</value>
@@ -2117,7 +2117,7 @@
 		<value>Indicateurs opérationnels principaux</value>
 	</data>
 	<data name="T_PRODUCTSALES" xml:space="preserve">
-		<value>Ventes par paquet de bénéfices</value>
+		<value>Ventes par paquet de services</value>
 	</data>
 	<data name="L_HFLEVEL" xml:space="preserve">
 		<value>Catégorie</value>
@@ -2150,7 +2150,7 @@
 		<value>Imprimé le</value>
 	</data>
 	<data name="L_PRODUCTVALUE" xml:space="preserve">
-		<value>Montant du paquet de bénéfices</value>
+		<value>Montant du paquet de services</value>
 	</data>
 	<data name="L_PROMPTDATE" xml:space="preserve">
 		<value>Date</value>
@@ -2195,10 +2195,10 @@
 		<value>Police expirée</value>
 	</data>
 	<data name="L_FEEDBACKPROMPTJ" xml:space="preserve">
-		<value>Journal des retours d'information</value>
+		<value>Journal des Feedback</value>
 	</data>
 	<data name="L_FEEDBACKRESPONSERATIO" xml:space="preserve">
-		<value>Ratio réponse/demande de retours d'information</value>
+		<value>Ratio réponse/demande de Feedback</value>
 	</data>
 	<data name="L_GROWTHRATIO" xml:space="preserve">
 		<value>Taux de croissance</value>
@@ -2396,7 +2396,7 @@
 		<value>Nom du village</value>
 	</data>
 	<data name="L_WardName" xml:space="preserve">
-		<value>Nom de la municipalité</value>
+		<value>Nom du Village/Quartier</value>
 	</data>
 	<data name="M_DELETEDISTRICTPROMPT" xml:space="preserve">
 		<value>Voulez-vous vraiment supprimer ce district?</value>
@@ -2405,7 +2405,7 @@
 		<value>Voulez-vous vraiment supprimer ce village?</value>
 	</data>
 	<data name="M_DELETEWARDPROMPT" xml:space="preserve">
-		<value>Voulez-vous vraiment supprimer cette municipalité?</value>
+		<value>Voulez-vous vraiment supprimer ce Village/Quartier?</value>
 	</data>
 	<data name="M_EMPTYLOCATIONNAME" xml:space="preserve">
 		<value>Le nom du lieu ne peut être vide</value>
@@ -2606,7 +2606,7 @@
 		<value>Aucun village spécifié</value>
 	</data>
 	<data name="M_NOWARDSPECIFIED" xml:space="preserve">
-		<value>Aucune Municipalité spécifiée</value>
+		<value>Aucun Village/Quartier spécifié</value>
 	</data>
 	<data name="M_SELECTMONTH" xml:space="preserve">
 		<value>Veuillez sélectionner le mois</value>
@@ -2789,7 +2789,7 @@
 		<value>Le paiement d'une police expirée n'est pas autorisé.</value>
 	</data>
 	<data name="M_NOADVSEARCHPRODUCTDETAILS" xml:space="preserve">
-		<value>Aucun détail de paquet de bénéfices pour cet(te) assuré(e)</value>
+		<value>Aucun détail de paquet de services pour cet(te) assuré(e)</value>
 	</data>
 	<data name="M_NOPOLICYENROLLEDFORADHERENT" xml:space="preserve">
 		<value>Nombre de police souscrite pour cet(te) assuré(e)</value>
@@ -2816,7 +2816,7 @@
 		<value>Admission: Montant restant</value>
 	</data>
 	<data name="L_PRODUCTID" xml:space="preserve">
-		<value>ID du paquet de bénéfices</value>
+		<value>ID du paquet de services</value>
 	</data>
 	<data name="L_SURGERYAMOUNTLEFT" xml:space="preserve">
 		<value>Chirurgie: Montant restant</value>
@@ -2858,13 +2858,13 @@
 		<value>Aperçu de la catégorie de paiement</value>
 	</data>
 	<data name="M_DISTRICTSAVED" xml:space="preserve">
-		<value>Municipalité sauvegardé avec succès</value>
+		<value>Village/Quartier sauvegardé avec succès</value>
 	</data>
 	<data name="M_VILLAGESAVED" xml:space="preserve">
 		<value>Village sauvegardé avec succès</value>
 	</data>
 	<data name="M_WARDSAVED" xml:space="preserve">
-		<value>Municipalité enregistrée</value>
+		<value>Village/Quartier enregistré</value>
 	</data>
 	<data name="M_CONTINUEPROMPT" xml:space="preserve">
 		<value>Voulez-vous continuer?</value>
@@ -2873,10 +2873,10 @@
 		<value>Les polices avec les dates d'affiliation suivantes ont atteint le maximum du nombre de membres et donc cet(te) assuré(e) ne sera pas couvert par les polices cependant l'assuré(e) sera ajouté(e) à la famille :</value>
 	</data>
 	<data name="M_LASTINSTALLMENT" xml:space="preserve">
-		<value>Il s'agit du dernier paiement selon la définition du paquet de bénéfices.</value>
+		<value>Il s'agit du dernier paiement selon la définition du paquet de services.</value>
 	</data>
 	<data name="M_PROMPTPOLICYADD" xml:space="preserve">
-		<value>La famille a plus d'assurés que le nombre maximum &lt;br/&gt; de membres autorisés dans le paquet de bénéfices sélectionné. &lt;br/&gt; Voulez-vous continuer?</value>
+		<value>La famille a plus d'assurés que le nombre maximum &lt;br/&gt; de membres autorisés dans le paquet de services sélectionné. &lt;br/&gt; Voulez-vous continuer?</value>
 	</data>
 	<data name="M_LATEPOLICYRENEWAL" xml:space="preserve">
 		<value>Le renouvellement de la police est en dehors de la période de grâce. Voulez-vous continuer avec ce renouvellement?</value>
@@ -2963,7 +2963,7 @@
 		<value>Précédent</value>
 	</data>
 	<data name="M_PLEASESELECTAPRODUCT" xml:space="preserve">
-		<value>Veuillez sélectionner un paquet de bénéfices</value>
+		<value>Veuillez sélectionner un paquet de services</value>
 	</data>
 	<data name="M_REPORTINGDATECHANGED" xml:space="preserve">
 		<value>La génération du rapport d'un point de vue antérieur pourrait entraîner une duplication de la demande de subvention. &lt;br/&gt; Voulez-vous continuer?</value>
@@ -3152,10 +3152,10 @@
 		<value>Détails de l'adresse actuelle</value>
 	</data>
 	<data name="L_CVDC" xml:space="preserve">
-		<value>Municipalité actuelle</value>
+		<value>Village/Quartier actuel</value>
 	</data>
 	<data name="L_CWARD" xml:space="preserve">
-		<value>Municipalité actuelle</value>
+		<value>Village/Quartier actuel</value>
 	</data>
 	<data name="L_FREEITEMPRICE" xml:space="preserve">
 		<value>produit médical gratuit</value>
@@ -3338,7 +3338,7 @@
 		<value>Insérer</value>
 	</data>
 	<data name="R_INSURANCEPRODUCT" xml:space="preserve">
-		<value>Paquet de bénéfices</value>
+		<value>Paquet de services</value>
 	</data>
 	<data name="R_LOGIN" xml:space="preserve">
 		<value>S'identifier</value>
@@ -3683,7 +3683,7 @@
 		<value>Code Village</value>
 	</data>
 	<data name="L_WARDCODE" xml:space="preserve">
-		<value>Code Municipalité</value>
+		<value>Code Village/Quartier</value>
 	</data>
 	<data name="M_EMPTYLOCATIONCODE" xml:space="preserve">
 		<value>Le code location ne peut être vide</value>
@@ -3710,13 +3710,13 @@
 		<value>Région sauvegardée avec succès</value>
 	</data>
 	<data name="M_FEEDBACKSELECTION" xml:space="preserve">
-		<value>Souhaitez-vous appliquer les critères suivants pour la sélection des retours d'information? &lt;br /&gt;</value>
+		<value>Souhaitez-vous appliquer les critères suivants pour la sélection des Feedback? &lt;br /&gt;</value>
 	</data>
 	<data name="M_REVIEWSELECTION" xml:space="preserve">
 		<value>Souhaitez-vous appliquer les critères suivants pour la sélection des vérifications? &lt;br /&gt;</value>
 	</data>
 	<data name="M_WLDLIKEFEEDBACKELECTION" xml:space="preserve">
-		<value>Souhaitez-vous poursuivre le processus de sélection des retours?</value>
+		<value>Souhaitez-vous poursuivre le processus de sélection des Feedback?</value>
 	</data>
 	<data name="M_WLDLIKEREVIEWSELECTION" xml:space="preserve">
 		<value>Souhaitez-vous poursuivre le processus de sélections des vérifications?</value>
@@ -3731,7 +3731,7 @@
 		<value>La valeur ne peut pas excéder 100%</value>
 	</data>
 	<data name="M_NOWARD" xml:space="preserve">
-		<value>Aucune Municipalité trouvée</value>
+		<value>Aucun Village/Quartier trouvé</value>
 	</data>
 	<data name="L_FSPREGION" xml:space="preserve">
 		<value>Région du PPS</value>
@@ -3860,13 +3860,13 @@
 		<value>Code de district inclus dans le fichier déjà existant dans la base de données</value>
 	</data>
 	<data name="M_DISTRICTCODENOTEXISTSINEXCELORDB" xml:space="preserve">
-		<value>Le code du district spécifié dans municipalité n'existe ni dans le fichier ni dans la base de donnée</value>
+		<value>Le code du district spécifié dans le Village/Quartier n'existe ni dans le fichier ni dans la base de donnée</value>
 	</data>
 	<data name="M_DUPLICATEDISTRICTCODEINEXCEL" xml:space="preserve">
 		<value>Il y a un code de district en double dans le fichier</value>
 	</data>
 	<data name="M_DUPLICATEMUNICIPALITYCODEINEXCEL" xml:space="preserve">
-		<value>Il y a une municipalité en double dans le fichier</value>
+		<value>Il y a un Village/Quartier en double dans le fichier</value>
 	</data>
 	<data name="M_DUPLICATEREGIONCODEINEXCEL" xml:space="preserve">
 		<value>Il y a un code de région en double dans le fichier</value>
@@ -3878,7 +3878,7 @@
 		<value>Ficher de district invalide (soit le nom de l'onglet, soit le nom des colonnes soit les entrées sont invalides)</value>
 	</data>
 	<data name="M_INVALIDMUNICIPALITYFILEINEXCEL" xml:space="preserve">
-		<value>Ficher de municipalité invalide (soit le nom de l'onglet, soit le nom des colonnes soit les entrées sont invalides)</value>
+		<value>Ficher de Village/Quartier invalide (soit le nom de l'onglet, soit le nom des colonnes soit les entrées sont invalides)</value>
 	</data>
 	<data name="M_INVALIDREGIONFILEINEXCEL" xml:space="preserve">
 		<value>Ficher de région invalide (soit le nom de l'onglet, soit le nom des colonnes soit les entrées sont invalides)</value>
@@ -3893,19 +3893,19 @@
 		<value>Nom ou code de district manquant dans le fichier Excel</value>
 	</data>
 	<data name="M_MISSINGMUNICIPALITYCODEORNAMEINEXCEL" xml:space="preserve">
-		<value>Nom ou Code de municipalité manquant dans le fichier Excel</value>
+		<value>Nom ou Code du Village/Quartier manquant dans le fichier Excel</value>
 	</data>
 	<data name="M_MISSINGREGIONCODEORNAMEINEXCEL" xml:space="preserve">
 		<value>Nom ou Code de région manquant dans le fichier</value>
 	</data>
 	<data name="M_MISSINGVILLAGECODEORNAMEINEXCEL" xml:space="preserve">
-		<value>Nom ou Code de village manquant dans le fichier Excel</value>
+		<value>Nom ou Code du village manquant dans le fichier Excel</value>
 	</data>
 	<data name="M_MUNICIPALITYCODEEXISTSINDB" xml:space="preserve">
-		<value>Code de municipalité du fichier déjà dans la base de donnée</value>
+		<value>Code de Village/Quartier du fichier déjà dans la base de donnée</value>
 	</data>
 	<data name="M_MUNICIPALITYCODENOTEXISTSINEXCELORDB" xml:space="preserve">
-		<value>Municipalité du fichier &quot;Village&quot; n'existe ni dans la base de donnée in dans le fichier &quot;municipalité&quot;</value>
+		<value>Village/Quartier du fichier &quot;Village/Quartier&quot; n'existe ni dans la base de donnée in dans le fichier &quot;Village/Quartier&quot;</value>
 	</data>
 	<data name="M_REGIONCODEEXISTSINDB" xml:space="preserve">
 		<value>Code de région dans le fichier existe déjà dans la base de donnée</value>
@@ -4046,7 +4046,7 @@
 		<value>Téléverser des photos</value>
 	</data>
 	<data name="B_DownLoadFeedback" xml:space="preserve">
-		<value>Télécharger les retours d'information</value>
+		<value>Télécharger les Feedback</value>
 	</data>
 	<data name="B_DownLoadRenewals" xml:space="preserve">
 		<value>Télécharger les renouvèlements</value>
@@ -4058,7 +4058,7 @@
 		<value>Agent non trouvé</value>
 	</data>
 	<data name="B_UPLOADFEEDBACK" xml:space="preserve">
-		<value>Téléverser des retours d'information</value>
+		<value>Téléverser des Feedback</value>
 	</data>
 	<data name="B_UPLOADRENEWAL" xml:space="preserve">
 		<value>Téléverser des renouvèlements</value>
@@ -4070,7 +4070,7 @@
 		<value>Reçu en double trouvé</value>
 	</data>
 	<data name="M_FEEDFILEACCEPTED" xml:space="preserve">
-		<value>Résumé du téléversement des retours d'information</value>
+		<value>Résumé du téléversement des Feedback</value>
 	</data>
 	<data name="M_GRACEPERIODISOVER" xml:space="preserve">
 		<value>Le délai de grâce de la police est terminé</value>
@@ -4079,7 +4079,7 @@
 		<value>N° d'assuré invalide</value>
 	</data>
 	<data name="M_INVALIDFEEDBACKFILE" xml:space="preserve">
-		<value>Fichier de retours d'information invalide</value>
+		<value>Fichier de Feedback invalide</value>
 	</data>
 	<data name="M_INVALIDOFFICERCODE" xml:space="preserve">
 		<value>Code d'agent invalide</value>
@@ -4103,7 +4103,7 @@
 		<value>Rejeté</value>
 	</data>
 	<data name="L_UPLOADFEEDBACK" xml:space="preserve">
-		<value>Téléverser les retours d'information</value>
+		<value>Téléverser les Feedback</value>
 	</data>
 	<data name="L_UPLOADRENEWAL" xml:space="preserve">
 		<value>Téléverser les renouvellements</value>
@@ -4296,7 +4296,7 @@
 		<value>Il n'y a pas de demande de réinitialisation de mot de passe pendant la période de validité de la demande.</value>
 	</data>
 	<data name="M_MUSTFILLPRODUCT" xml:space="preserve">
-		<value>Veuillez entrer un paquet de bénéfices</value>
+		<value>Veuillez entrer un paquet de services</value>
 	</data>
 	<data name="L_FINDROLE" xml:space="preserve">
 		<value>Rechercher rôles</value>
@@ -4608,10 +4608,10 @@
 		<value>Traitement</value>
 	</data>
 	<data name="R_PRODUCTS" xml:space="preserve">
-		<value>Paquet de bénéfices</value>
+		<value>Paquet de services</value>
 	</data>
 	<data name="R_PRODUCTSALES" xml:space="preserve">
-		<value>Vente par paquet de bénéfices</value>
+		<value>Vente par paquet de services</value>
 	</data>
 	<data name="R_REGISTERS" xml:space="preserve">
 		<value>Registres</value>
@@ -4698,7 +4698,7 @@
 		<value>Téléverser affiliation</value>
 	</data>
 	<data name="R_FEEDBACKUPLOAD" xml:space="preserve">
-		<value>Téléverser les retours d'information</value>
+		<value>Téléverser les Feedback</value>
 	</data>
 	<data name="R_HEALTHFACILITIESDOWNLOAD" xml:space="preserve">
 		<value>Télécharger établissement de santé</value>
@@ -4893,7 +4893,7 @@
 		<value>Recherche le Code du bénéficiaire</value>
 	</data>
 	<data name="T_CHARITY" xml:space="preserve">
-		<value>Charity</value>
+		<value>Organisation à base communautaire</value>
 	</data>
 	<data name="L_EXTR_IMPORTEXTRACT1" xml:space="preserve">
 		<value>Exportation phots</value>
@@ -5053,7 +5053,7 @@
 		<value>District de santé</value>
 	</data>
 	<data name="T_HEALTHMUNICIPALITY" xml:space="preserve">
-		<value>Municipalité</value>
+		<value>Village/Quartier</value>
 	</data>
 	<data name="T_HEALTHAREA" xml:space="preserve">
 		<value>Aire de santé</value>
@@ -5141,5 +5141,30 @@
 	</data>
 	<data name="T_SERVICEPERF" xml:space="preserve">
 		<value>Performances du Service</value>
+	</data>
+
+	<data name="T_GENERAL_HOSPITAL" xml:space="preserve">
+    <value>Hôpital Général</value>
+	</data>
+	<data name="T_CENTRAL_HOSPITAL" xml:space="preserve">
+		<value>Hôpital Central</value>
+	</data>
+	<data name="T_REGIONAL_HOSPITAL" xml:space="preserve">
+		<value>Hôpital Régional</value>
+	</data>
+	<data name="T_DISTRICT_HOSPITAL" xml:space="preserve">
+		<value>Hôpital de District</value>
+	</data>
+	<data name="T_MEDICAL_HEALTHCENTRE" xml:space="preserve">
+		<value>Centre Médical d’Arrondissement</value>
+	</data>
+	<data name="T_CLINIC" xml:space="preserve">
+		<value>Clinique/Polyclinique</value>
+	</data>
+	<data name="T_INTEGRATED_HEALTHCENTER" xml:space="preserve">
+		<value>Centre de Santé Intégré</value>
+	</data>
+	<data name="T_LABORATORY" xml:space="preserve">
+		<value>Laboratoire</value>
 	</data>
 </root>
