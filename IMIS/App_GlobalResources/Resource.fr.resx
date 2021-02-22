@@ -89,10 +89,10 @@
 		<value>Prénoms</value>
 	</data>
 	<data name="L_VILLAGE" xml:space="preserve">
-		<value>Aire de santé</value>
+		<value>Village/Quartier</value>
 	</data>
 	<data name="L_WARD" xml:space="preserve">
-		<value>Village/Quartier</value>
+		<value>Aire de santé</value>
 	</data>
 	<data name="L_DISTRICT" xml:space="preserve">
 		<value>District de santé</value>
@@ -182,7 +182,7 @@
 		<value>Veuillez sélectionner un village</value>
 	</data>
 	<data name="V_WARD" xml:space="preserve">
-		<value>Veuillez sélectionner un village/quartier</value>
+		<value>Veuillez sélectionner une Aire de santé</value>
 	</data>
 	<data name="B_ADDPREMIUM" xml:space="preserve">
 		<value>Ajouter une cotisation</value>
@@ -1115,7 +1115,7 @@
 		<value>Aucun village trouvé</value>
 	</data>
 	<data name="M_NOWARDS" xml:space="preserve">
-		<value>Aucun Village/Quartier trouvée</value>
+		<value>Aucune Aire de santé trouvée</value>
 	</data>
 	<data name="M_POLICYVALUECHANGE" xml:space="preserve">
 		<value>Valeur de la police avec la date de souscription:</value>
@@ -1124,7 +1124,7 @@
 		<value>Code du bénéficiaire invalide</value>
 	</data>
 	<data name="M_VILLAGESINWARD" xml:space="preserve">
-		<value>Veuillez d'abord supprimer le village dans le village/quartier</value>
+		<value>Veuillez d'abord supprimer le village dans l'Aire de santé</value>
 	</data>
 	<data name="M_WARDSINDISTRICT" xml:space="preserve">
 		<value>Veuillez d'abord supprimer les villages/quartiers dans le district</value>
@@ -1346,7 +1346,7 @@
 		<value>Sél. village </value>
 	</data>
 	<data name="T_SELECTAWARD" xml:space="preserve">
-		<value>Sél. Village/Quartier</value>
+		<value>Sél. Aire de santé</value>
 	</data>
 	<data name="T_SELECTDISTRICT" xml:space="preserve">
 		<value> Sél. district</value>
@@ -1571,7 +1571,7 @@
 		<value>Village en double trouvé. Importation annulée.</value>
 	</data>
 	<data name="M_DUPLICATEWARD" xml:space="preserve">
-		<value>Village/Quartier en double trouvée. Importation annulée.</value>
+		<value>Aire de santé en double trouvée. Importation annulée.</value>
 	</data>
 	<data name="M_LOCATIONUPLOADED" xml:space="preserve">
 		<value>Les lieux ont été transférés avec succès. </value>
@@ -2396,7 +2396,7 @@
 		<value>Nom du village</value>
 	</data>
 	<data name="L_WardName" xml:space="preserve">
-		<value>Nom du Village/Quartier</value>
+		<value>Nom de l'Aire de santé</value>
 	</data>
 	<data name="M_DELETEDISTRICTPROMPT" xml:space="preserve">
 		<value>Voulez-vous vraiment supprimer ce district?</value>
@@ -2405,7 +2405,7 @@
 		<value>Voulez-vous vraiment supprimer ce village?</value>
 	</data>
 	<data name="M_DELETEWARDPROMPT" xml:space="preserve">
-		<value>Voulez-vous vraiment supprimer ce Village/Quartier?</value>
+		<value>Voulez-vous vraiment supprimer cette Aire de santé?</value>
 	</data>
 	<data name="M_EMPTYLOCATIONNAME" xml:space="preserve">
 		<value>Le nom du lieu ne peut être vide</value>
@@ -2606,7 +2606,7 @@
 		<value>Aucun village spécifié</value>
 	</data>
 	<data name="M_NOWARDSPECIFIED" xml:space="preserve">
-		<value>Aucun Village/Quartier spécifié</value>
+		<value>Aucun Aire de santé spécifié</value>
 	</data>
 	<data name="M_SELECTMONTH" xml:space="preserve">
 		<value>Veuillez sélectionner le mois</value>
@@ -2858,13 +2858,13 @@
 		<value>Aperçu de la catégorie de paiement</value>
 	</data>
 	<data name="M_DISTRICTSAVED" xml:space="preserve">
-		<value>Village/Quartier sauvegardé avec succès</value>
+		<value>Aire de santé sauvegardée avec succès</value>
 	</data>
 	<data name="M_VILLAGESAVED" xml:space="preserve">
 		<value>Village sauvegardé avec succès</value>
 	</data>
 	<data name="M_WARDSAVED" xml:space="preserve">
-		<value>Village/Quartier enregistré</value>
+		<value>Aire de santé enregistrée</value>
 	</data>
 	<data name="M_CONTINUEPROMPT" xml:space="preserve">
 		<value>Voulez-vous continuer?</value>
@@ -3152,10 +3152,10 @@
 		<value>Détails de l'adresse actuelle</value>
 	</data>
 	<data name="L_CVDC" xml:space="preserve">
-		<value>Village/Quartier actuel</value>
+		<value>Aire de santé actuelle</value>
 	</data>
 	<data name="L_CWARD" xml:space="preserve">
-		<value>Village/Quartier actuel</value>
+		<value>Aire de santé actuelle</value>
 	</data>
 	<data name="L_FREEITEMPRICE" xml:space="preserve">
 		<value>produit médical gratuit</value>
@@ -3683,7 +3683,7 @@
 		<value>Code Village</value>
 	</data>
 	<data name="L_WARDCODE" xml:space="preserve">
-		<value>Code Village/Quartier</value>
+		<value>Code Aire de santé</value>
 	</data>
 	<data name="M_EMPTYLOCATIONCODE" xml:space="preserve">
 		<value>Le code location ne peut être vide</value>
@@ -3731,7 +3731,7 @@
 		<value>La valeur ne peut pas excéder 100%</value>
 	</data>
 	<data name="M_NOWARD" xml:space="preserve">
-		<value>Aucun Village/Quartier trouvé</value>
+		<value>Aucune Aire de santé trouvée</value>
 	</data>
 	<data name="L_FSPREGION" xml:space="preserve">
 		<value>Région du PPS</value>
@@ -3860,13 +3860,13 @@
 		<value>Code de district inclus dans le fichier déjà existant dans la base de données</value>
 	</data>
 	<data name="M_DISTRICTCODENOTEXISTSINEXCELORDB" xml:space="preserve">
-		<value>Le code du district spécifié dans le Village/Quartier n'existe ni dans le fichier ni dans la base de donnée</value>
+		<value>Le code du district spécifié dans l'Aire de santé n'existe ni dans le fichier ni dans la base de donnée</value>
 	</data>
 	<data name="M_DUPLICATEDISTRICTCODEINEXCEL" xml:space="preserve">
 		<value>Il y a un code de district en double dans le fichier</value>
 	</data>
 	<data name="M_DUPLICATEMUNICIPALITYCODEINEXCEL" xml:space="preserve">
-		<value>Il y a un Village/Quartier en double dans le fichier</value>
+		<value>Il y a une Aire de santé en double dans le fichier</value>
 	</data>
 	<data name="M_DUPLICATEREGIONCODEINEXCEL" xml:space="preserve">
 		<value>Il y a un code de région en double dans le fichier</value>
@@ -3878,7 +3878,7 @@
 		<value>Ficher de district invalide (soit le nom de l'onglet, soit le nom des colonnes soit les entrées sont invalides)</value>
 	</data>
 	<data name="M_INVALIDMUNICIPALITYFILEINEXCEL" xml:space="preserve">
-		<value>Ficher de Village/Quartier invalide (soit le nom de l'onglet, soit le nom des colonnes soit les entrées sont invalides)</value>
+		<value>Ficher d'Aire de santé invalide (soit le nom de l'onglet, soit le nom des colonnes soit les entrées sont invalides)</value>
 	</data>
 	<data name="M_INVALIDREGIONFILEINEXCEL" xml:space="preserve">
 		<value>Ficher de région invalide (soit le nom de l'onglet, soit le nom des colonnes soit les entrées sont invalides)</value>
@@ -3893,7 +3893,7 @@
 		<value>Nom ou code de district manquant dans le fichier Excel</value>
 	</data>
 	<data name="M_MISSINGMUNICIPALITYCODEORNAMEINEXCEL" xml:space="preserve">
-		<value>Nom ou Code du Village/Quartier manquant dans le fichier Excel</value>
+		<value>Nom ou Code de l'Aire de santé manquant dans le fichier Excel</value>
 	</data>
 	<data name="M_MISSINGREGIONCODEORNAMEINEXCEL" xml:space="preserve">
 		<value>Nom ou Code de région manquant dans le fichier</value>
@@ -3902,10 +3902,10 @@
 		<value>Nom ou Code du village manquant dans le fichier Excel</value>
 	</data>
 	<data name="M_MUNICIPALITYCODEEXISTSINDB" xml:space="preserve">
-		<value>Code de Village/Quartier du fichier déjà dans la base de donnée</value>
+		<value>Code de l'Aire de santé du fichier déjà dans la base de donnée</value>
 	</data>
 	<data name="M_MUNICIPALITYCODENOTEXISTSINEXCELORDB" xml:space="preserve">
-		<value>Village/Quartier du fichier &quot;Village/Quartier&quot; n'existe ni dans la base de donnée in dans le fichier &quot;Village/Quartier&quot;</value>
+		<value>Aire de santé du fichier &quot;Aire de santé&quot; n'existe ni dans la base de donnée in dans le fichier &quot;Aire de santé&quot;</value>
 	</data>
 	<data name="M_REGIONCODEEXISTSINDB" xml:space="preserve">
 		<value>Code de région dans le fichier existe déjà dans la base de donnée</value>
@@ -5053,10 +5053,10 @@
 		<value>District de santé</value>
 	</data>
 	<data name="T_HEALTHMUNICIPALITY" xml:space="preserve">
-		<value>Village/Quartier</value>
+		<value>Aire de santé</value>
 	</data>
 	<data name="T_HEALTHAREA" xml:space="preserve">
-		<value>Aire de santé</value>
+		<value>Village/Quartier</value>
 	</data>
 	<data name="T_NAMEHEALTHFACILITY" xml:space="preserve">
 		<value>Nom du FOSA</value>
@@ -5071,7 +5071,7 @@
 		<value>Population totale</value>
 	</data>
 	<data name="T_NUMPLHIV" xml:space="preserve">
-		<value>Nombre de PLHIV dans l'aire de santé/District de santé</value>
+		<value>Nombre de PLHIV dans le Village/Quartier/District de santé</value>
 	</data>
 	<data name="T_DATEINVOICING" xml:space="preserve">
 		<value>Date de Facturation</value>
@@ -5166,5 +5166,14 @@
 	</data>
 	<data name="T_LABORATORY" xml:space="preserve">
 		<value>Laboratoire</value>
+	</data>
+	<data name="T_CMDEVISE" xml:space="preserve">
+		<value>FCFA</value>
+	</data>
+	<data name="T_CMDEVISELETTER" xml:space="preserve">
+		<value>Francs CFA</value>
+	</data>
+	<data name="T_LANG" xml:space="preserve">
+		<value>fr</value>
 	</data>
 </root>
