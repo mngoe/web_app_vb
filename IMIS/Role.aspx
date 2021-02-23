@@ -401,6 +401,7 @@
                             <asp:TreeNode Text="<%$ Resources:Resource,R_CONTROLNUMBERASSIGNMENT %>" Value="131221" SelectAction="None"></asp:TreeNode>
                             <asp:TreeNode Text="<%$ Resources:Resource,R_OVERVIEWOFCOMMISSIONS %>" Value="131222" SelectAction="None"></asp:TreeNode>
                             <asp:TreeNode Text="<%$ Resources:Resource,R_CLAIMHISTORYREPORT %>" Value="131223" SelectAction="None"></asp:TreeNode>
+                            <asp:TreeNode Text="<%$ Resources:Resource,R_SERVICEPERF %>" Value="131224" SelectAction="None"></asp:TreeNode>
                         </asp:TreeNode>
                         <asp:TreeNode Text="<%$ Resources:Resource,R_UTILITIES %>" Value="131300" SelectAction="Expand" ImageUrl="~/Images/Renew.png">
                                 <asp:TreeNode Text="<%$ Resources:Resource,R_BACKUP %>" Value="131301" SelectAction="None"></asp:TreeNode> 

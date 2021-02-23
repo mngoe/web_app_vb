@@ -224,6 +224,7 @@ Public Class Enums
         ReportsControlNumberAssignment = 131221
         ReportsOverviewOfCommissions = 131222
         ReportsClaimHistoryReport = 131223
+        ReportsServicePerformanceReport = 131224
 
 
         '****************************************Utilities/Email Setting 131300 

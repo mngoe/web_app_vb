@@ -5111,6 +5111,9 @@ adults/children)
   <data name="T_SERVICEPERF" xml:space="preserve">
     <value>Service Performances</value>
   </data>
+  <data name="R_SERVICEPERF" xml:space="preserve">
+    <value>Service Performances</value>
+  </data>
   <!-- Resources changes for SERVICEPERFORMANCE report -->
   <data name="T_RDPH_RFHP" xml:space="preserve">
     <value>RDPH/RFHP</value>

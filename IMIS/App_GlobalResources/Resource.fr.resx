@@ -5142,6 +5142,9 @@
 	<data name="T_SERVICEPERF" xml:space="preserve">
 		<value>Performances du Service</value>
 	</data>
+	<data name="R_SERVICEPERF" xml:space="preserve">
+		<value>Performances du Service</value>
+	</data>
 
 	<data name="T_GENERAL_HOSPITAL" xml:space="preserve">
     <value>Hôpital Général</value>

@@ -256,6 +256,7 @@ Public Class UsersBL
             Case IMIS_EN.Enums.Rights.ReportsControlNumberAssignment : Return CheckUserRights(UserID, Right) '(Roles.CHFAccountant + Roles.CHFClerk And UserID)
             Case IMIS_EN.Enums.Rights.ReportsOverviewOfCommissions : Return CheckUserRights(UserID, Right) '(Roles.CHFAccountant  )
             Case IMIS_EN.Enums.Rights.ReportsClaimHistoryReport : Return CheckUserRights(UserID, Right) '(Roles.CHFAccountant  )
+            Case IMIS_EN.Enums.Rights.ReportsServicePerformanceReport : Return CheckUserRights(UserID, Right) '(Roles.CHFAccountant  and CHManager)
 
             'UTILITIES
             Case IMIS_EN.Enums.Rights.Utilities : Return CheckUserRights(UserID, Right, 1) '(Roles.IMISAdministrator + Roles.HFAdministrator + Roles.OfflineCHFAdministrator And UserID)

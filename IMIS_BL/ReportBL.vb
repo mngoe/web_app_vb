@@ -136,7 +136,7 @@ Public Class ReportBL
         'dict.Add(getMessage("L_CONTROLNUMBERASSIGNMENT"), IMIS_EN.Enums.Rights.ReportsControlNumberAssignment) 'Id = 21
         'dict.Add(getMessage("L_OVERVIEWOFCOMMISSIONS"), IMIS_EN.Enums.Rights.ReportsOverviewOfCommissions) 'Id = 22
         dict.Add(getMessage("L_CLAIMHISTORYREPORT"), IMIS_EN.Enums.Rights.ReportsClaimHistoryReport) 'Id = 23
-        dict.Add(getMessage("L_LISTSERVICE"), IMIS_EN.Enums.Rights.ReportsClaimHistoryReport) 'Id = 24
+        dict.Add(getMessage("L_LISTSERVICE"), IMIS_EN.Enums.Rights.ReportsServicePerformanceReport) 'Id = 24
         Dim dr As DataRow
         Dim index As Integer = 1
         For Each Rtype As String In dict.Keys
