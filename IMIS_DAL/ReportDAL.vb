@@ -684,7 +684,7 @@ Public Class ReportDAL
         Data.params("@StartDate", SqlDbType.Date, StartDate)
         Data.params("@EndDate", SqlDbType.Date, EndDate)
         Data.params("@ClaimStatus", SqlDbType.Int, ClaimStatus)
-        Data.params("@InsuranceNumber", SqlDbType.NVarChar, 12, InsuranceNumber)
+        Data.params("@InsuranceNumber", SqlDbType.NVarChar, 250, InsuranceNumber)
         Data.params("@Scope", SqlDbType.Int, Scope)
         If Not Scope = 0 Then
             Data.params("@ClaimRejReason", dtRejReasons, "xClaimRejReasons")

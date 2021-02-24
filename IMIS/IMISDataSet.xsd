@@ -114,7 +114,7 @@
               <xs:element name="CHFID" msprop:Generator_ColumnVarNameInTable="columnCHFID" msprop:Generator_ColumnPropNameInRow="CHFID" msprop:Generator_ColumnPropNameInTable="CHFIDColumn" msprop:Generator_UserColumnName="CHFID" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="12" />
+                    <xs:maxLength value="250" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

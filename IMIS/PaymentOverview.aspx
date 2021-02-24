@@ -290,7 +290,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                           <td class="DataEntry">
                                             <asp:UpdatePanel ID="up1" runat="server">
                                                 <ContentTemplate>
-                                                    <asp:TextBox ID="txtEditInsuranceNumber" runat="server" AutoPostBack="True" CssClass="numbersOnly" MaxLength="12" Width="150px"></asp:TextBox>
+                                                    <asp:TextBox ID="txtEditInsuranceNumber" runat="server" AutoPostBack="True" CssClass="numbersOnly" Width="150px"></asp:TextBox>
                                                     <asp:RequiredFieldValidator ID="RequiredFieldCHFID0" runat="server" ControlToValidate="txtEditInsuranceNumber" SetFocusOnError="True" Text="*" ValidationGroup="check">
                                                     </asp:RequiredFieldValidator>
                                                 </ContentTemplate>

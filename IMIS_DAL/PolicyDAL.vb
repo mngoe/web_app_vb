@@ -219,7 +219,7 @@ Public Class PolicyDAL
     Public Function FindInsureeByCHFIDGrid(ByVal CHFID As String) As DataTable
         Dim sSQL As String = "uspPolicyInquiry"
         data.setSQLCommand(sSQL, CommandType.StoredProcedure)
-        data.params("@CHFID", SqlDbType.NVarChar, 12, CHFID)
+        data.params("@CHFID", SqlDbType.NVarChar, 250, CHFID)
         Return data.Filldata
     End Function
     Public Function GetPolicy(ByVal ePolicy As IMIS_EN.tblPolicy, ByVal All As Boolean, ByVal Status As DataTable, Optional ByVal DeactivatedPolicies As Boolean = False) As DataTable

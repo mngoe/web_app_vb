@@ -539,7 +539,7 @@ Public Class IMISExtractsDAL
         sSQL = "uspPhoneExtract"
 
         data.setSQLCommand(sSQL, CommandType.StoredProcedure, , 0)
-        'data.params("@CHFID", SqlDbType.NVarChar, 12, "")
+        'data.params("@CHFID", SqlDbType.NVarChar, 250, "")
         data.params("@LocationId", SqlDbType.Int, LocationId)
 
 

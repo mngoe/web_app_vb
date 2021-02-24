@@ -476,7 +476,7 @@ Public Class ClaimsDAL
             data.params("@HFID", SqlDbType.Int, eClaims.tblHF.HfID)
         End If
         If Not eClaims.tblInsuree.CHFID = Nothing Then
-            data.params("@CHFID", SqlDbType.NVarChar, 12, eClaims.tblInsuree.CHFID)
+            data.params("@CHFID", SqlDbType.NVarChar, 250, eClaims.tblInsuree.CHFID)
         End If
         If Not eClaims.tblHF.HFName = Nothing Then
             data.params("@HFName", SqlDbType.NVarChar, 100, eClaims.tblHF.HFName)
@@ -580,7 +580,7 @@ Public Class ClaimsDAL
             data.params("@HFID", SqlDbType.Int, eClaims.tblHF.HfID)
         End If
         If Not eClaims.tblInsuree.CHFID = Nothing Then
-            data.params("@CHFID", SqlDbType.NVarChar, 12, eClaims.tblInsuree.CHFID)
+            data.params("@CHFID", SqlDbType.NVarChar, 250, eClaims.tblInsuree.CHFID)
         End If
         If Not eClaims.tblHF.HFName = Nothing Then
             data.params("@HFName", SqlDbType.NVarChar, 100, eClaims.tblHF.HFName)
@@ -691,7 +691,7 @@ Public Class ClaimsDAL
             data.params("@HFID", SqlDbType.Int, eClaims.tblHF.HfID)
         End If
         If Not eClaims.tblInsuree.CHFID = Nothing Then
-            data.params("@CHFID", SqlDbType.NVarChar, 12, eClaims.tblInsuree.CHFID)
+            data.params("@CHFID", SqlDbType.NVarChar, 250, eClaims.tblInsuree.CHFID)
         End If
         If Not eClaims.tblHF.HFName = Nothing Then
             data.params("@HFName", SqlDbType.NVarChar, 100, eClaims.tblHF.HFName)
@@ -796,7 +796,7 @@ Public Class ClaimsDAL
             data.params("@HFID", SqlDbType.Int, eClaims.tblHF.HfID)
         End If
         If Not eClaims.tblInsuree.CHFID = Nothing Then
-            data.params("@CHFID", SqlDbType.NVarChar, 12, eClaims.tblInsuree.CHFID)
+            data.params("@CHFID", SqlDbType.NVarChar, 250, eClaims.tblInsuree.CHFID)
         End If
         If Not eClaims.tblHF.HFName = Nothing Then
             data.params("@HFName", SqlDbType.NVarChar, 100, eClaims.tblHF.HFName)

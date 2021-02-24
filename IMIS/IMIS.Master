@@ -550,7 +550,7 @@
                         <li><a style="width: 200px" class="search">
                             <div style="position: relative; background-color: White; overflow: hidden; width: 155px; float: left; font-weight: normal;">
                                 <asp:Label ID="lblWaterMark" runat="server" Text='<%$ Resources:Resource,L_SEARCHCHFNUMBER %>' CssClass="WaterMark"></asp:Label>
-                                <asp:TextBox ID="txtSearch" runat="server" CssClass="numbersOnly" AutoPostBack="False" Height="14px" Style="background: none; z-index: 2; position: relative; font-size: small; float: left; width: 155px" MaxLength="12"></asp:TextBox>
+                                <asp:TextBox ID="txtSearch" runat="server" CssClass="numbersOnly" AutoPostBack="False" Height="14px" Style="background: none; z-index: 2; position: relative; font-size: small; float: left; width: 155px" MaxLength="250"></asp:TextBox>
                             </div>
                             <div class="AdvancedSearch">
                                 <span id="btnAdvance" style="color: Blue; font-size: 18px;">▼</span>

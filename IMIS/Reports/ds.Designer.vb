@@ -2393,7 +2393,7 @@ Partial Public Class ds
             MyBase.Columns.Add(Me.columnOfficerCode)
             Me.columnRejectedDate = New Global.System.Data.DataColumn("RejectedDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnRejectedDate)
-            Me.columnCHFID.MaxLength = 12
+            Me.columnCHFID.MaxLength = 250
             Me.columnOfficerCode.MaxLength = 8
             Me.columnRejectedDate.AllowDBNull = false
         End Sub
@@ -2817,7 +2817,7 @@ Partial Public Class ds
             Me.columnPaymentID.AllowDBNull = false
             Me.columnPaymentID.ReadOnly = true
             Me.columnPaymentID.Unique = true
-            Me.columnInsuranceNumber.MaxLength = 12
+            Me.columnInsuranceNumber.MaxLength = 250
             Me.columnOfficerCode.MaxLength = 50
             Me.columnReceiptNo.MaxLength = 100
             Me.columnControlNumber.MaxLength = 50

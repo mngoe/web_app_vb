@@ -334,7 +334,7 @@ warning 6002: The table/view 'openIMIS-demo-1.3.0.dbo.tblEmailSettings' does not
           <Property Name="DocStatus" Type="nvarchar" MaxLength="3" />
           <Property Name="LandedDate" Type="datetime" Nullable="false" />
           <Property Name="OfficerCode" Type="nvarchar" MaxLength="8" />
-          <Property Name="CHFID" Type="nvarchar" MaxLength="12" />
+          <Property Name="CHFID" Type="nvarchar" MaxLength="250" />
           <Property Name="PhotoSumittedDate" Type="datetime" />
           <Property Name="ClaimId" Type="int" />
         </EntityType>
@@ -478,7 +478,7 @@ warning 6013: The table/view 'openIMIS-demo-1.3.0.dbo.tblIMISDetaulsPhone' does 
           </Key>
           <Property Name="InsureeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FamilyID" Type="int" Nullable="false" />
-          <Property Name="CHFID" Type="nvarchar" MaxLength="12" />
+          <Property Name="CHFID" Type="nvarchar" MaxLength="250" />
           <Property Name="LastName" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="OtherNames" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="DOB" Type="date" Nullable="false" />
@@ -662,7 +662,7 @@ warning 6013: The table/view 'openIMIS-demo-1.3.0.dbo.tblIMISDetaulsPhone' does 
           </Key>
           <Property Name="PhotoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="InsureeID" Type="int" />
-          <Property Name="CHFID" Type="nvarchar" MaxLength="12" />
+          <Property Name="CHFID" Type="nvarchar" MaxLength="250" />
           <Property Name="PhotoFolder" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="PhotoFileName" Type="nvarchar" MaxLength="250" />
           <Property Name="OfficerID" Type="int" Nullable="false" />
@@ -1074,7 +1074,7 @@ warning 6013: The table/view 'openIMIS-demo-1.3.0.dbo.tblIMISDetaulsPhone' does 
           </Key>
           <Property Name="PhotoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ImageName" Type="nvarchar" MaxLength="50" />
-          <Property Name="CHFID" Type="nvarchar" MaxLength="12" />
+          <Property Name="CHFID" Type="nvarchar" MaxLength="250" />
           <Property Name="OfficerCode" Type="nvarchar" MaxLength="8" />
           <Property Name="PhotoDate" Type="date" />
           <Property Name="RegisterDate" Type="datetime" />
@@ -4422,7 +4422,7 @@ warning 6013: The table/view 'openIMIS-demo-1.3.0.dw.uvwVisit' does not have a p
           <Property Name="DocStatus" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
           <Property Name="LandedDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="OfficerCode" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
-          <Property Name="CHFID" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CHFID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="PhotoSumittedDate" Type="DateTime" Precision="3" />
           <Property Name="ClaimId" Type="Int32" />
         </EntityType>
@@ -4580,7 +4580,7 @@ warning 6013: The table/view 'openIMIS-demo-1.3.0.dw.uvwVisit' does not have a p
           </Key>
           <Property Name="InsureeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FamilyID" Type="Int32" Nullable="false" />
-          <Property Name="CHFID" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CHFID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="LastName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="OtherNames" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
@@ -4810,7 +4810,7 @@ warning 6013: The table/view 'openIMIS-demo-1.3.0.dw.uvwVisit' does not have a p
           </Key>
           <Property Name="PhotoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="InsureeID" Type="Int32" />
-          <Property Name="CHFID" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CHFID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="PhotoFolder" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="PhotoFileName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="OfficerID" Type="Int32" Nullable="false" />
@@ -5279,7 +5279,7 @@ warning 6013: The table/view 'openIMIS-demo-1.3.0.dw.uvwVisit' does not have a p
           </Key>
           <Property Name="PhotoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ImageName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CHFID" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="CHFID" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="OfficerCode" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="PhotoDate" Type="DateTime" Precision="0" />
           <Property Name="RegisterDate" Type="DateTime" Precision="3" />

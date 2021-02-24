@@ -522,7 +522,7 @@ Partial Public Class IMISDataSet
             Me.columnDocStatus.MaxLength = 3
             Me.columnLandedDate.AllowDBNull = false
             Me.columnOfficerCode.MaxLength = 8
-            Me.columnCHFID.MaxLength = 12
+            Me.columnCHFID.MaxLength = 250
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

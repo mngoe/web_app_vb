@@ -427,7 +427,7 @@ Public Class InsureeDAL
         End If
 
         data.setSQLCommand(strSQL, CommandType.Text)
-        data.params("@CHFId", SqlDbType.NVarChar, 12, eInsuree.CHFID)
+        data.params("@CHFId", SqlDbType.NVarChar, 250, eInsuree.CHFID)
         If Not eInsuree.InsureeID = 0 Then
             data.params("@InsureeId", SqlDbType.Int, eInsuree.InsureeID)
         End If
@@ -487,7 +487,7 @@ Public Class InsureeDAL
     Public Function verifyCHFIDandReturnName(ByVal CHFID As String, ByRef insureeid As Integer) As String
         Dim data As New ExactSQL
         data.setSQLCommand("select Insureeid,  OtherNames + ' ' + Lastname Name from tblInsuree where CHFID = @CHFId and validityto is null", CommandType.Text)
-        data.params("@CHFId", SqlDbType.NVarChar, 12, CHFID)
+        data.params("@CHFId", SqlDbType.NVarChar, 250, CHFID)
         '  data.params("Name", SqlDbType.NVarChar, 150, "", ParameterDirection.Output)
         Dim dr As DataRow = data.Filldata()(0)
         If dr Is Nothing Then

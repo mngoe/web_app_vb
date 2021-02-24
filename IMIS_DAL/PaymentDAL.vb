@@ -197,7 +197,7 @@ Public Class PaymentDAL
         'End If
         'sSQL += " ORDER BY py.PaymentID,PY.OfficerCode, PY.ExpectedAmount, PY.ReceiptNo, CN.ControlNumber, PY.TransactionNo, PY.PhoneNumber, PY.PaymentDate, PY.ReceivedDate,  PY.MatchedDate,  PY.PaymentOrigin"
         data.setSQLCommand(sSQL, CommandType.Text)
-        data.params("@InsuranceNumber", SqlDbType.NVarChar, 15, ePayment.InsuranceNumber + "%")
+        data.params("@InsuranceNumber", SqlDbType.NVarChar, 250, ePayment.InsuranceNumber + "%")
         data.params("@TransactionNo", SqlDbType.NVarChar, 50, ePayment.TransactionNumber + "%")
         data.params("@ControlNumber", SqlDbType.NVarChar, 50, ePayment.ControlNumber + "%")
         data.params("@PhoneNumber", SqlDbType.NVarChar, 25, ePayment.PhoneNumber + "%")
@@ -290,7 +290,7 @@ Public Class PaymentDAL
         SSQL += " WHERE [PaymentDetailsID] = @PaymentDetailsID"
         data.setSQLCommand(SSQL, CommandType.Text)
 
-        data.params("@InsuranceNumber", SqlDbType.NVarChar, 12, ePaymentDetails.InsuranceNumber)
+        data.params("@InsuranceNumber", SqlDbType.NVarChar, 250, ePaymentDetails.InsuranceNumber)
         data.params("@ProductCode", SqlDbType.NVarChar, 8, ePaymentDetails.ProductCode)
         data.params("@PolicyStage", SqlDbType.NVarChar, 1, ePaymentDetails.PolicyStage)
         data.params("@PaymentDetailsID", SqlDbType.Int, ePaymentDetails.PaymentDetailID)
