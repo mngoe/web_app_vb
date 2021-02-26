@@ -119,7 +119,7 @@ Partial Public Class Insuree
         trMaritalStatus.Visible = Not (Adjustibility = "N")
         L_MARITAL.Visible = Not (Adjustibility = "N")
         ddlMarital.Visible = Not (Adjustibility = "N")
-        rfMaritalStatus.Enabled = (Adjustibility = "M")
+        'rfMaritalStatus.Enabled = (Adjustibility = "M")
 
         'Permanent Address
         Adjustibility = General.getControlSetting("PermanentAddress")

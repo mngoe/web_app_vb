@@ -190,7 +190,7 @@ Public Class ClaimsDAL
         data.params("@InsureeID", SqlDbType.Int, eClaim.tblInsuree.InsureeID)
         data.params("@HFID", SqlDbType.Int, eClaim.tblHF.HfID)
         data.params("@ICDID", SqlDbType.Int, eClaim.tblICDCodes.ICDID)
-        data.params("@ClaimCode", SqlDbType.NVarChar, 8, eClaim.ClaimCode)
+        data.params("@ClaimCode", SqlDbType.NVarChar, 10, eClaim.ClaimCode)
         data.params("@DateFrom", SqlDbType.SmallDateTime, eClaim.DateFrom)
         data.params("@DateTo", SqlDbType.SmallDateTime, if(eClaim.DateTo Is Nothing, SqlTypes.SqlDateTime.Null, eClaim.DateTo))
         data.params("@Explanation", SqlDbType.NText, 100, eClaim.Explanation)
@@ -224,7 +224,7 @@ Public Class ClaimsDAL
         data.params("@claimID", SqlDbType.Int, eClaim.ClaimID)
         data.params("@InsureeId", SqlDbType.Int, eClaim.tblInsuree.InsureeID)
         data.params("@ICDID", SqlDbType.Int, eClaim.tblICDCodes.ICDID)
-        data.params("@ClaimCode", SqlDbType.NVarChar, 8, eClaim.ClaimCode)
+        data.params("@ClaimCode", SqlDbType.NVarChar, 10, eClaim.ClaimCode)
         data.params("@DateFrom", SqlDbType.SmallDateTime, eClaim.DateFrom)
         data.params("@DateTo", SqlDbType.SmallDateTime, if(eClaim.DateTo Is Nothing, SqlTypes.SqlDateTime.Null, eClaim.DateTo))
         data.params("@Claimed", SqlDbType.Decimal, eClaim.Claimed)
@@ -325,7 +325,7 @@ Public Class ClaimsDAL
 
         data.setSQLCommand(str, CommandType.Text)
 
-        data.params("@ClaimCode", SqlDbType.NVarChar, 8, eClaim.ClaimCode)
+        data.params("@ClaimCode", SqlDbType.NVarChar, 10, eClaim.ClaimCode)
         data.params("@HfID", SqlDbType.Int, eClaim.tblHF.HfID)
 
         Return data.Filldata
@@ -482,7 +482,7 @@ Public Class ClaimsDAL
             data.params("@HFName", SqlDbType.NVarChar, 100, eClaims.tblHF.HFName)
         End If
         If Not eClaims.ClaimCode = Nothing Then
-            data.params("@ClaimCode", SqlDbType.NVarChar, 8, eClaims.ClaimCode)
+            data.params("@ClaimCode", SqlDbType.NVarChar, 10, eClaims.ClaimCode)
         End If
         If Not eClaims.DateFrom = Nothing Then
             data.params("@DateFrom", SqlDbType.SmallDateTime, eClaims.DateFrom)
@@ -586,7 +586,7 @@ Public Class ClaimsDAL
             data.params("@HFName", SqlDbType.NVarChar, 100, eClaims.tblHF.HFName)
         End If
         If Not eClaims.ClaimCode = Nothing Then
-            data.params("@ClaimCode", SqlDbType.NVarChar, 8, eClaims.ClaimCode)
+            data.params("@ClaimCode", SqlDbType.NVarChar, 10, eClaims.ClaimCode)
         End If
         If Not eClaims.DateFrom = Nothing Then
             data.params("@DateFrom", SqlDbType.DateTime, eClaims.DateFrom)
@@ -697,7 +697,7 @@ Public Class ClaimsDAL
             data.params("@HFName", SqlDbType.NVarChar, 100, eClaims.tblHF.HFName)
         End If
         If Not eClaims.ClaimCode = Nothing Then
-            data.params("@ClaimCode", SqlDbType.NVarChar, 8, eClaims.ClaimCode)
+            data.params("@ClaimCode", SqlDbType.NVarChar, 10, eClaims.ClaimCode)
         End If
         If Not eClaims.DateFrom = Nothing Then
             data.params("@DateFrom", SqlDbType.SmallDateTime, eClaims.DateFrom)
@@ -802,7 +802,7 @@ Public Class ClaimsDAL
             data.params("@HFName", SqlDbType.NVarChar, 100, eClaims.tblHF.HFName)
         End If
         If Not eClaims.ClaimCode = Nothing Then
-            data.params("@ClaimCode", SqlDbType.NVarChar, 8, eClaims.ClaimCode)
+            data.params("@ClaimCode", SqlDbType.NVarChar, 10, eClaims.ClaimCode)
         End If
         If Not eClaims.DateFrom = Nothing Then
             data.params("@DateFrom", SqlDbType.SmallDateTime, eClaims.DateFrom)

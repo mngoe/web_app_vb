@@ -270,30 +270,30 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <td class="FormLabel">&nbsp;</td>
                                         <td class="DataEntry">&nbsp;</td>
                                     </tr>
-                                    <tr>
+                                    <tr style="display: none;">
                                         <td class="FormLabel">
                                             <asp:Label ID="L_OTHERNAMES0" runat="server" Text="<%$ Resources:Resource,L_OTHERNAMES %>">
                                             </asp:Label>
                                         </td>
                                         <td class="DataEntry">
                                             <asp:TextBox ID="txtOtherNames" runat="server"   Width="150px"></asp:TextBox>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldOtherNames1" runat="server" ControlToValidate="txtOtherNames" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic"
+                                            <%--<asp:RequiredFieldValidator ID="RequiredFieldOtherNames1" runat="server" ControlToValidate="txtOtherNames" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic"
                                             Text='*'>
-                                            </asp:RequiredFieldValidator>
+                                            </asp:RequiredFieldValidator>--%>
                                              
                                         </td>
                                         <td class="FormLabel">&nbsp;</td>
                                         <td class="DataEntry">&nbsp;</td>
                                     </tr>
-                                    <tr>
+                                    <tr style="display: none;">
                                         <td class="FormLabel">
                                             <asp:Label ID="L_LASTNAME0" runat="server" Text="<%$ Resources:Resource,L_LASTNAME %>">
                                             </asp:Label>
                                         </td>
                                         <td class="DataEntry">
                                             <asp:TextBox ID="txtLastName" runat="server"   Width="150px"></asp:TextBox>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldLastName2" runat="server" ControlToValidate="txtLastName" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic" Text='*'>
-                                            </asp:RequiredFieldValidator>
+                                            <%--<asp:RequiredFieldValidator ID="RequiredFieldLastName2" runat="server" ControlToValidate="txtLastName" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic" Text='*'>
+                                            </asp:RequiredFieldValidator>--%>
                                              
                                         </td>
                                         <td class="FormLabel">&nbsp;</td>
@@ -350,7 +350,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <td class="DataEntry">
                                             &nbsp;</td>
                                     </tr>
-                                    <tr id="trMaritalStatus" runat="server">
+                                    <tr id="trMaritalStatus" runat="server" style="display: none;">
                                         <td class="FormLabel" >
                                             <asp:Label
                                                 ID="L_MARITAL"
@@ -364,9 +364,9 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                             <asp:DropDownList ID="ddlMarital" runat="server" Width="150px" Visible="false">
                                             </asp:DropDownList>
 
-                                            <asp:RequiredFieldValidator ID="rfMaritalStatus" runat="server" ControlToValidate="ddlMarital" InitialValue="" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic"
+                                            <%-- <asp:RequiredFieldValidator ID="rfMaritalStatus" runat="server" ControlToValidate="ddlMarital" InitialValue="" SetFocusOnError="True" ValidationGroup="check" ForeColor="Red" Display="Dynamic"
                                                 Text='*'>
-                                            </asp:RequiredFieldValidator>
+                                            </asp:RequiredFieldValidator>--%>
 
                                         </td>
                                         <td class="FormLabel">
@@ -382,7 +382,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                             &nbsp;</td>
                                     </tr>
 
-                                    <tr id="trBeneficiary" runat="server">
+                                    <tr id="trBeneficiary" runat="server" style="display: none;">
                                         <td class="FormLabel">
                                             <asp:Label
                                                 ID="L_CARD"
@@ -491,7 +491,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <td class="FormLabel">&nbsp;</td>
                                         <td class="DataEntry">&nbsp;</td>
                                     </tr>
-                                    <tr id="trProfession" runat="server">
+                                    <tr id="trProfession" runat="server" style="display: none;">
                                             <td class="FormLabel">
                                             <asp:Label ID="L_PROFESSION0" runat="server" Text="<%$ Resources:Resource, L_PROFESSION %>"> </asp:Label>
                                         </td>
@@ -503,7 +503,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                             </asp:RequiredFieldValidator>
                                         </td>
                                     </tr>
-                                    <tr id="trEducation" runat="server">
+                                    <tr id="trEducation" runat="server" style="display: none;">
                                         <td class="FormLabel">
                                             <asp:Label ID="L_EDUCATION0" runat="server" Text="<%$ Resources:Resource, L_EDUCATION %>" ></asp:Label>
                                         </td>
@@ -514,7 +514,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                             Text='*'></asp:RequiredFieldValidator>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr style="display: none;">
                                         <td class="FormLabel">
                                             <asp:Label
                                                 ID="L_PHONE"
@@ -530,7 +530,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <td class="DataEntry">
                                             &nbsp;</td>
                                     </tr>
-                                    <tr id="trEmail" runat="server">
+                                    <tr id="trEmail" runat="server" style="display: none;">
                                         <td class="FormLabel">
                                             <asp:Label ID="L_EMAIL" runat="server" Text="<%$ Resources:Resource, L_EMAIL %>"></asp:Label>
                                         </td>
@@ -543,7 +543,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <td class="FormLabel" style="vertical-align: top">&nbsp;</td>
                                         <td class="DataEntry">&nbsp;</td>
                                     </tr>
-                                    <tr id="trIdentificationType" runat="server">
+                                    <tr id="trIdentificationType" runat="server" style="display: none;">
                                         <td class="FormLabel">
                                             <asp:Label ID="L_IDTYPE" runat="server" Text="<%$ Resources:Resource, L_IDTYPE %>"></asp:Label>
                                         </td>
@@ -558,7 +558,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <td class="DataEntry">
                                             &nbsp;</td>
                                     </tr>
-                                    <tr id="trIdentificationNo" runat="server">
+                                    <tr id="trIdentificationNo" runat="server" style="display: none;">
                                         <td class="FormLabel">
                                             <asp:Label ID="L_PASSPORT1" runat="server" Text="<%$ Resources:Resource,L_PASSPORT%>">
                                             </asp:Label>
@@ -573,7 +573,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <td class="DataEntry">
                                             &nbsp;</td>
                                     </tr>
-                                    <tr id="trFSPRegion" runat="server">
+                                    <tr id="trFSPRegion" runat="server" style="display: none;">
                                         <td class="FormLabel">
                                             <asp:Label ID="lblFSPRegion" runat="server" Text="<%$ Resources:Resource, L_FSPREGION %>"></asp:Label>
                                         </td>
@@ -586,7 +586,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <td>&nbsp;</td>
                                         <td class="DataEntry">&nbsp;</td>
                                     </tr>
-                                    <tr id="trFSPDistrict" runat="server">
+                                    <tr id="trFSPDistrict" runat="server" style="display: none;">
                                         <td class="FormLabel">
                                             <asp:Label ID="lblFSPDistrict" runat="server" Text="<%$ Resources:Resource, L_FSPDISTRICT %>"></asp:Label>
                                         </td>
@@ -606,7 +606,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <td class="DataEntry">
                                             &nbsp;</td>
                                     </tr>
-                                    <tr id="trFSPCategory" runat="server">
+                                    <tr id="trFSPCategory" runat="server" style="display: none;">
                                         <td class="FormLabel">
                                             <asp:Label ID="lblFSPCategory" runat="server" Text="<%$ Resources:Resource, L_FSPCATEGORY %>"></asp:Label>
                                         </td>
@@ -623,7 +623,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                         <td class="FormLabel">&nbsp;</td>
                                         <td class="DataEntry">&nbsp;</td>
                                     </tr>
-                                    <tr id="trFSP" runat="server">
+                                    <tr id="trFSP" runat="server" style="display: none;">
                                         <td class="FormLabel">
                                             <asp:Label ID="lblFSP" runat="server" Text="<%$ Resources:Resource, L_FSP %>"></asp:Label>
                                         </td>

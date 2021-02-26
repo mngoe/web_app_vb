@@ -828,7 +828,7 @@ Title = '<%$ Resources:Resource,L_CLAIMOVERVIEW %>'%>
                     <asp:Label ID="Label2" runat="server" Text="<%$ Resources:Resource,L_CLAIMCODE%>"></asp:Label>
                 </td>
                 <td class="DataEntry">
-                    <asp:TextBox ID="txtClaimCode" runat="server" MaxLength="8"></asp:TextBox>
+                    <asp:TextBox ID="txtClaimCode" runat="server" MaxLength="10"></asp:TextBox>
                 </td>
                 <td class="FormLabel">
                     <asp:Label ID="lblVisitType0" runat="server" Text="<%$ Resources:Resource,L_VISITTYPE %>"></asp:Label>

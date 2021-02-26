@@ -779,7 +779,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                    <asp:Label ID="lblCLAIMCODE" runat="server" Text='<%$ Resources:Resource,L_CLAIMCODE %>' ></asp:Label>
                </td>
                <td class ="DataEntry">
-                   <asp:TextBox ID="txtCLAIMCODEData" runat="server" size="10" MaxLength="8" Text="" Width="125px" ></asp:TextBox>
+                   <asp:TextBox ID="txtCLAIMCODEData" runat="server" size="10" MaxLength="10" Text="" Width="125px" ></asp:TextBox>
                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" 
                        runat="server" ErrorMessage="*" ControlToValidate="txtCLAIMCODEData" 
                        ValidationGroup="check" Visible="True" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>

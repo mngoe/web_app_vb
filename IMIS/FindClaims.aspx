@@ -513,7 +513,7 @@ Title = '<%$ Resources:Resource,L_FINDCLAIM %>'%>
                     <asp:Label ID="lblClaimCode0" runat="server" Text="<%$ Resources:Resource,L_CLAIMCODE%>"></asp:Label>
                 </td>
                 <td class="DataEntry">
-                    <asp:TextBox ID="txtClaimCode" runat="server" MaxLength="8"></asp:TextBox>
+                    <asp:TextBox ID="txtClaimCode" runat="server" MaxLength="10"></asp:TextBox>
                 </td>
                 <td class="FormLabel">
                     
