@@ -24,7 +24,7 @@
         </Field>
         <Field Name="QtyApproved">
           <DataField>QtyApproved</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="PriceAsked">
           <DataField>PriceAsked</DataField>
@@ -32,7 +32,11 @@
         </Field>
         <Field Name="ServName">
           <DataField>ServName</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HFName">
+          <DataField>HFName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="TotalAmount">
           <DataField>TotalAmount</DataField>
@@ -369,14 +373,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox64">
+                        <Textbox Name="HFName">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!paramSRHFCode.Value</Value>
+                                  <Value>=IIf(First(Fields!HFName.Value, "DataSet_ServicePerformance") &lt;&gt; "", First(Fields!HFName.Value, "DataSet_ServicePerformance"), Parameters!paramSRHFCode.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -385,7 +389,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox64</rd:DefaultName>
+                          <rd:DefaultName>HFName</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -774,6 +778,7 @@
                 <TablixMember />
               </TablixMembers>
             </TablixRowHierarchy>
+            <DataSetName>DataSet_ServicePerformance</DataSetName>
             <Top>0.17639cm</Top>
             <Left>1.00541cm</Left>
             <Height>6.37042cm</Height>
@@ -1725,7 +1730,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!QtyApproved.Value*Fields!PriceAsked.Value)</Value>
+                                  <Value>=IIf(Sum(Fields!QtyApproved.Value*Fields!PriceAsked.Value) &lt;&gt; "", Sum(Fields!QtyApproved.Value*Fields!PriceAsked.Value), "0")</Value>
                                   <Style>
                                     <Format>#,0;(#,0)</Format>
                                   </Style>

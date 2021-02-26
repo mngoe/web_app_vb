@@ -112,9 +112,13 @@ Public Class ReportsBI
         Return BL.GetStatusofRegisters(DistrictID)
     End Function
 
-    Public Function GetServicePerformanceData(ByVal AreaID As Integer, ByVal DistrictID As Integer, ByVal RegionID As Integer, ByVal DateFrom as DateTime, ByVal DateTo as DateTime) As DataTable
+    Public Function GetServicePerformanceData(ByVal HfID As Integer, ByVal AreaID As Integer, ByVal WardsID As Integer, ByVal DistrictID As Integer, ByVal RegionID As Integer, ByVal DateFrom as DateTime, ByVal DateTo as DateTime) As DataTable
         Dim BL As New IMIS_BL.ReportBL
-        Return BL.GetServicePerformanceData(AreaID, DistrictID, RegionID, DateFrom, DateTo)
+        Return BL.GetServicePerformanceData(HfID, AreaID, WardsID, DistrictID, RegionID, DateFrom, DateTo)
+    End Function
+    Public Function GetServicePerformanceHFName(ByVal HfID As Integer) As DataTable
+        Dim BL As New IMIS_BL.ReportBL
+        Return BL.GetServicePerformanceHFName(HfID)
     End Function
     Public Function GetInsureesWithoutPhotos(ByVal OfficerId As Integer, ByVal DistrictID As Integer) As DataTable
         Dim BL As New IMIS_BL.ReportBL

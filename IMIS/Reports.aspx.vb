@@ -1480,6 +1480,7 @@ Partial Public Class Reports
         Dim LocationId As Integer?
         dim HfID As Integer?
         dim AreaID As Integer?
+        dim WardsID As Integer?
         dim DistrictID As Integer?
         dim RegionID As Integer?
         If Val(ddlDistrictWoNational.SelectedValue) > 0 Then
@@ -1487,6 +1488,11 @@ Partial Public Class Reports
         Else
             LocationId = Val(ddlRegionWoNational.SelectedValue)
         End If
+        IMIS_EN.eReports.region = ""
+        IMIS_EN.eReports.district = ""
+        IMIS_EN.eReports.municipality = ""
+        IMIS_EN.eReports.area = ""
+        IMIS_EN.eReports.hf_code = ""
 
         If Val(ddlRegionWoNational.SelectedValue) = 0 Then
             sSubTitle = imisgen.getMessage("L_REGION") & ": " & imisgen.getMessage("T_ALL")
@@ -1520,11 +1526,21 @@ Partial Public Class Reports
             IMIS_EN.eReports.hf_code = hf_code.ToUpper()
         End If
         IMIS_EN.eReports.SubTitle = sSubTitle
+        HfID = If(Val(ddlHF.SelectedValue) > 0, CInt(ddlHF.SelectedValue), Nothing)
         AreaID = If(Val(ddlVillages.SelectedValue) > 0, CInt(Val(ddlVillages.SelectedValue)), Nothing)
+        WardsID = If(Val(ddlWards.SelectedValue) > 0, CInt(Val(ddlWards.SelectedValue)), Nothing)
         DistrictID = If(Val(ddlDistrictWoNational.SelectedValue) > 0, CInt(Val(ddlDistrictWoNational.SelectedValue)), Nothing)
         RegionID = If(Val(ddlRegionWoNational.SelectedValue) > 0, CInt(Val(ddlRegionWoNational.SelectedValue)), Nothing)
-        HfID = If(Val(ddlHF.SelectedValue) > 0, CInt(ddlHF.SelectedValue), Nothing)
-        dt = reports.GetServicePerformanceData(AreaID, DistrictID, RegionID, RangeFrom, RangeTo)
+        'imisgen.Log(eLogin.LoginName & " has logged in.", Nothing, 1, EventLogEntryType.Information)
+        'imisgen.Log("VillageID : " & AreaID & " -Aire santéID : " & WardsID & " - DistrictID : " & DistrictID  & " - RegionID : " & RegionID & " - HfID : " & HfID,  Nothing, 1, EventLogEntryType.Information)
+        'imisgen.Log("Village : " & area & " -Aire santé : " & municipality & " - District : " & district  & " - Region : " & region & " - Hf : " & hf_code,  Nothing, 1, EventLogEntryType.Information)
+        'If HfID <> Nothing Then
+        '    Dim dt_name As DataTable = reports.GetServicePerformanceHFName(HfID)
+        '    If dt_name.Rows.Count > 0 Then
+        '        IMIS_EN.eReports.hf_code = dt_name.Rows(0)("HFName").ToUpper()
+        '    End If
+        'End If
+        dt = reports.GetServicePerformanceData(HfID, AreaID, WardsID, DistrictID, RegionID, RangeFrom, RangeTo)
     End Sub
 
 

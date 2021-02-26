@@ -198,9 +198,22 @@ Public Class ReportDAL
         data.params("@LocationID", SqlDbType.Int, LocationId)
         Return data.Filldata()
     End Function
+    Public Function GetServicePerformanceHFName(ByVal HfID As Integer) As DataTable
+        Dim sSQL As String = ""
+        Dim location As Integer?
+        Dim data As New ExactSQL
+        sSQL += "SELECT"
+        sSQL += " HFName"
+        sSQL += " FROM tblHF"
+        sSQL += " WHERE"
+        sSQL += " AND HfID = @HFID"
+        data.setSQLCommand(sSQL, CommandType.Text, timeout:=0)
+        data.params("@HFID", SqlDbType.Int, HfID)
+        Return data.Filldata()
+    End Function
 
 
-    Public Function GetServicePerformanceData(ByVal AreaID As Integer, ByVal DistrictID As Integer, ByVal RegionID As Integer, ByVal DateFrom As DateTime, ByVal DateTo As DateTime) As DataTable
+    Public Function GetServicePerformanceData(ByVal HfID As Integer, ByVal AreaID As Integer, ByVal WardsID As Integer, ByVal DistrictID As Integer, ByVal RegionID As Integer, ByVal DateFrom As DateTime, ByVal DateTo As DateTime) As DataTable
         Dim sSQL As String = ""
         Dim location As Integer?
         Dim data As New ExactSQL
@@ -216,22 +229,37 @@ Public Class ReportDAL
         sSQL += " END"
         sSQL += " )QtyApproved,"
         'sSQL += " SUM(ISNULL(CS.PriceValuated,0)) as QtyApproved,"
+        If HfID <> Nothing Then
+            sSQL += " Upper(H.HFName),"
+        End If
         sSQL += " SUM(ISNULL(CS.QtyProvided,0) * ISNULL(CS.PriceAsked,0)) as TotalAmount"
         sSQL += " FROM tblClaim C"
+        'If HfID <> Nothing Then
+        '    sSQL += " ,tblHF H"
+        'End If
         sSQL += " LEFT OUTER JOIN tblClaimServices CS ON C.ClaimId = CS.ClaimID"
         sSQL += " LEFT OUTER JOIN tblServices S ON CS.ServiceId = S.ServiceId"
+        If HfID <> Nothing Then
+            sSQL += " LEFT OUTER JOIN tblHF H ON C.HFID = H.HfID"
+        End If
         sSQL += " WHERE"
         '''sSQL += " C.ValidityTo IS NULL"
         '''sSQL += " AND CS.ValidityTo IS NULL AND"
         sSQL += " C.DateFrom >= CAST(@FromDate AS Date) and C.DateTo <= CAST(@DateTo AS Date)"
         sSQL += " AND S.ServName IS NOT NULL"
         sSQL += " AND CS.ClaimServiceID NOT IN (SELECT CSC.LegacyID FROM tblClaimServices as CSC WHERE CSC.LegacyID IS NOT NULL)"
+        If HfID <> Nothing Then
+            sSQL += " AND H.HfID = @HFID and C.HFID = @HFID"
+        End If
         '''location = Nothing
         If RegionID <> Nothing Then
             location = RegionID
         End If
         If DistrictID <> Nothing Then
             location = DistrictID
+        End If
+        If WardsID <> Nothing Then
+            location = WardsID
         End If
         If AreaID <> Nothing Then
             location = AreaID
@@ -240,10 +268,16 @@ Public Class ReportDAL
             sSQL += " AND C.InsureeID in (SELECT InsureeID FROM tblFamilies WHERE LocationID=@LocationID)"
         End If
         sSQL += " GROUP BY S.ServName, CS.PriceAsked"
+        If HfID <> Nothing Then
+            sSQL += " , H.HFName"
+        End If
         data.setSQLCommand(sSQL, CommandType.Text, timeout:=0)
         data.params("@FromDate", SqlDbType.Date, DateFrom)
         data.params("@DateTo", SqlDbType.Date, DateTo)
         data.params("@LocationID", SqlDbType.Int, location)
+        If HfID <> Nothing Then
+            data.params("@HFID", SqlDbType.Int, HfID)
+        End If
         Return data.Filldata()
     End Function
 
