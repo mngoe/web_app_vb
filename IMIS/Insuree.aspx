@@ -646,10 +646,10 @@ In case of dispute arising out or in relation to the use of the program, it is s
                             <%--</ContentTemplate>
                         </asp:UpdatePanel>    --%>   
                     </td>
-                    <td valign="top" style="width:225px;">
-                        <table width="200px">
+                     <td valign="top" style="width:225px;" style="display:None">
+                        <table width="200px" style="display:None">
 
-                            <tr>
+                            <tr style="display:None">
                                 <td valign="top">
                                 <asp:UpdatePanel ID="upImage" runat="server" style="width:200px; height:200px; text-align:center">
                                     <ContentTemplate>
@@ -659,7 +659,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                                     
                                 </td>
                             </tr>
-                            <tr>
+                            <tr style="display:None">
                                 <td align="center">
                                     <asp:Button runat="server" ID="btnBrowse" Text='<%$ Resources:Resource,B_BROWSE%>' />
                                  

@@ -298,7 +298,7 @@ Partial Public Class Insuree
             ddlRelation.CausesValidation = Not eInsuree.IsHead And (Not General.getControlSetting("Relationship") = "N")
 
 
-            FillImageDL()
+            'FillImageDL()
 
         Catch ex As Exception
             'lblMsg.Text = imisgen.getMessage("M_ERRORMESSAGE")
@@ -586,8 +586,8 @@ Partial Public Class Insuree
         eInsuree.CHFID = txtCHFID.Text.Trim
         ' If txtCHFID.Text.Length = 9 Then
         If Insuree.CheckCHFID(txtCHFID.Text) = True Then
-            FetchNewImage()
-            FillImageDL()
+            'FetchNewImage()
+            'FillImageDL()
             Return
         Else
 
