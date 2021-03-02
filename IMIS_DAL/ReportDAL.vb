@@ -249,7 +249,8 @@ Public Class ReportDAL
         sSQL += " AND S.ServName IS NOT NULL"
         sSQL += " AND CS.ClaimServiceID NOT IN (SELECT CSC.LegacyID FROM tblClaimServices as CSC WHERE CSC.LegacyID IS NOT NULL)"
         If HfID <> Nothing Then
-            sSQL += " AND H.HfID = @HFID and C.HFID = @HFID"
+            sSQL += " AND H.HfID = @HFID"
+            'sSQL += " AND H.HfID = @HFID and C.HFID = @HFID"
         End If
         '''location = Nothing
         If RegionID <> Nothing Then

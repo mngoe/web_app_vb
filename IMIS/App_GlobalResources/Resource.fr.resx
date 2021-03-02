@@ -5179,4 +5179,13 @@
 	<data name="T_LANG" xml:space="preserve">
 		<value>fr</value>
 	</data>
+	<data name="M_PLEASESELECTHEALTHDISTRICT" xml:space="preserve">
+		<value>Veuillez sélectionner un District de santé</value>
+	</data>
+	<data name="M_PLEASESELECTHEALTHVILAGE" xml:space="preserve">
+		<value>Veuillez sélectionner un Aire de santé</value>
+	</data>
+	<data name="M_PLEASESELECTHEALTHWARDS" xml:space="preserve">
+		<value>Veuillez sélectionner un Village/Quartier</value>
+	</data>
 </root>

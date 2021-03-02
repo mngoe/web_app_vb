@@ -5239,4 +5239,13 @@ adults/children)
   <data name="T_LANG" xml:space="preserve">
     <value>eng</value>
   </data>
+  <data name="M_PLEASESELECTHEALTHDISTRICT" xml:space="preserve">
+    <value>Please select Health District</value>
+  </data>
+  <data name="M_PLEASESELECTHEALTHVILAGE" xml:space="preserve">
+    <value>Please select Health Area</value>
+  </data>
+  <data name="M_PLEASESELECTHEALTHWARDS" xml:space="preserve">
+    <value>Please select Village/Quarter</value>
+  </data>
 </root>

@@ -237,12 +237,16 @@ Public Class HealthFacilityBL
         Dim hfId As Integer = 0
         dthf = hf.GetHFCodes(UserId, LocationId, hfId)
         If dthf.Rows.Count = 0 Then Return dthf
-        If dthf.Rows.Count > 1 Or hfId = 0 Then
-            dtrow = dthf.NewRow
-            dtrow("HfID") = 0
-            dtrow("HFCode") = imisgen.getMessage("T_SELECTHFCODE")
-            dthf.Rows.InsertAt(dtrow, 0)
-        End If
+        'If dthf.Rows.Count > 1 Or hfId = 0 Then
+        '    dtrow = dthf.NewRow
+        '    dtrow("HfID") = 0
+        '    dtrow("HFCode") = imisgen.getMessage("T_SELECTHFCODE")
+        '    dthf.Rows.InsertAt(dtrow, 0)
+        'End If
+        dtrow = dthf.NewRow
+        dtrow("HfID") = 0
+        dtrow("HFCode") = imisgen.getMessage("T_SELECTHFCODE")
+        dthf.Rows.InsertAt(dtrow, 0)
         Return dthf
 
     End Function

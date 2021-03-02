@@ -1534,12 +1534,6 @@ Partial Public Class Reports
         'imisgen.Log(eLogin.LoginName & " has logged in.", Nothing, 1, EventLogEntryType.Information)
         'imisgen.Log("VillageID : " & AreaID & " -Aire santéID : " & WardsID & " - DistrictID : " & DistrictID  & " - RegionID : " & RegionID & " - HfID : " & HfID,  Nothing, 1, EventLogEntryType.Information)
         'imisgen.Log("Village : " & area & " -Aire santé : " & municipality & " - District : " & district  & " - Region : " & region & " - Hf : " & hf_code,  Nothing, 1, EventLogEntryType.Information)
-        'If HfID <> Nothing Then
-        '    Dim dt_name As DataTable = reports.GetServicePerformanceHFName(HfID)
-        '    If dt_name.Rows.Count > 0 Then
-        '        IMIS_EN.eReports.hf_code = dt_name.Rows(0)("HFName").ToUpper()
-        '    End If
-        'End If
         dt = reports.GetServicePerformanceData(HfID, AreaID, WardsID, DistrictID, RegionID, RangeFrom, RangeTo)
     End Sub
 
@@ -1582,6 +1576,18 @@ Partial Public Class Reports
             If SelectedValueID = 10 Then
                 If Val(ddlHF.SelectedValue) = 0 Then
                     lblMsg.Text = imisgen.getMessage("M_PLEASESELECTHEALTHFACILITY")
+                    Return
+                End If
+                If Val(ddlDistrictWoNational.SelectedValue) = 0 Then
+                    lblMsg.Text = imisgen.getMessage("M_PLEASESELECTHEALTHDISTRICT")
+                    Return
+                End If
+                If Val(ddlVillages.SelectedValue) = 0 Then
+                    lblMsg.Text = imisgen.getMessage("M_PLEASESELECTHEALTHVILAGE")
+                    Return
+                End If
+                If Val(ddlWards.SelectedValue) = 0 Then
+                    lblMsg.Text = imisgen.getMessage("M_PLEASESELECTHEALTHWARDS")
                     Return
                 End If
             End If
