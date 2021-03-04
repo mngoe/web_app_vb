@@ -185,6 +185,10 @@ Partial Public Class FindClaims
             If Not FindClaimsB.checkRights(IMIS_EN.Enums.Rights.ClaimReview, UserID) Then
                 Server.Transfer("Redirect.aspx?perm=0&page=" & IMIS_EN.Enums.Pages.FindClaim.ToString & "&retUrl=" & RefUrl)
             End If
+        ElseIf which = 3 Then
+            If Not FindClaimsB.checkRights(IMIS_EN.Enums.Rights.ClaimSubmit, UserID) Then
+                Server.Transfer("Redirect.aspx?perm=0&page=" & IMIS_EN.Enums.Pages.FindClaim.ToString & "&retUrl=" & RefUrl)
+            End If
         End If
     End Sub
     Private Sub AddButtonControl()
@@ -506,7 +510,7 @@ Partial Public Class FindClaims
 
     Private Sub B_SUBMIT_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles B_SUBMIT.Click
 
-        RunPageSecurity(2)
+        RunPageSecurity(3)
         Try
             Dim chkbox As CheckBox
             Dim dt As New DataTable
