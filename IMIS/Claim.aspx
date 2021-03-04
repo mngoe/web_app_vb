@@ -244,6 +244,9 @@ In case of dispute arising out or in relation to the use of the program, it is s
        }
 
         $(document).ready(function(){
+            $('#<%=btnRestore.ClientID %>').click(function() { 
+                $(".ClaimValue").attr("disabled", false);
+            });
             $('#<%=B_SAVE.ClientID %>').click(function() {
 
                 var isGuaranteeNoRequired = $("#<%= txtGuaranteeId.ClientID %>").hasClass("requiedField");
