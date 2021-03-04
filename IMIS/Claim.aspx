@@ -252,7 +252,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
                         $('#<%=lblMsg.ClientID%>').html('<%= imisgen.getMessage("V_SUMMARY", True ) %>');
                                                return false;
                     }
-              
+                $(".ClaimValue").attr("disabled", false);
                 // date validation...added by ruzo 2 nov 2012
                 var check = 0;
                 ClaimedDateFill();
@@ -338,7 +338,7 @@ In case of dispute arising out or in relation to the use of the program, it is s
 
             
                 
-
+            $(".ClaimValue").attr("disabled", true);
             $("#<%=gvService.ClientID %>").find("input[type=text]").change(function() {
 
                 $("#<%=txtAddServiceRows.ClientID %>").attr("disabled", true);
@@ -877,8 +877,8 @@ In case of dispute arising out or in relation to the use of the program, it is s
                   <td class="DataEntry" colspan="5">
                     <asp:DropDownList ID="ddlVisitType" runat="server" Width="135px">
                     </asp:DropDownList>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*"
-                        ControlToValidate="ddlVisitType" ValidationGroup="check" Visible="True" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*"
+                        ControlToValidate="ddlVisitType" ValidationGroup="check" Visible="True" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>--%>
                   </td>
                   <td class="FormLabel">
                       &nbsp;</td>

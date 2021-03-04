@@ -161,6 +161,8 @@ Partial Public Class Claim
             End If
             If Not eClaim.VisitType Is Nothing Then
                 ddlVisitType.SelectedValue = eClaim.VisitType
+            Else
+                ddlVisitType.SelectedValue = "O"
             End If
             'Addition for Nepal >> End
             txtCLAIMCODEData.Attributes.Add("ClaimCodetag", txtCLAIMCODEData.Text)
