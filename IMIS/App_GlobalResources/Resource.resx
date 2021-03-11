@@ -86,7 +86,7 @@
 		<value>Role name</value>
 	</data>
 	<data name="L_OTHERNAMES" xml:space="preserve">
-		<value>Given names</value>
+		<value>Other names</value>
 	</data>
 	<data name="L_VILLAGE" xml:space="preserve">
 		<value>Village</value>
@@ -122,7 +122,7 @@
 		<value>Blocked</value>
 	</data>
 	<data name="L_PASSPORT" xml:space="preserve">
-		<value>Identification Number</value>
+		<value>National ID Card Number of Head of HH</value>
 	</data>
 	<data name="B_ADDFAMILY" xml:space="preserve">
 		<value>Add Family/Group</value>
@@ -147,6 +147,9 @@
 	</data>
 	<data name="L_FAMILYPANEL" xml:space="preserve">
 		<value>Family/Group Details</value>
+	</data>
+	<data name="L_BIRTHDATEINCONNU" xml:space="preserve">
+		<value>unknow date of bith</value>
 	</data>
 	<data name="M_NOFAMILIES" xml:space="preserve">
 		<value>No Families/Groups found</value>
@@ -2329,6 +2332,15 @@
 	<data name="L_POLICYHOLDER_" xml:space="preserve">
 		<value>Policy Holder</value>
 	</data>
+	<data name="L_HEADHOUSEINFO_" xml:space="preserve">
+		<value>Head of Household Information</value>
+	</data>
+	<data name="L_HOUSEVULNERABILITY_" xml:space="preserve">
+		<value>Household Vulnerability</value>
+	</data>
+	<data name="L_LOCATIONINFO_" xml:space="preserve">
+		<value>Location</value>
+	</data>
 	<data name="L_SUBSTITUTION" xml:space="preserve">
 		<value>Substitution</value>
 	</data>
@@ -2624,10 +2636,10 @@
 		<value>Insurees without Photos</value>
 	</data>
 	<data name="L_EDUCATION" xml:space="preserve">
-		<value>Education</value>
+		<value>Level of Education of Head of Household</value>
 	</data>
 	<data name="L_PROFESSION" xml:space="preserve">
-		<value>Profession</value>
+		<value>Occupation of Head of Household</value>
 	</data>
 	<data name="L_RELATION" xml:space="preserve">
 		<value>Relationship</value>
@@ -3149,7 +3161,7 @@
 		<value>Current District</value>
 	</data>
 	<data name="L_CURRENTADDRESS" xml:space="preserve">
-		<value>Current Address Details</value>
+		<value>Current Address</value>
 	</data>
 	<data name="L_CVDC" xml:space="preserve">
 		<value>Current Municipality</value>
@@ -4315,6 +4327,33 @@
 	<data name="L_PHONE" xml:space="preserve">
 		<value>Phone</value>
 	</data>
+	<data name="L_HEADPHONE" xml:space="preserve">
+		<value>Is this Phone Number registered in Head of HH’s Name?</value>
+	</data>
+	<data name="L_ALTPHONE" xml:space="preserve">
+		<value>Alternative Phone</value>
+	</data>
+	<data name="L_NETWORKPROVIDER" xml:space="preserve">
+		<value>Network Provider</value>
+	</data>
+	<data name="L_ALTHEADPHONE" xml:space="preserve">
+		<value>Is this Phone Number registered in Head of HH’s Name?</value>
+	</data>
+	<data name="T_SELECTNETWORKPROVIDER" xml:space="preserve">
+		<value>Sel. Network Prov.</value>
+	</data>
+	<data name="T_CAMTEL" xml:space="preserve">
+		<value>CAMTEL</value>
+	</data>
+	<data name="T_ORANGE" xml:space="preserve">
+		<value>Orange</value>
+	</data>
+	<data name="T_MTN" xml:space="preserve">
+		<value>MTN</value>
+	</data>
+	<data name="T_Nexttel" xml:space="preserve">
+		<value>NEXTTEL</value>
+	</data>
 	<data name="L_ROLEFOUNDS" xml:space="preserve">
 		<value>Roles Found</value>
 	</data>
@@ -5045,5 +5084,345 @@ adults/children)
 	</data>
 	<data name="L_PAYMENTTYPE1" xml:space="preserve">
 		<value>Payment Type</value>
+	</data>
+	<data name="L_PREFEREDMONEYTRANSFERTMODE" xml:space="preserve">
+		<value>Preferred mode of receiving Money Transfer by Head of Household</value>
+	</data>
+	<data name="T_SELECTPREFERREDPAIEMENTMODE" xml:space="preserve">
+		<value>Sel. Money Trans. Mode</value>
+	</data>
+	<data name="T_EXPRESS_UNION_MOMO" xml:space="preserve">
+		<value>Express Union</value>
+	</data>
+	<data name="T_MTN_MOMO" xml:space="preserve">
+		<value>MTN Mobile Money (MoMo)</value>
+	</data>
+	<data name="T_ORANGE_MOMO" xml:space="preserve">
+		<value>Orange Money</value>
+	</data>
+	<data name="T_YUP_MOMO" xml:space="preserve">
+		<value>YUP</value>
+	</data>
+	<data name="L_REGIONORIGIN" xml:space="preserve">
+		<value>Region of Origin </value>
+	</data>
+	<data name="L_DISTRICTORIGIN" xml:space="preserve">
+		<value>District of Origin</value>
+	</data>
+	<data name="L_WARDORIGIN" xml:space="preserve">
+		<value>Municipality of Origin</value>
+	</data>
+	<data name="L_VILLAGEORIGIN" xml:space="preserve">
+		<value>Village of Origin of Head of HH</value>
+	</data>
+	<data name="L_HEADOCCUPATION" xml:space="preserve">
+		<value>Occupation of Head of Household </value>
+	</data>
+	<data name="L_HEADEDUCATIONLEVEL" xml:space="preserve">
+		<value>Level of Education of Head of Household</value>
+	</data>
+	<data name="L_HEADSTATUS" xml:space="preserve">
+		<value>Status of Head of HH</value>
+	</data>
+	<data name="L_LENGTHSTAYLOCATION" xml:space="preserve">
+		<value>Length of stay in present location</value>
+	</data>
+	<data name="L_MALELIVINGHOUSHOLD" xml:space="preserve">
+		<value>Number of Male living in Houshold</value>
+	</data>
+	<data name="L_FEMALELIVINGHOUSHOLD" xml:space="preserve">
+		<value>Number of Female living in Houshold</value>
+	</data>
+	<data name="L_PERSONLIVINGHOUSHOLD" xml:space="preserve">
+		<value>Number of persons living in Houshold</value>
+	</data>
+	<data name="L_HHNBChildrenLivingM" xml:space="preserve">
+		<value>Number of Boys/Dependents below 18 years in Houshold</value>
+	</data>
+	<data name="L_HHNBChildrenLivingFemale" xml:space="preserve">
+		<value>Number of Girls/Dependents below 18 years in Houshold</value>
+	</data>
+	<data name="L_HHNBChildrenLivingTotal" xml:space="preserve">
+		<value>Number of Children/Dependents below 18 years in Houshold</value>
+	</data>
+	<data name="L_HHNBChildrenSchoolLivingM" xml:space="preserve">
+		<value>Number of Boys in Houshold going to Primary School</value>
+	</data>
+	<data name="L_HHNBChildrenSchoolLivingF" xml:space="preserve">
+		<value>Number of Girls in Houshold going to Primary School</value>
+	</data>
+	<data name="L_HHNBChildrenSchoolLivingTotal" xml:space="preserve">
+		<value>Total Number of Children in Houshold going to Primary School</value>
+	</data>
+	<data name="L_HHNBChildrenCompleteSchoolLivingM" xml:space="preserve">
+		<value>Number of Boys in HH below 18 that have completed primary school</value>
+	</data>
+	<data name="L_HHNBChildrenCompleteSchoolLivingF" xml:space="preserve">
+		<value>Number of Girls in HH below 18 that have completed primary school</value>
+	</data>
+	<data name="L_HHNBChildrenCompleteSchoolLivingTotal" xml:space="preserve">
+		<value>Number of Children in HH below 18 that have completed primary school</value>
+	</data>
+	<data name="L_HHNBChildrenDropSchoolLivingM" xml:space="preserve">
+		<value>Number of boys below 18 not going to/dropped from primary school</value>
+	</data>
+	<data name="L_HHNBChildrenDropSchoolLivingF" xml:space="preserve">
+		<value>Number of girls below 18 not going to/dropped from primary school</value>
+	</data>
+	<data name="L_HHNBChildrenDropSchoolLivingTotal" xml:space="preserve">
+		<value>Number of children below 18 not going to/dropped from primary school</value>
+	</data>
+	<data name="L_HHNBGirlsMarried" xml:space="preserve">
+		<value>Number of girls below 18 who are married from household</value>
+	</data>
+	<data name="L_HHNBChildrenBirthCertifM" xml:space="preserve">
+		<value>Number of boys below 18 in HH WITHOUT Birth Certificate</value>
+	</data>
+	<data name="L_HHNBChildrenBirthCertifF" xml:space="preserve">
+		<value>Number of girls below 18 in HH WITHOUT Birth Certificate</value>
+	</data>
+	<data name="L_HHNBChildrenBirthCertifTotal" xml:space="preserve">
+		<value>Number of boys/girls below 18 in HH WITHOUT Birth Certificate</value>
+	</data>
+	<data name="L_HHHealthStatus" xml:space="preserve">
+		<value>Health Status of Head of Household</value>
+	</data>
+	<data name="L_HHExpenditure" xml:space="preserve">
+		<value>Household Expenditure (How much the entire HH spends a day)</value>
+	</data>
+	<data name="L_HHExpenditurePerH" xml:space="preserve">
+		<value>Household Daily Expenditure per Head (divide total daily expenditure by # pers in HH)</value>
+	</data>
+	<data name="L_HHNutritionalStatus" xml:space="preserve">
+		<value>Household Nutritional Status (how many balanced meals household ate the previous day)</value>
+	</data>
+	<data name="L_HHMentalPhysicalDisability" xml:space="preserve">
+		<value>Household has children or adults with physical or mental disability</value>
+	</data>
+	<data name="L_HHMentalPhysicalDisabilityM" xml:space="preserve">
+		<value>If YES, How many Male children and/or adults with disability?</value>
+	</data>
+	<data name="L_HHMentalPhysicalDisabilityF" xml:space="preserve">
+		<value>f YES, How many Female children and/or adults with disability?</value>
+	</data>
+	<data name="L_HHMentalPhysicalDisabilityTotal" xml:space="preserve">
+		<value>If YES, How many children and/or adults with disability?</value>
+	</data>
+	<data name="L_HHMentalPhysicalDisabilityObtainable" xml:space="preserve">
+		<value>If YES, list the types of disability obtainable in Household</value>
+	</data>
+	<data name="L_HHMentalPhysicalDisabilityO1" xml:space="preserve">
+		<value>Mental Disability</value>
+	</data>
+	<data name="L_HHMentalPhysicalDisabilityO2" xml:space="preserve">
+		<value>Speech/heating impairment/Visual Impairment</value>
+	</data>
+	<data name="L_HHMentalPhysicalDisabilityO3" xml:space="preserve">
+		<value>Mobility impairment</value>
+	</data>
+	<data name="L_HHMentalPhysicalDisabilityO4" xml:space="preserve">
+		<value>Other? Specify</value>
+	</data>
+	<data name="T_SELECTHHSTATUS" xml:space="preserve">
+		<value>Sel. Head of HH status</value>
+	</data>
+	<data name="T_HOSTCOMMUNITYMEMBER" xml:space="preserve">
+		<value>Host Community Member</value>
+	</data>
+	<data name="T_DEPLACEDBYCRISES" xml:space="preserve">
+		<value>Displaced by Crises</value>
+	</data>
+	<data name="T_OTHERSITUATIONSPECIFY" xml:space="preserve">
+		<value>Other Situations</value>
+	</data>
+	<data name="T_SELECTLENGTHSTAY" xml:space="preserve">
+		<value>Sel. Length of stay</value>
+	</data>
+	<data name="T_LESSTHAN1YEAR" xml:space="preserve">
+		<value>Less than 1 year</value>
+	</data>
+	<data name="T_LESSTHAN3YEARS" xml:space="preserve">
+		<value>Less than 3 years</value>
+	</data>
+	<data name="T_MORETHAN3YEARS" xml:space="preserve">
+		<value>More than 3 years</value>
+	</data>
+
+	<data name="T_SELECTHHealthStatus" xml:space="preserve">
+		<value>Sel.Health Status of HH. </value>
+	</data>
+	<data name="T_Healthly" xml:space="preserve">
+		<value>Healthy and Fit/Not Ill</value>
+	</data>
+	<data name="T_Frequentlysick" xml:space="preserve">
+		<value>Frequently sick but NOT on sick bed or hospitalized</value>
+	</data>
+	<data name="T_VerySick" xml:space="preserve">
+		<value>Very Sick/Hospitalized/Bed-ridden/Incapacitated</value>
+	</data>
+	<data name="T_TerminallyIll" xml:space="preserve">
+		<value>Head of HH is Terminally Ill</value>
+	</data>
+	<data name="T_Disability" xml:space="preserve">
+		<value>Head of Household has Disability:</value>
+	</data>
+	<data name="T_SELECTNutritionalStatus" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="T_Once" xml:space="preserve">
+		<value>Once</value>
+	</data>
+	<data name="T_Twice" xml:space="preserve">
+		<value>Twice</value>
+	</data>
+	<data name="T_threeMore" xml:space="preserve">
+		<value>Three or more times</value>
+	</data>
+	<data name="T_None" xml:space="preserve">
+		<value>None</value>
+	</data>
+	<data name="L_Relationship" xml:space="preserve">
+		<value>Relation</value>
+	</data>
+	<data name="L_ChildName" xml:space="preserve">
+		<value>Name of Child </value>
+	</data>
+	<data name="L_CHBirthCertificate" xml:space="preserve">
+		<value>Child has Birth Certificate</value>
+	</data>
+	<data name="L_CHEnrolmentStatus" xml:space="preserve">
+		<value>Child’s current enrollment status</value>
+	</data>
+	<data name="L_ChildSchoolName" xml:space="preserve">
+		<value>If Yes, name of present school</value>
+	</data>
+	<data name="L_CHEnrolmentWhichClass" xml:space="preserve">
+		<value>If Yes, present class in school </value>
+	</data>
+	<data name="T_SELECTChildEnrollementStatus" xml:space="preserve">
+		<value>Sel. Child's Enrollement Status in School</value>
+	</data>
+	<data name="T_BelowEnrollmentAge" xml:space="preserve">
+		<value>Below Enrollment Age</value>
+	</data>
+	<data name="T_Oneyear" xml:space="preserve">
+		<value>1 year +</value>
+	</data>
+	<data name="T_Twoyears" xml:space="preserve">
+		<value>2 years +</value>
+	</data>
+	<data name="T_Threeyears" xml:space="preserve">
+		<value>3 years + </value>
+	</data>
+	<data name="T_NeverBeenEnrolled" xml:space="preserve">
+		<value>Never Been Enrolled</value>
+	</data>
+	<data name="T_SELECTPresentClass" xml:space="preserve">
+		<value>Sel. Child's Present Class in School</value>
+	</data>
+	<data name="T_P1" xml:space="preserve">
+		<value>P1</value>
+	</data>
+	<data name="T_P2" xml:space="preserve">
+		<value>P2</value>
+	</data>
+	<data name="T_P3" xml:space="preserve">
+		<value>P3</value>
+	</data>
+	<data name="T_P4" xml:space="preserve">
+		<value>P4</value>
+	</data>
+	<data name="T_P5" xml:space="preserve">
+		<value>P5</value>
+	</data>
+	<data name="T_P6" xml:space="preserve">
+		<value>P6</value>
+	</data>
+	<data name="T_CompletedP6" xml:space="preserve">
+		<value>Completed P6</value>
+	</data>
+	<data name="T_Nursery" xml:space="preserve">
+		<value>Nursery</value>
+	</data>
+	<data name="L_CHEnrolmentScore" xml:space="preserve">
+		<value>If Yes, what was the child’s performance in class last term? (Average Score from Report Booklet)</value>
+	</data>
+	<data name="T_SELECTAverageScore" xml:space="preserve">
+		<value>Sel. Average Scrore</value>
+	</data>
+	<data name="T_BelowAverage" xml:space="preserve">
+		<value>Below average (less than 50%) OR (less than 10/20)</value>
+	</data>
+	<data name="T_Average" xml:space="preserve">
+		<value>Average (50 – 54%) OR (10 – 10.9/20)</value>
+	</data>
+	<data name="T_AboveAverage" xml:space="preserve">
+		<value>Above Average (55 – 69%) OR (11 – 13.9/20)</value>
+	</data>
+	<data name="T_Excellent" xml:space="preserve">
+		<value>Excellent (70% and above) OR (14/20 and above)</value>
+	</data>
+	<data name="L_CHEnrolmentOutofSchool" xml:space="preserve">
+		<value>If out-of-school, number of years not in school</value>
+	</data>
+	<data name="L_CHParentalStatus" xml:space="preserve">
+		<value>Parental Status of Child: (Check as many as applicable)</value>
+	</data>
+	<data name="T_SELECTParentalStatus" xml:space="preserve">
+		<value>Sel. Parental Status</value>
+	</data>
+	<data name="T_BothParentsChildAlive" xml:space="preserve">
+		<value>Both Parents of Child Alive</value>
+	</data>
+	<data name="T_SingleOrphanedChild" xml:space="preserve">
+		<value>Single Orphaned Child</value>
+	</data>
+	<data name="T_DoubleOrphanedChild" xml:space="preserve">
+		<value>Double Orphaned Child</value>
+	</data>
+	<data name="L_ResidentialStatus" xml:space="preserve">
+		<value>Residential Status of Child: (Check as many as applicable (Select as many as applicable)</value>
+	</data>
+	<data name="L_ResidentialStatus1" xml:space="preserve">
+		<value>Displaced Child</value>
+	</data>
+	<data name="L_ResidentialStatus2" xml:space="preserve">
+		<value>Host Community Child</value>
+	</data>
+	<data name="L_ResidentialStatus3" xml:space="preserve">
+		<value>Mbororo/Fulani Child</value>
+	</data>
+	<data name="L_ResidentialStatus4" xml:space="preserve">
+		<value>Child living with Own Parents</value>
+	</data>
+	<data name="L_ResidentialStatus5" xml:space="preserve">
+		<value>Child Unaccompanied/Separated</value>
+	</data>
+	<data name="L_ResidentialStatus6" xml:space="preserve">
+		<value>Child living with Relation/Foster Caregivers</value>
+	</data>
+	<data name="L_ResidentialStatus7" xml:space="preserve">
+		<value>Child living in a Child-headed Household</value>
+	</data>
+	<data name="L_CHSpecialNeeds" xml:space="preserve">
+		<value>Child Has Special Needs (Check as many as applicable)</value>
+	</data>
+	<data name="L_CHSpecialNeeds1" xml:space="preserve">
+		<value>Child is mentally retarded/has learning disability/altruistic</value>
+	</data>
+	<data name="L_CHSpecialNeeds2" xml:space="preserve">
+		<value>Child has hearing/speech impairment</value>
+	</data>
+	<data name="L_CHSpecialNeeds3" xml:space="preserve">
+		<value>Child has visual impairment</value>
+	</data>
+	<data name="L_CHSpecialNeeds4" xml:space="preserve">
+		<value>Child has amputation/other mobility impairment</value>
+	</data>
+	<data name="L_CHSpecialNeeds5" xml:space="preserve">
+		<value>Child has albinism</value>
+	</data>
+	<data name="L_CHSpecialNeeds6" xml:space="preserve">
+		<value>Other disability Specify</value>
 	</data>
 </root>

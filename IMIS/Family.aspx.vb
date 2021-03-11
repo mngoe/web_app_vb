@@ -41,6 +41,7 @@ Public Class Family
         'Beneficiary card
         Adjustibility = General.getControlSetting("BeneficiaryCard")
         trBeneficiary.Visible = Not (Adjustibility = "N")
+        trBeneficiary1.Visible = Not (Adjustibility = "N")
         rfBeneficiary.Enabled = (Adjustibility = "M")
 
         'Confirmation
@@ -105,12 +106,12 @@ Public Class Family
 
         'Identification Type
         Adjustibility = General.getControlSetting("IdentificationType")
-        trIdentificationType.Visible = Not (Adjustibility = "N")
+        'trIdentificationType.Visible = Not (Adjustibility = "N")
         rfIdType.Enabled = (Adjustibility = "M")
 
         'Identification Number
         Adjustibility = General.getControlSetting("IdentificationNumber")
-        trIdentificationNo.Visible = Not (Adjustibility = "N")
+        'trIdentificationNo.Visible = Not (Adjustibility = "N")
         rfIdNo1.Enabled = (Adjustibility = "M")
 
         'Email
@@ -136,8 +137,8 @@ Public Class Family
 
         'Profession
         Adjustibility = General.getControlSetting("Profession")
-        trProfession.Visible = Not (Adjustibility = "N")
-        rfProfession.Enabled = (Adjustibility = "M")
+        'trProfession.Visible = Not (Adjustibility = "N")
+        'rfProfession.Enabled = (Adjustibility = "M")
 
     End Sub
 
@@ -242,14 +243,93 @@ Public Class Family
             If dtCurrentRegion.Rows.Count = 1 Then
                 FillCurrentDistricts()
             End If
+            ddlNetWorkProvider1.DataSource = Family.GetNetworkProvider
+            ddlNetWorkProvider1.DataValueField = "Code"
+            ddlNetWorkProvider1.DataTextField = "Status"
+            ddlNetWorkProvider1.DataBind()
+
+            ddlNetWorkProvider2.DataSource = Family.GetNetworkProvider
+            ddlNetWorkProvider2.DataValueField = "Code"
+            ddlNetWorkProvider2.DataTextField = "Status"
+            ddlNetWorkProvider2.DataBind()
+
+            ddlPreferredPaiementMode.DataSource = Family.GetPreferredPaiementMode
+            ddlPreferredPaiementMode.DataValueField = "Code"
+            ddlPreferredPaiementMode.DataTextField = "Status"
+            ddlPreferredPaiementMode.DataBind()
+
+            ddlHeadStatus.DataSource = Family.GetStatusProvider
+            ddlHeadStatus.DataValueField = "Code"
+            ddlHeadStatus.DataTextField = "Status"
+            ddlHeadStatus.DataBind()
+
+            ddlLengthPresentLocation.DataSource = Family.GetLengthStayProvider
+            ddlLengthPresentLocation.DataValueField = "Code"
+            ddlLengthPresentLocation.DataTextField = "Status"
+            ddlLengthPresentLocation.DataBind()
+
+            ddlHHHealthStatus.DataSource = Family.GetHHealthStatusProvider
+            ddlHHHealthStatus.DataValueField = "Code"
+            ddlHHHealthStatus.DataTextField = "Status"
+            ddlHHHealthStatus.DataBind()
+
+            ddlHHNutritionalStatus.DataSource = Family.GetNutritionalStatusProvider
+            ddlHHNutritionalStatus.DataValueField = "Code"
+            ddlHHNutritionalStatus.DataTextField = "Status"
+            ddlHHNutritionalStatus.DataBind()
+
+            ddlHHMentalPhysicalDisability.DataSource = Family.GetYesNO
+            ddlHHMentalPhysicalDisability.DataValueField = "Code"
+            ddlHHMentalPhysicalDisability.DataTextField = "Status"
+            ddlHHMentalPhysicalDisability.DataBind()
+
+            ddlRelationship.DataSource = Family.GetRelations
+            ddlRelationship.DataValueField = "RelationId"
+            ddlRelationship.DataTextField = If(Request.Cookies("CultureInfo").Value = "en", "Relation", "AltLanguage")
+            ddlRelationship.DataBind()
+
+            ddlChildGender.DataSource = Family.GetGender
+            ddlChildGender.DataValueField = "Code"
+            ddlChildGender.DataTextField = "Gender"
+            ddlChildGender.DataBind()
+
+            ddlCHBirthCertificate.DataSource = Family.GetYesNO
+            ddlCHBirthCertificate.DataValueField = "Code"
+            ddlCHBirthCertificate.DataTextField = "Status"
+            ddlCHBirthCertificate.DataBind()
+
+            ddlCHEnrolmentStatus.DataSource = Family.GetYesNO
+            ddlCHEnrolmentStatus.DataValueField = "Code"
+            ddlCHEnrolmentStatus.DataTextField = "Status"
+            ddlCHEnrolmentStatus.DataBind()
+
+            ddlCHEnrolmentWhichClass.DataSource = Family.GetCHEnrolmentWhichClassProvider
+            ddlCHEnrolmentWhichClass.DataValueField = "Code"
+            ddlCHEnrolmentWhichClass.DataTextField = "Status"
+            ddlCHEnrolmentWhichClass.DataBind()
+
+            ddlCHEnrolmentScore.DataSource = Family.GetChildCurrentSchoolPerfProvider
+            ddlCHEnrolmentScore.DataValueField = "Code"
+            ddlCHEnrolmentScore.DataTextField = "Status"
+            ddlCHEnrolmentScore.DataBind()
+
+            ddlCHEnrolmentOutofSchool.DataSource = Family.GetCHEnrolmentOutofSchool
+            ddlCHEnrolmentOutofSchool.DataValueField = "Code"
+            ddlCHEnrolmentOutofSchool.DataTextField = "Status"
+            ddlCHEnrolmentOutofSchool.DataBind()
+
+            ddlCHParentalStatus.DataSource = Family.GetCHParentalStatus
+            ddlCHParentalStatus.DataValueField = "Code"
+            ddlCHParentalStatus.DataTextField = "Status"
+            ddlCHParentalStatus.DataBind()
 
 
             If Not eFamily.FamilyID = 0 Then
                 Family.LoadFamily(eFamily)
                 ddlRegion.SelectedValue = eFamily.RegionId
-                ddlDistrict.SelectedValue = eFamily.DistrictID
+                ddlDistrict.SelectedValue = eFamily.DistrictId
                 ddlVillage.SelectedValue = eFamily.LocationId
-                ddlWard.SelectedValue = eFamily.WardID
+                ddlWard.SelectedValue = eFamily.WardId
                 'ddlDistrict.SelectedValue = eFamily.tblDistricts.DistrictID
                 ddlPoverty.SelectedValue = eFamily.Poverty
                 ddlConfirmationType.SelectedValue = eFamily.ConfirmationType
@@ -257,6 +337,157 @@ Public Class Family
                 ddlCardIssued.SelectedValue = eFamily.tblInsuree.CardIssued
                 ddlGender.SelectedValue = eFamily.tblInsuree.Gender
                 ddlMarital.SelectedValue = eFamily.tblInsuree.Marital
+                'Nouveaux champs ajoutés dans programme
+                ddlNetWorkProvider1.SelectedValue = eFamily.tblInsuree.NetWorkProvider1
+                ddlNetWorkProvider2.SelectedValue = eFamily.tblInsuree.NetWorkProvider2
+                ddlPreferredPaiementMode.SelectedValue = eFamily.tblInsuree.PreferredPaiementMode
+                ddlHeadStatus.SelectedValue = eFamily.tblInsuree.HeadStatus
+                ddlLengthPresentLocation.SelectedValue = eFamily.tblInsuree.LengthPresentLocation
+                If eFamily.tblInsuree.DOB_unknow Then
+                    chkDateInconnue.Checked = eFamily.tblInsuree.DOB_unknow
+                Else
+                    chkDateInconnue.Checked = False
+                End If
+                If eFamily.tblInsuree.IsHeadPhone1 Then
+                    chkIsHeadPhone1.Checked = eFamily.tblInsuree.IsHeadPhone1
+                Else
+                    chkIsHeadPhone1.Checked = False
+                End If
+                If eFamily.tblInsuree.IsHeadPhone2 Then
+                    chkIsHeadPhone2.Checked = eFamily.tblInsuree.IsHeadPhone2
+                Else
+                    chkIsHeadPhone2.Checked = False
+                End If
+                txtMaleLivingHoushold.Text = eFamily.tblInsuree.MaleLivingHoushold
+                txtFemaleLivingHoushold.Text = eFamily.tblInsuree.FemaleLivingHoushold
+                txtPersonLivingHoushold.Text = eFamily.tblInsuree.PersonLivingHoushold
+                txtHHNBChildrenLivingM.Text = eFamily.tblInsuree.HHNBChildrenLivingM
+                txtHHNBChildrenLivingF.Text = eFamily.tblInsuree.HHNBChildrenLivingF
+                txtHHNBChildrenLivingT.Text = eFamily.tblInsuree.HHNBChildrenLivingT
+                txtHHNBChildrenSchoolLivingM.Text = eFamily.tblInsuree.HHNBChildrenSchoolLivingM
+                txtHHNBChildrenSchoolLivingF.Text = eFamily.tblInsuree.HHNBChildrenSchoolLivingF
+                txtHHNBChildrenSchoolLivingT.Text = eFamily.tblInsuree.HHNBChildrenSchoolLivingT
+                txtHHNBChildrenCompleteSchoolLivingM.Text = eFamily.tblInsuree.HHNBChildrenCompleteSchoolLivingM
+                txtHHNBChildrenCompleteSchoolLivingF.Text = eFamily.tblInsuree.HHNBChildrenCompleteSchoolLivingF
+                txtHHNBChildrenCompleteSchoolLivingT.Text = eFamily.tblInsuree.HHNBChildrenCompleteSchoolLivingT
+                txtHHNBChildrenDropSchoolLivingM.Text = eFamily.tblInsuree.HHNBChildrenDropSchoolLivingM
+                txtHHNBChildrenDropSchoolLivingF.Text = eFamily.tblInsuree.HHNBChildrenDropSchoolLivingF
+                txtHHNBChildrenDropSchoolLivingT.Text = eFamily.tblInsuree.HHNBChildrenDropSchoolLivingT
+                txtHHNBGirlsMarried.Text = eFamily.tblInsuree.HHNBGirlsMarried
+                txtHHNBChildrenBirthCertifM.Text = eFamily.tblInsuree.HHNBChildrenBirthCertifM
+                txtHHNBChildrenBirthCertifF.Text = eFamily.tblInsuree.HHNBChildrenBirthCertifF
+                txtHHNBChildrenBirthCertifT.Text = eFamily.tblInsuree.HHNBChildrenBirthCertifT
+                ddlHHHealthStatus.SelectedValue = eFamily.tblInsuree.HHHealthStatus
+                txtHHExpenditure.Text = eFamily.tblInsuree.HHExpenditure
+                txtHHExpenditurePerH.Text = eFamily.tblInsuree.HHExpenditurePerH
+                ddlHHNutritionalStatus.SelectedValue = eFamily.tblInsuree.HHNutritionalStatus
+                ddlHHMentalPhysicalDisability.SelectedValue = eFamily.tblInsuree.HHMentalPhysicalDisability
+                txtHHMentalPhysicalDisabilityM.Text = eFamily.tblInsuree.HHMentalPhysicalDisabilityM
+                txtHHMentalPhysicalDisabilityF.Text = eFamily.tblInsuree.HHMentalPhysicalDisabilityF
+                txtHHMentalPhysicalDisabilityT.Text = eFamily.tblInsuree.HHMentalPhysicalDisabilityT
+                If eFamily.tblInsuree.HHMentalPhysicalDisabilityO1 Then
+                    chkHHMentalPhysicalDisabilityO1.Checked = eFamily.tblInsuree.HHMentalPhysicalDisabilityO1
+                Else
+                    chkHHMentalPhysicalDisabilityO1.Checked = False
+                End If
+                If eFamily.tblInsuree.HHMentalPhysicalDisabilityO2 Then
+                    chkHHMentalPhysicalDisabilityO2.Checked = eFamily.tblInsuree.HHMentalPhysicalDisabilityO2
+                Else
+                    chkHHMentalPhysicalDisabilityO2.Checked = False
+                End If
+                If eFamily.tblInsuree.HHMentalPhysicalDisabilityO3 Then
+                    chkHHMentalPhysicalDisabilityO3.Checked = eFamily.tblInsuree.HHMentalPhysicalDisabilityO3
+                Else
+                    chkHHMentalPhysicalDisabilityO3.Checked = False
+                End If
+                txtHHMentalPhysicalDisabilityO4.Text = eFamily.tblInsuree.HHMentalPhysicalDisabilityO4
+
+
+                ddlRelationship.SelectedValue = eFamily.tblInsuree.Relationship
+                ddlChildGender.SelectedValue = eFamily.tblInsuree.ChildGender
+                txtBirthDateChild.Text = eFamily.tblInsuree.BirthDateChild
+                If eFamily.tblInsuree.DateInconnueChild Then
+                    chkDateInconnueChild.Checked = eFamily.tblInsuree.DateInconnueChild
+                Else
+                    chkDateInconnueChild.Checked = False
+                End If
+                ddlCHBirthCertificate.SelectedValue = eFamily.tblInsuree.CHBirthCertificate
+                ddlCHEnrolmentStatus.SelectedValue = eFamily.tblInsuree.CHEnrolmentStatus
+                txtChildSchoolName.Text = eFamily.tblInsuree.ChildSchoolName
+                ddlCHEnrolmentWhichClass.SelectedValue = eFamily.tblInsuree.CHEnrolmentWhichClass
+                ddlCHEnrolmentScore.SelectedValue = eFamily.tblInsuree.CHEnrolmentScore
+                ddlCHEnrolmentOutofSchool.SelectedValue = eFamily.tblInsuree.CHEnrolmentOutofSchool
+                ddlCHParentalStatus.SelectedValue = eFamily.tblInsuree.CHParentalStatus
+                If eFamily.tblInsuree.ResidentialStatus1 Then
+                    chkResidentialStatus1.Checked = eFamily.tblInsuree.ResidentialStatus1
+                Else
+                    chkResidentialStatus1.Checked = False
+                End If
+                If eFamily.tblInsuree.ResidentialStatus2 Then
+                    chkResidentialStatus2.Checked = eFamily.tblInsuree.ResidentialStatus2
+                Else
+                    chkResidentialStatus2.Checked = False
+                End If
+                If eFamily.tblInsuree.ResidentialStatus3 Then
+                    chkResidentialStatus3.Checked = eFamily.tblInsuree.ResidentialStatus3
+                Else
+                    chkResidentialStatus3.Checked = False
+                End If
+                If eFamily.tblInsuree.ResidentialStatus4 Then
+                    chkResidentialStatus4.Checked = eFamily.tblInsuree.ResidentialStatus4
+                Else
+                    chkResidentialStatus4.Checked = False
+                End If
+                If eFamily.tblInsuree.ResidentialStatus5 Then
+                    chkResidentialStatus5.Checked = eFamily.tblInsuree.ResidentialStatus5
+                Else
+                    chkResidentialStatus5.Checked = False
+                End If
+                If eFamily.tblInsuree.ResidentialStatus6 Then
+                    chkResidentialStatus6.Checked = eFamily.tblInsuree.ResidentialStatus6
+                Else
+                    chkResidentialStatus6.Checked = False
+                End If
+                If eFamily.tblInsuree.ResidentialStatus7 Then
+                    chkResidentialStatus7.Checked = eFamily.tblInsuree.ResidentialStatus7
+                Else
+                    chkResidentialStatus7.Checked = False
+                End If
+
+                If eFamily.tblInsuree.CHSpecialNeeds1 Then
+                    chkCHSpecialNeeds1.Checked = eFamily.tblInsuree.CHSpecialNeeds1
+                Else
+                    chkCHSpecialNeeds1.Checked = False
+                End If
+                If eFamily.tblInsuree.CHSpecialNeeds2 Then
+                    chkCHSpecialNeeds2.Checked = eFamily.tblInsuree.CHSpecialNeeds2
+                Else
+                    chkCHSpecialNeeds2.Checked = False
+                End If
+                If eFamily.tblInsuree.CHSpecialNeeds3 Then
+                    chkCHSpecialNeeds3.Checked = eFamily.tblInsuree.CHSpecialNeeds3
+                Else
+                    chkCHSpecialNeeds3.Checked = False
+                End If
+                If eFamily.tblInsuree.CHSpecialNeeds4 Then
+                    chkCHSpecialNeeds4.Checked = eFamily.tblInsuree.CHSpecialNeeds4
+                Else
+                    chkCHSpecialNeeds4.Checked = False
+                End If
+                If eFamily.tblInsuree.CHSpecialNeeds5 Then
+                    chkCHSpecialNeeds5.Checked = eFamily.tblInsuree.CHSpecialNeeds5
+                Else
+                    chkCHSpecialNeeds5.Checked = False
+                End If
+                txtCHSpecialNeeds6.Text = eFamily.tblInsuree.CHSpecialNeeds6
+                txtChildName.Text = eFamily.tblInsuree.ChildName
+                
+
+
+                'txtMaleLivingHoushold.Text = eFamily.tblInsuree.MaleLivingHoushold
+
+                'Fin nouveaux champs
+
                 If eFamily.tblInsuree.Profession IsNot Nothing Then ddlProfession.SelectedValue = eFamily.tblInsuree.Profession
                 If eFamily.tblInsuree.Education IsNot Nothing Then ddlEducation.SelectedValue = eFamily.tblInsuree.Education
                 txtCHFID.Text = eFamily.tblInsuree.CHFID.Trim
@@ -265,6 +496,7 @@ Public Class Family
                 txtOtherNames.Text = eFamily.tblInsuree.OtherNames
                 txtPassport.Text = eFamily.tblInsuree.passport
                 txtPhone.Text = eFamily.tblInsuree.Phone
+                txtAltPhone.Text = eFamily.tblInsuree.AltPhone
                 ddlType.SelectedValue = eFamily.FamilyType
                 txtAddress.Text = eFamily.FamilyAddress
                 txtConfirmationNo.Text = eFamily.ConfirmationNo
@@ -300,7 +532,7 @@ Public Class Family
                     pnlImages.Enabled = False
                     B_SAVE.Visible = False
                     btnBrowse.Enabled = False
-                    Panel1.Enabled = False
+                    'Panel1.Enabled = False
                 End If
             End If
             FillImageDL()
@@ -336,7 +568,7 @@ Public Class Family
             If Not B_SAVE.Visible Then
                 pnlBody.Enabled = False
                 pnlImages.Enabled = False
-                Panel1.Enabled = False
+                'Panel1.Enabled = False
             End If
         Else
             Dim RefUrl = Request.Headers("Referer")
@@ -490,21 +722,167 @@ Public Class Family
             eInsuree.CHFID = txtCHFID.Text.Trim
             eInsuree.LastName = txtLastName.Text
             eInsuree.OtherNames = txtOtherNames.Text
+            '''Traitement des nouveaux champs pour l'ajout
+            If txtBirthDate.Text.Length > 0 Then
+                eInsuree.DOB = Date.ParseExact(txtBirthDate.Text, "dd/MM/yyyy", Nothing)
+            Else
+                eInsuree.DOB = Date.ParseExact("01/01/1900", "dd/MM/yyyy", Nothing)
+            End If
+            If chkDateInconnue.Checked Then
+                eInsuree.DOB_unknow = True
+            Else
+                eInsuree.DOB_unknow = False
+            End If
+            If chkIsHeadPhone1.Checked Then
+                eInsuree.IsHeadPhone1 = True
+            Else
+                eInsuree.IsHeadPhone1 = False
+            End If
+            If chkIsHeadPhone2.Checked Then
+                eInsuree.IsHeadPhone2 = True
+            Else
+                eInsuree.IsHeadPhone2 = False
+            End If
+            If ddlNetWorkProvider1.SelectedValue <> "" Then eInsuree.NetWorkProvider1 = ddlNetWorkProvider1.SelectedValue
+            If ddlNetWorkProvider2.SelectedValue <> "" Then eInsuree.NetWorkProvider2 = ddlNetWorkProvider2.SelectedValue
+            If ddlPreferredPaiementMode.SelectedValue <> "" Then eInsuree.PreferredPaiementMode = ddlPreferredPaiementMode.SelectedValue
+            eInsuree.MaleLivingHoushold = txtMaleLivingHoushold.Text
+            eInsuree.FemaleLivingHoushold = txtFemaleLivingHoushold.Text
+            eInsuree.PersonLivingHoushold = txtPersonLivingHoushold.Text
+            eInsuree.HHNBChildrenLivingM = txtHHNBChildrenLivingM.Text
+            eInsuree.HHNBChildrenLivingF = txtHHNBChildrenLivingF.Text
+            eInsuree.HHNBChildrenLivingT = txtHHNBChildrenLivingT.Text
+            eInsuree.HHNBChildrenSchoolLivingM = txtHHNBChildrenSchoolLivingM.Text
+            eInsuree.HHNBChildrenSchoolLivingF = txtHHNBChildrenSchoolLivingF.Text
+            eInsuree.HHNBChildrenSchoolLivingT = txtHHNBChildrenSchoolLivingT.Text
+            eInsuree.HHNBChildrenCompleteSchoolLivingM = txtHHNBChildrenCompleteSchoolLivingM.Text
+            eInsuree.HHNBChildrenCompleteSchoolLivingF = txtHHNBChildrenCompleteSchoolLivingF.Text
+            eInsuree.HHNBChildrenCompleteSchoolLivingT = txtHHNBChildrenCompleteSchoolLivingT.Text
+            eInsuree.HHNBChildrenDropSchoolLivingM = txtHHNBChildrenDropSchoolLivingM.Text
+            eInsuree.HHNBChildrenDropSchoolLivingF = txtHHNBChildrenDropSchoolLivingF.Text
+            eInsuree.HHNBChildrenDropSchoolLivingT = txtHHNBChildrenDropSchoolLivingT.Text
+            eInsuree.HHNBGirlsMarried = txtHHNBGirlsMarried.Text
+            eInsuree.HHNBChildrenBirthCertifM = txtHHNBChildrenBirthCertifM.Text
+            eInsuree.HHNBChildrenBirthCertifF = txtHHNBChildrenBirthCertifF.Text
+            eInsuree.HHNBChildrenBirthCertifT = txtHHNBChildrenBirthCertifT.Text
+            If ddlHHHealthStatus.SelectedValue <> "" Then eInsuree.HHHealthStatus = ddlHHHealthStatus.SelectedValue
+            eInsuree.HHExpenditure = txtHHExpenditure.Text
+            eInsuree.HHExpenditurePerH = txtHHExpenditurePerH.Text
+            If ddlHHNutritionalStatus.SelectedValue <> "" Then eInsuree.HHNutritionalStatus = ddlHHNutritionalStatus.SelectedValue
+            If ddlHHMentalPhysicalDisability.SelectedValue <> "" Then eInsuree.HHMentalPhysicalDisability = ddlHHMentalPhysicalDisability.SelectedValue
+            eInsuree.HHMentalPhysicalDisabilityM = txtHHMentalPhysicalDisabilityM.Text
+            eInsuree.HHMentalPhysicalDisabilityF = txtHHMentalPhysicalDisabilityF.Text
+            eInsuree.HHMentalPhysicalDisabilityT = txtHHMentalPhysicalDisabilityT.Text
+            If chkHHMentalPhysicalDisabilityO1.Checked Then
+                eInsuree.HHMentalPhysicalDisabilityO1 = True
+            Else
+                eInsuree.HHMentalPhysicalDisabilityO1 = False
+            End If
+            If chkHHMentalPhysicalDisabilityO2.Checked Then
+                eInsuree.HHMentalPhysicalDisabilityO2 = True
+            Else
+                eInsuree.HHMentalPhysicalDisabilityO2 = False
+            End If
+            If chkHHMentalPhysicalDisabilityO3.Checked Then
+                eInsuree.HHMentalPhysicalDisabilityO3 = True
+            Else
+                eInsuree.HHMentalPhysicalDisabilityO3 = False
+            End If
+            eInsuree.HHMentalPhysicalDisabilityO4 = txtHHMentalPhysicalDisabilityO4.Text
+            eInsuree.Relationship = ddlRelationship.SelectedValue
+            eInsuree.ChildGender = ddlChildGender.SelectedValue
+            If txtBirthDateChild.Text.Length > 0 Then
+                eInsuree.BirthDateChild = Date.ParseExact(txtBirthDateChild.Text, "dd/MM/yyyy", Nothing)
+            Else
+                eInsuree.BirthDateChild = Date.ParseExact("01/01/1900", "dd/MM/yyyy", Nothing)
+            End If
+            If chkDateInconnueChild.Checked Then
+                eInsuree.DateInconnueChild = True
+            Else
+                eInsuree.DateInconnueChild = False
+            End If
+            eInsuree.CHBirthCertificate = ddlCHBirthCertificate.SelectedValue
+            eInsuree.CHEnrolmentStatus = ddlCHEnrolmentStatus.SelectedValue
+            eInsuree.ChildSchoolName = txtChildSchoolName.Text
+            eInsuree.CHEnrolmentWhichClass = ddlCHEnrolmentWhichClass.SelectedValue
+            eInsuree.CHEnrolmentScore = ddlCHEnrolmentScore.SelectedValue
+            eInsuree.CHEnrolmentOutofSchool = ddlCHEnrolmentOutofSchool.SelectedValue
+            eInsuree.CHParentalStatus = ddlCHParentalStatus.SelectedValue
 
-            ' If Trim(txtBirthDate.Text).Length > 0 Then
-            ' If IsDate(txtBirthDate.Text) Then
-            eInsuree.DOB = Date.ParseExact(txtBirthDate.Text, "dd/MM/yyyy", Nothing)
-            'Else
-            '  lblMsg.Text = "Invalid Date Format"
-            '  Return
-            'End If
-            ' End If
+            If chkResidentialStatus1.Checked Then
+                eInsuree.ResidentialStatus1 = True
+            Else
+                eInsuree.ResidentialStatus1 = False
+            End If
+            If chkResidentialStatus2.Checked Then
+                eInsuree.ResidentialStatus2 = True
+            Else
+                eInsuree.ResidentialStatus2 = False
+            End If
+            If chkResidentialStatus3.Checked Then
+                eInsuree.ResidentialStatus3 = True
+            Else
+                eInsuree.ResidentialStatus3 = False
+            End If
+            If chkResidentialStatus4.Checked Then
+                eInsuree.ResidentialStatus4 = True
+            Else
+                eInsuree.ResidentialStatus4 = False
+            End If
+            If chkResidentialStatus5.Checked Then
+                eInsuree.ResidentialStatus5 = True
+            Else
+                eInsuree.ResidentialStatus5 = False
+            End If
+            If chkResidentialStatus6.Checked Then
+                eInsuree.ResidentialStatus6 = True
+            Else
+                eInsuree.ResidentialStatus6 = False
+            End If
+            If chkResidentialStatus7.Checked Then
+                eInsuree.ResidentialStatus7 = True
+            Else
+                eInsuree.ResidentialStatus7 = False
+            End If
 
+
+            If chkCHSpecialNeeds1.Checked Then
+                eInsuree.CHSpecialNeeds1 = True
+            Else
+                eInsuree.CHSpecialNeeds1 = False
+            End If
+            If chkCHSpecialNeeds2.Checked Then
+                eInsuree.CHSpecialNeeds2 = True
+            Else
+                eInsuree.CHSpecialNeeds2 = False
+            End If
+            If chkCHSpecialNeeds3.Checked Then
+                eInsuree.CHSpecialNeeds3 = True
+            Else
+                eInsuree.CHSpecialNeeds3 = False
+            End If
+            If chkCHSpecialNeeds4.Checked Then
+                eInsuree.CHSpecialNeeds4 = True
+            Else
+                eInsuree.CHSpecialNeeds4 = False
+            End If
+            If chkCHSpecialNeeds5.Checked Then
+                eInsuree.CHSpecialNeeds5 = True
+            Else
+                eInsuree.CHSpecialNeeds5 = False
+            End If
+            eInsuree.CHSpecialNeeds6 = txtCHSpecialNeeds6.Text
+            eInsuree.ChildName = txtChildName.Text
+
+
+
+            '''fin traitement ajout champs
             eInsuree.Gender = ddlGender.SelectedValue
             If ddlMarital.SelectedValue <> "" Then eInsuree.Marital = ddlMarital.SelectedValue
             If ddlCardIssued.SelectedValue.Length > 0 Then eInsuree.CardIssued = ddlCardIssued.SelectedValue
             eInsuree.passport = txtPassport.Text
             eInsuree.Phone = txtPhone.Text
+            eInsuree.AltPhone = txtAltPhone.Text
             eInsuree.Email = txtEmail.Text
             If ddlProfession.SelectedValue > 0 Then
                 eInsuree.Profession = ddlProfession.SelectedValue
@@ -589,6 +967,28 @@ Public Class Family
         Response.Redirect("OverviewFamily.aspx?f=" & FamilyUUID.ToString())
 
     End Sub
+
+    Protected Sub chkDateInconnue_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs)
+        If chkDateInconnue.Checked Then
+            changeEnabledValidatorFieldsDob(False)
+        Else
+            changeEnabledValidatorFieldsDob(True)
+        End If
+    End Sub
+    Private Sub changeEnabledValidatorFieldsDob(ByVal enabled As Boolean)
+        RequiredFieldBirthDate0.Enabled = enabled
+    End Sub
+    Protected Sub chkDateInconnueChild_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs)
+        If chkDateInconnueChild.Checked Then
+            changeEnabledValidatorFieldsDobChild(False)
+        Else
+            changeEnabledValidatorFieldsDobChild(True)
+        End If
+    End Sub
+    Private Sub changeEnabledValidatorFieldsDobChild(ByVal enabled As Boolean)
+        RequiredFieldBirthDate1.Enabled = enabled
+    End Sub
+
     Private Sub B_CANCEL_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles B_CANCEL.Click
 
         If Not eFamily.FamilyID = 0 And B_SAVE.Visible Then

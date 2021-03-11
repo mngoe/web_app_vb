@@ -41,6 +41,74 @@ Partial Public Class tblInsuree
     Public Property CurrentAddress As String
     Public Property GeoLocation As String
     Public Property CurrentVillage As Nullable(Of Integer)
+    ''' new property
+    
+    Public Property IsHeadPhone1 As Boolean
+    Public Property IsHeadPhone2 As Boolean
+    Public Property DOB_unknow As Boolean
+    Public Property AltPhone As String
+    Public Property NetWorkProvider1 As String
+    Public Property NetWorkProvider2 As String
+    Public Property PreferredPaiementMode As String
+    Public Property HeadStatus As String
+    Public Property LengthPresentLocation As String
+    Public Property MaleLivingHoushold As String
+    Public Property FemaleLivingHoushold As String
+    Public Property PersonLivingHoushold As String
+    Public Property HHNBChildrenLivingM As String
+    Public Property HHNBChildrenLivingF As String
+    Public Property HHNBChildrenLivingT As String
+    Public Property HHNBChildrenSchoolLivingM As String
+    Public Property HHNBChildrenSchoolLivingF As String
+    Public Property HHNBChildrenSchoolLivingT As String
+    Public Property HHNBChildrenCompleteSchoolLivingM As String
+    Public Property HHNBChildrenCompleteSchoolLivingF As String
+    Public Property HHNBChildrenCompleteSchoolLivingT As String
+    Public Property HHNBChildrenDropSchoolLivingM As String
+    Public Property HHNBChildrenDropSchoolLivingF As String
+    Public Property HHNBChildrenDropSchoolLivingT As String
+    Public Property HHNBGirlsMarried As String
+    Public Property HHNBChildrenBirthCertifM As String
+    Public Property HHNBChildrenBirthCertifF As String
+    Public Property HHNBChildrenBirthCertifT As String
+    Public Property HHHealthStatus As String
+    Public Property HHExpenditure As String
+    Public Property HHExpenditurePerH As String
+    Public Property HHNutritionalStatus As String
+    Public Property HHMentalPhysicalDisability As String
+    Public Property HHMentalPhysicalDisabilityM As String
+    Public Property HHMentalPhysicalDisabilityF As String
+    Public Property HHMentalPhysicalDisabilityT As String
+    Public Property HHMentalPhysicalDisabilityO1 As Boolean
+    Public Property HHMentalPhysicalDisabilityO2 As Boolean
+    Public Property HHMentalPhysicalDisabilityO3 As Boolean
+    Public Property HHMentalPhysicalDisabilityO4 As String
+    Public Property ChildName As String
+    Public Property ChildGender As String
+    Public Property BirthDateChild As Date
+    Public Property DateInconnueChild As Boolean
+    Public Property CHBirthCertificate As String
+    Public Property CHEnrolmentStatus As String
+    Public Property ChildSchoolName As String
+    Public Property CHEnrolmentWhichClass As String
+    Public Property CHEnrolmentScore As String
+    Public Property CHEnrolmentOutofSchool As String
+    Public Property CHParentalStatus As String
+    Public Property ResidentialStatus1 As Boolean
+    Public Property ResidentialStatus2 As Boolean
+    Public Property ResidentialStatus3 As Boolean
+    Public Property ResidentialStatus4 As Boolean
+    Public Property ResidentialStatus5 As Boolean
+    Public Property ResidentialStatus6 As Boolean
+    Public Property ResidentialStatus7 As Boolean
+    Public Property CHSpecialNeeds1 As Boolean
+    Public Property CHSpecialNeeds2 As Boolean
+    Public Property CHSpecialNeeds3 As Boolean
+    Public Property CHSpecialNeeds4 As Boolean
+    Public Property CHSpecialNeeds5 As Boolean
+    Public Property CHSpecialNeeds6 As String
+
+
 
     Public Overridable Property tblClaim As ICollection(Of tblClaim) = New HashSet(Of tblClaim)
     Public Overridable Property tblClaimDedRem As ICollection(Of tblClaimDedRem) = New HashSet(Of tblClaimDedRem)

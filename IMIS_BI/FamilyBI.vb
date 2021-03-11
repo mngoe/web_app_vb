@@ -171,4 +171,48 @@ Public Class FamilyBI
         Dim Family As New IMIS_BL.FamilyBL
         Return Family.GetFamilyUUIDByID(id)
     End Function
+    Public Function GetNetworkProvider() As DataTable
+        Dim NetworkProvider As New IMIS_BL.GeneralBL
+        Return NetworkProvider.GetNetworkProvider()
+    End Function
+    Public Function GetPreferredPaiementMode() As DataTable
+        Dim PreferredPaiementMode As New IMIS_BL.GeneralBL
+        Return PreferredPaiementMode.GetPreferredPaiementMode()
+    End Function
+    Public Function GetStatusProvider() As DataTable
+        Dim StatusProvider As New IMIS_BL.GeneralBL
+        Return StatusProvider.GetStatusProvider()
+    End Function
+    Public Function GetLengthStayProvider() As DataTable
+        Dim LengthStayProvider As New IMIS_BL.GeneralBL
+        Return LengthStayProvider.GetLengthStayProvider()
+    End Function
+    Public Function GetHHealthStatusProvider() As DataTable
+        Dim HHealthStatusProvider As New IMIS_BL.GeneralBL
+        Return HHealthStatusProvider.GetHHealthStatusProvider()
+    End Function
+    Public Function GetNutritionalStatusProvider() As DataTable
+        Dim NutritionalStatusProvider As New IMIS_BL.GeneralBL
+        Return NutritionalStatusProvider.GetNutritionalStatusProvider()
+    End Function
+    Public Function GetRelations() As DataTable
+        Dim Ins As New IMIS_BL.InsureeBL
+        Return Ins.GetRelations
+    End Function
+    Public Function GetCHEnrolmentOutofSchool() As DataTable
+        Dim CHEnrolmentOutofSchool As New IMIS_BL.GeneralBL
+        Return CHEnrolmentOutofSchool.GetCHEnrolmentOutofSchool()
+    End Function
+    Public Function GetCHEnrolmentWhichClassProvider() As DataTable
+        Dim CHEnrolmentWhichClassProvider As New IMIS_BL.GeneralBL
+        Return CHEnrolmentWhichClassProvider.GetCHEnrolmentWhichClassProvider()
+    End Function
+    Public Function GetChildCurrentSchoolPerfProvider() As DataTable
+        Dim Gen As New IMIS_BL.GeneralBL
+        Return Gen.GetChildCurrentSchoolPerfProvider()
+    End Function
+    Public Function GetCHParentalStatus() As DataTable
+        Dim Gen As New IMIS_BL.GeneralBL
+        Return Gen.GetCHParentalStatus()
+    End Function
 End Class

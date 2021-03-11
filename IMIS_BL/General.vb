@@ -1083,4 +1083,306 @@ Public Class GeneralBL
 
         Return dtScope
     End Function
+
+    Public Function GetNetworkProvider() As DataTable
+        'Fonction pour gérer la selection des network provider
+        Dim dtbl As New DataTable
+        dtbl.Columns.Add("Code")
+        dtbl.Columns.Add("Status")
+        Dim dr As DataRow = dtbl.NewRow
+        dr("Code") = ""
+        dr("Status") = getMessage("T_SELECTNETWORKPROVIDER")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "C"
+        dr("Status") = getMessage("T_CAMTEL")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "M"
+        dr("Status") = getMessage("T_MTN")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "N"
+        dr("Status") = getMessage("T_Nexttel")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "Or"
+        dr("Status") = getMessage("T_ORANGE")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "O"
+        dr("Status") = getMessage("T_OTHER")
+        dtbl.Rows.Add(dr)
+
+        Return dtbl
+    End Function
+
+    Public Function GetPreferredPaiementMode() As DataTable
+        'Fonction pour gérer la Preferred mode of receiving Money Transfer by Head of Household
+        Dim dtbl As New DataTable
+        dtbl.Columns.Add("Code")
+        dtbl.Columns.Add("Status")
+        Dim dr As DataRow = dtbl.NewRow
+        dr("Code") = ""
+        dr("Status") = getMessage("T_SELECTPREFERREDPAIEMENTMODE")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "EU"
+        dr("Status") = getMessage("T_EXPRESS_UNION_MOMO")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "M"
+        dr("Status") = getMessage("T_MTN_MOMO")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "O"
+        dr("Status") = getMessage("T_ORANGE_MOMO")
+        dtbl.Rows.Add(dr)
+
+        Return dtbl
+    End Function
+
+    Public Function GetStatusProvider() As DataTable
+        'Fonction pour gérer le status du parent
+        Dim dtbl As New DataTable
+        dtbl.Columns.Add("Code")
+        dtbl.Columns.Add("Status")
+        Dim dr As DataRow = dtbl.NewRow
+        dr("Code") = ""
+        dr("Status") = getMessage("T_SELECTHHSTATUS")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "H"
+        dr("Status") = getMessage("T_HOSTCOMMUNITYMEMBER")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "D"
+        dr("Status") = getMessage("T_DEPLACEDBYCRISES")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "O"
+        dr("Status") = getMessage("T_OTHERSITUATIONSPECIFY")
+        dtbl.Rows.Add(dr)
+
+        Return dtbl
+    End Function
+
+    Public Function GetLengthStayProvider() As DataTable
+        'Fonction pour gérer le Length Stay Provider
+        Dim dtbl As New DataTable
+        dtbl.Columns.Add("Code")
+        dtbl.Columns.Add("Status")
+        Dim dr As DataRow = dtbl.NewRow
+        dr("Code") = ""
+        dr("Status") = getMessage("T_SELECTLENGTHSTAY")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "l1"
+        dr("Status") = getMessage("T_LESSTHAN1YEAR")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "l3"
+        dr("Status") = getMessage("T_LESSTHAN3YEARS")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "m3"
+        dr("Status") = getMessage("T_MORETHAN3YEARS")
+        dtbl.Rows.Add(dr)
+
+        Return dtbl
+    End Function
+
+    Public Function GetHHealthStatusProvider() As DataTable
+        'Fonction pour gérer le HHealthStatus
+        Dim dtbl As New DataTable
+        dtbl.Columns.Add("Code")
+        dtbl.Columns.Add("Status")
+        Dim dr As DataRow = dtbl.NewRow
+        dr("Code") = ""
+        dr("Status") = getMessage("T_SELECTHHealthStatus")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "H"
+        dr("Status") = getMessage("T_Healthly")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "FS"
+        dr("Status") = getMessage("T_Frequentlysick")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "VS"
+        dr("Status") = getMessage("T_VerySick")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "TI"
+        dr("Status") = getMessage("T_TerminallyIll")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "O"
+        dr("Status") = getMessage("T_Disability")
+        dtbl.Rows.Add(dr)
+
+        Return dtbl
+    End Function
+
+    Public Function GetNutritionalStatusProvider() As DataTable
+        'Fonction pour gérer le NutritionalStatus
+        Dim dtbl As New DataTable
+        dtbl.Columns.Add("Code")
+        dtbl.Columns.Add("Status")
+        Dim dr As DataRow = dtbl.NewRow
+        dr("Code") = ""
+        dr("Status") = getMessage("T_SELECTNutritionalStatus")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "ON"
+        dr("Status") = getMessage("T_Once")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "TW"
+        dr("Status") = getMessage("T_Twice")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "THR"
+        dr("Status") = getMessage("T_threeMore")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "O"
+        dr("Status") = getMessage("T_None")
+        dtbl.Rows.Add(dr)
+
+        Return dtbl
+    End Function
+
+    Public Function GetCHEnrolmentOutofSchool() As DataTable
+        'Fonction pour gérer le CHEnrolmentOutofSchool
+        Dim dtbl As New DataTable
+        dtbl.Columns.Add("Code")
+        dtbl.Columns.Add("Status")
+        Dim dr As DataRow = dtbl.NewRow
+        dr("Code") = ""
+        dr("Status") = getMessage("T_SELECTChildEnrollementStatus")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "B"
+        dr("Status") = getMessage("T_BelowEnrollmentAge")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "1+"
+        dr("Status") = getMessage("T_Oneyear")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "2+"
+        dr("Status") = getMessage("T_Twoyears")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "3+"
+        dr("Status") = getMessage("T_Threeyears")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "NE"
+        dr("Status") = getMessage("T_NeverBeenEnrolled")
+        dtbl.Rows.Add(dr)
+
+        Return dtbl
+    End Function
+
+    Public Function GetCHEnrolmentWhichClassProvider() As DataTable
+        'Fonction pour gérer le CHEnrolmentWhichClassProvider
+        Dim dtbl As New DataTable
+        dtbl.Columns.Add("Code")
+        dtbl.Columns.Add("Status")
+        Dim dr As DataRow = dtbl.NewRow
+        dr("Code") = ""
+        dr("Status") = getMessage("T_SELECTPresentClass")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "P1"
+        dr("Status") = getMessage("T_P1")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "P2"
+        dr("Status") = getMessage("T_P2")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "P3"
+        dr("Status") = getMessage("T_P3")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "P4"
+        dr("Status") = getMessage("T_P4")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "P5"
+        dr("Status") = getMessage("T_P5")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "P6"
+        dr("Status") = getMessage("T_P6")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "CP6"
+        dr("Status") = getMessage("T_CompletedP6")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "Nur"
+        dr("Status") = getMessage("T_Nursery")
+        dtbl.Rows.Add(dr)
+
+        Return dtbl
+    End Function
+
+    Public Function GetChildCurrentSchoolPerfProvider() As DataTable
+        'Fonction pour gérer le childCurrentSchoolPerfProvider
+        Dim dtbl As New DataTable
+        dtbl.Columns.Add("Code")
+        dtbl.Columns.Add("Status")
+        Dim dr As DataRow = dtbl.NewRow
+        dr("Code") = ""
+        dr("Status") = getMessage("T_SELECTAverageScore")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "BA"
+        dr("Status") = getMessage("T_BelowAverage")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "AV"
+        dr("Status") = getMessage("T_Average")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "AA"
+        dr("Status") = getMessage("T_AboveAverage")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "E"
+        dr("Status") = getMessage("T_Excellent")
+        dtbl.Rows.Add(dr)
+
+        Return dtbl
+    End Function
+
+    Public Function GetCHParentalStatus() As DataTable
+        'Fonction pour gérer le CHParentalStatus
+        Dim dtbl As New DataTable
+        dtbl.Columns.Add("Code")
+        dtbl.Columns.Add("Status")
+        Dim dr As DataRow = dtbl.NewRow
+        dr("Code") = ""
+        dr("Status") = getMessage("T_SELECTParentalStatus")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "B"
+        dr("Status") = getMessage("T_BothParentsChildAlive")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "S"
+        dr("Status") = getMessage("T_SingleOrphanedChild")
+        dtbl.Rows.Add(dr)
+        dr = dtbl.NewRow
+        dr("Code") = "D"
+        dr("Status") = getMessage("T_DoubleOrphanedChild")
+        dtbl.Rows.Add(dr)
+
+        Return dtbl
+    End Function
 End Class

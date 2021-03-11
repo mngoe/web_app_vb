@@ -120,12 +120,31 @@ Public Class FamilyDAL
     Public Sub InsertInsuredFamily(ByRef eFamily As IMIS_EN.tblFamilies)
         Dim data As New ExactSQL
         data.setSQLCommand("Insert into tblFamilies (LocationId,Poverty,ConfirmationType,isOffline,AuditUserID,FamilyType,FamilyAddress,Ethnicity,ConfirmationNo) VALUES (@LocationId,@Poverty,@ConfirmationType, @isOffline,@AuditUserID,@FamilyType,@FamilyAddress,@Ethnicity,@ConfirmationNo ); select @FamilyId = scope_identity();" _
-                           & "INSERT INTO tblInsuree ([FamilyID],[CHFID],[LastName],[OtherNames],[DOB],[Gender],[Marital],[IsHead],[passport],[Phone],[PhotoID],[PhotoDate],[CardIssued],isOffline,[AuditUserID],[Email],Education,Profession, TypeOfId, HFID,CurrentAddress,CurrentVillage, GeoLocation)" _
-     & " VALUES (@FamilyID,@CHFID,@LastName,@OtherNames,@DOB,@Gender,@Marital,@IsHead,@passport,@Phone,@PhotoID, @PhotoDate,@CardIssued,@isOffline,@AuditUserID,@Email,@Education,@Profession, @TypeOfId, @HFID,@CurrentAddress, @CurrentVillage, @GeoLocation);select @InsureeID = scope_identity()" _
-     & "Update tblFamilies set InsureeId = @Insureeid where FamilyId = @FamilyId;" & _
-     " INSERT INTO tblPhotos (InsureeID,CHFID,PhotoDate,PhotoFolder,PhotoFileName,OfficerID,ValidityFrom,AuditUserID)" & _
-     " VALUES(@InsureeID,@CHFID,@PhotoDate,@PhotoFolder,@PhotoFileName,@OfficerID,@ValidityFrom,@AuditUserID);" & _
-     " update tblInsuree SET PhotoID = (SELECT PhotoID from TblPhotos where InsureeID = @InsureeID)" & _
+                           & "INSERT INTO tblInsuree ([FamilyID],[CHFID],[LastName],[OtherNames],[DOB],[Gender],[Marital],[IsHead],[passport],[Phone],[PhotoID],[PhotoDate],[CardIssued],isOffline,[AuditUserID],[Email],Education,Profession, TypeOfId, HFID,CurrentAddress,CurrentVillage, GeoLocation" &
+                           ",[DOB_unknow], [IsHeadPhone1], [IsHeadPhone2], [AltPhone], [NetWorkProvider1], [NetWorkProvider2], [PreferredPaiementMode]" &
+                           ",[HeadStatus], [LengthPresentLocation], [MaleLivingHoushold], [FemaleLivingHoushold], [PersonLivingHoushold], [HHNBChildrenLivingM], [HHNBChildrenLivingF]" &
+                           ",[HHNBChildrenLivingT], [HHNBChildrenSchoolLivingM], [HHNBChildrenSchoolLivingF], [HHNBChildrenSchoolLivingT], [HHNBChildrenCompleteSchoolLivingM], [HHNBChildrenCompleteSchoolLivingF], [HHNBChildrenCompleteSchoolLivingT]" &
+                           ",[HHNBChildrenDropSchoolLivingM], [HHNBChildrenDropSchoolLivingF], [HHNBChildrenDropSchoolLivingT], [HHNBGirlsMarried], [HHNBChildrenBirthCertifM], [HHNBChildrenBirthCertifF], [HHNBChildrenBirthCertifT]" &
+                           ",[HHHealthStatus], [HHExpenditure], [HHExpenditurePerH], [HHNutritionalStatus], [HHMentalPhysicalDisability], [HHMentalPhysicalDisabilityM], [HHMentalPhysicalDisabilityF]" &
+                           ",[HHMentalPhysicalDisabilityT], [HHMentalPhysicalDisabilityO1], [HHMentalPhysicalDisabilityO2], [HHMentalPhysicalDisabilityO3], [HHMentalPhysicalDisabilityO4], [ChildGender], [BirthDateChild]" &
+                           ",[DateInconnueChild], [CHBirthCertificate], [CHEnrolmentStatus], [ChildSchoolName], [CHEnrolmentWhichClass], [CHEnrolmentScore], [CHEnrolmentOutofSchool]" &
+                           ",[CHParentalStatus], [ResidentialStatus1], [ResidentialStatus2], [ResidentialStatus3], [ResidentialStatus4], [ResidentialStatus5], [ResidentialStatus6]" &
+                           ",[ResidentialStatus7], [CHSpecialNeeds1], [CHSpecialNeeds2], [CHSpecialNeeds3], [CHSpecialNeeds4], [CHSpecialNeeds5], [CHSpecialNeeds6], [Relationship], [ChildName])" &
+    " VALUES (@FamilyID,@CHFID,@LastName,@OtherNames,@DOB,@Gender,@Marital,@IsHead,@passport,@Phone,@PhotoID, @PhotoDate,@CardIssued,@isOffline,@AuditUserID,@Email,@Education,@Profession, @TypeOfId, @HFID,@CurrentAddress, @CurrentVillage, @GeoLocation, " &
+    "@DOB_unknow, @IsHeadPhone1, @IsHeadPhone2, @AltPhone, @NetWorkProvider1, @NetWorkProvider2, @PreferredPaiementMode," &
+    "@HeadStatus, @LengthPresentLocation, @MaleLivingHoushold, @FemaleLivingHoushold, @PersonLivingHoushold, @HHNBChildrenLivingM, @HHNBChildrenLivingF, " &
+    "@HHNBChildrenLivingT, @HHNBChildrenSchoolLivingM, @HHNBChildrenSchoolLivingF, @HHNBChildrenSchoolLivingT, @HHNBChildrenCompleteSchoolLivingM, @HHNBChildrenCompleteSchoolLivingF, @HHNBChildrenCompleteSchoolLivingT, " &
+    "@HHNBChildrenDropSchoolLivingM, @HHNBChildrenDropSchoolLivingF, @HHNBChildrenDropSchoolLivingT, @HHNBGirlsMarried, @HHNBChildrenBirthCertifM, @HHNBChildrenBirthCertifF, @HHNBChildrenBirthCertifT, " &
+    "@HHHealthStatus, @HHExpenditure, @HHExpenditurePerH, @HHNutritionalStatus, @HHMentalPhysicalDisability, @HHMentalPhysicalDisabilityM, @HHMentalPhysicalDisabilityF, " &
+    "@HHMentalPhysicalDisabilityT, @HHMentalPhysicalDisabilityO1, @HHMentalPhysicalDisabilityO2, @HHMentalPhysicalDisabilityO3, @HHMentalPhysicalDisabilityO4, @ChildGender, @BirthDateChild, " &
+    "@DateInconnueChild, @CHBirthCertificate, @CHEnrolmentStatus, @ChildSchoolName, @CHEnrolmentWhichClass, @CHEnrolmentScore, @CHEnrolmentOutofSchool, " &
+    "@CHParentalStatus, @ResidentialStatus1, @ResidentialStatus2, @ResidentialStatus3, @ResidentialStatus4, @ResidentialStatus5, @ResidentialStatus6, " &
+    "@ResidentialStatus7, @CHSpecialNeeds1, @CHSpecialNeeds2, @CHSpecialNeeds3, @CHSpecialNeeds4, @CHSpecialNeeds5, @CHSpecialNeeds6, @Relationship, @ChildName" &
+    ");select @InsureeID = scope_identity()" _
+     & "Update tblFamilies set InsureeId = @Insureeid where FamilyId = @FamilyId;" &
+     " INSERT INTO tblPhotos (InsureeID,CHFID,PhotoDate,PhotoFolder,PhotoFileName,OfficerID,ValidityFrom,AuditUserID)" &
+     " VALUES(@InsureeID,@CHFID,@PhotoDate,@PhotoFolder,@PhotoFileName,@OfficerID,@ValidityFrom,@AuditUserID);" &
+     " update tblInsuree SET PhotoID = (SELECT PhotoID from TblPhotos where InsureeID = @InsureeID)" &
      " WHERE InsureeID = @InsureeID", CommandType.Text)
         data.params("@FamilyId", SqlDbType.Int, 0, ParameterDirection.Output)
         data.params("@InsureeId", SqlDbType.Int, 0, ParameterDirection.Output)
@@ -139,13 +158,12 @@ Public Class FamilyDAL
         data.params("@CHFID", SqlDbType.NVarChar, 12, eFamily.tblInsuree.CHFID)
         data.params("@LastName", SqlDbType.NVarChar, 100, eFamily.tblInsuree.LastName)
         data.params("@OtherNames", SqlDbType.NVarChar, 100, eFamily.tblInsuree.OtherNames)
-        data.params("@DOB", SqlDbType.SmallDateTime, eFamily.tblInsuree.DOB)
         data.params("@Marital", SqlDbType.NVarChar, 1, eFamily.tblInsuree.Marital)
         data.params("@Gender", SqlDbType.NVarChar, 1, eFamily.tblInsuree.Gender)
         data.params("@IsHead", SqlDbType.Bit, 1)
         data.params("@Passport", SqlDbType.NVarChar, 50, eFamily.tblInsuree.passport)
         data.params("@Phone", SqlDbType.NVarChar, 50, eFamily.tblInsuree.Phone)
-        data.params("@PhotoID", SqlDbType.Int, if(eFamily.tblInsuree.tblPhotos.PhotoID = 0, DBNull.Value, eFamily.tblInsuree.tblPhotos.PhotoID))
+        data.params("@PhotoID", SqlDbType.Int, If(eFamily.tblInsuree.tblPhotos.PhotoID = 0, DBNull.Value, eFamily.tblInsuree.tblPhotos.PhotoID))
         data.params("@PhotoDate", SqlDbType.SmallDateTime, eFamily.tblInsuree.PhotoDate)
         data.params("@CardIssued", SqlDbType.Bit, eFamily.tblInsuree.CardIssued)
         data.params("@AuditUserID", SqlDbType.Int, eFamily.AuditUserID)
@@ -173,6 +191,73 @@ Public Class FamilyDAL
         'data.params("@CurWard", SqlDbType.Int, eFamily.tblInsuree.CurrentVillage, ParameterDirection.Input)
         data.params("@GeoLocation", SqlDbType.NVarChar, 50, eFamily.tblInsuree.GeoLocation)
         'Addition for Nepal >> End
+        data.params("@DOB", SqlDbType.SmallDateTime, eFamily.tblInsuree.DOB)
+        data.params("@DOB_unknow", SqlDbType.Bit, eFamily.tblInsuree.DOB_unknow)
+        data.params("@IsHeadPhone1", SqlDbType.Bit, eFamily.tblInsuree.IsHeadPhone1)
+        data.params("@IsHeadPhone2", SqlDbType.Bit, eFamily.tblInsuree.IsHeadPhone2)
+        data.params("@AltPhone", SqlDbType.NVarChar, 50, eFamily.tblInsuree.AltPhone)
+        data.params("@NetWorkProvider1", SqlDbType.NVarChar, 50, eFamily.tblInsuree.NetWorkProvider1)
+        data.params("@NetWorkProvider2", SqlDbType.NVarChar, 50, eFamily.tblInsuree.NetWorkProvider2)
+        data.params("@PreferredPaiementMode", SqlDbType.NVarChar, 50, eFamily.tblInsuree.PreferredPaiementMode)
+
+        data.params("@Relationship", SqlDbType.SmallInt, eFamily.tblInsuree.Relationship)
+        data.params("@ChildName", SqlDbType.NVarChar, 50, eFamily.tblInsuree.ChildName)
+        data.params("@CHSpecialNeeds6", SqlDbType.NVarChar, 50, eFamily.tblInsuree.CHSpecialNeeds6)
+        data.params("@CHSpecialNeeds5", SqlDbType.Bit, eFamily.tblInsuree.CHSpecialNeeds5)
+        data.params("@CHSpecialNeeds4", SqlDbType.Bit, eFamily.tblInsuree.CHSpecialNeeds4)
+        data.params("@CHSpecialNeeds3", SqlDbType.Bit, eFamily.tblInsuree.CHSpecialNeeds3)
+        data.params("@CHSpecialNeeds2", SqlDbType.Bit, eFamily.tblInsuree.CHSpecialNeeds2)
+        data.params("@CHSpecialNeeds1", SqlDbType.Bit, eFamily.tblInsuree.CHSpecialNeeds1)
+        data.params("@ResidentialStatus7", SqlDbType.Bit, eFamily.tblInsuree.ResidentialStatus7)
+        data.params("@ResidentialStatus6", SqlDbType.Bit, eFamily.tblInsuree.ResidentialStatus6)
+        data.params("@ResidentialStatus5", SqlDbType.Bit, eFamily.tblInsuree.ResidentialStatus5)
+        data.params("@ResidentialStatus4", SqlDbType.Bit, eFamily.tblInsuree.ResidentialStatus4)
+        data.params("@ResidentialStatus3", SqlDbType.Bit, eFamily.tblInsuree.ResidentialStatus3)
+        data.params("@ResidentialStatus2", SqlDbType.Bit, eFamily.tblInsuree.ResidentialStatus2)
+        data.params("@ResidentialStatus1", SqlDbType.Bit, eFamily.tblInsuree.ResidentialStatus1)
+        data.params("@CHParentalStatus", SqlDbType.NVarChar, 50, eFamily.tblInsuree.CHParentalStatus)
+        data.params("@CHEnrolmentOutofSchool", SqlDbType.NVarChar, 50, eFamily.tblInsuree.CHEnrolmentOutofSchool)
+        data.params("@CHEnrolmentScore", SqlDbType.NVarChar, 50, eFamily.tblInsuree.CHEnrolmentScore)
+        data.params("@CHEnrolmentWhichClass", SqlDbType.NVarChar, 50, eFamily.tblInsuree.CHEnrolmentWhichClass)
+        data.params("@ChildSchoolName", SqlDbType.NVarChar, 100, eFamily.tblInsuree.ChildSchoolName)
+        data.params("@CHEnrolmentStatus", SqlDbType.NVarChar, 50, eFamily.tblInsuree.CHEnrolmentStatus)
+        data.params("@CHBirthCertificate", SqlDbType.NVarChar, 50, eFamily.tblInsuree.CHBirthCertificate)
+        data.params("@DateInconnueChild", SqlDbType.Bit, eFamily.tblInsuree.DateInconnueChild)
+        data.params("@BirthDateChild", SqlDbType.SmallDateTime, eFamily.tblInsuree.BirthDateChild)
+        data.params("@ChildGender", SqlDbType.NVarChar, 1, eFamily.tblInsuree.ChildGender)
+        data.params("@HHMentalPhysicalDisabilityO4", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHMentalPhysicalDisabilityO4)
+        data.params("@HHMentalPhysicalDisabilityO3", SqlDbType.Bit, eFamily.tblInsuree.HHMentalPhysicalDisabilityO3)
+        data.params("@HHMentalPhysicalDisabilityO2", SqlDbType.Bit, eFamily.tblInsuree.HHMentalPhysicalDisabilityO2)
+        data.params("@HHMentalPhysicalDisabilityO1", SqlDbType.Bit, eFamily.tblInsuree.HHMentalPhysicalDisabilityO1)
+        data.params("@HHMentalPhysicalDisabilityT", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHMentalPhysicalDisabilityT)
+        data.params("@HHMentalPhysicalDisabilityF", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHMentalPhysicalDisabilityF)
+        data.params("@HHMentalPhysicalDisabilityM", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHMentalPhysicalDisabilityM)
+        data.params("@HHMentalPhysicalDisability", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHMentalPhysicalDisability)
+        data.params("@HHNutritionalStatus", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNutritionalStatus)
+        data.params("@HHExpenditurePerH", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHExpenditurePerH)
+        data.params("@HHExpenditure", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHExpenditure)
+        data.params("@HHHealthStatus", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHHealthStatus)
+        data.params("@HHNBChildrenBirthCertifT", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenBirthCertifT)
+        data.params("@HHNBChildrenBirthCertifF", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenBirthCertifF)
+        data.params("@HHNBChildrenBirthCertifM", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenBirthCertifM)
+        data.params("@HHNBGirlsMarried", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBGirlsMarried)
+        data.params("@HHNBChildrenDropSchoolLivingT", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenDropSchoolLivingT)
+        data.params("@HHNBChildrenDropSchoolLivingF", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenDropSchoolLivingF)
+        data.params("@HHNBChildrenDropSchoolLivingM", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenDropSchoolLivingM)
+        data.params("@HHNBChildrenCompleteSchoolLivingT", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenCompleteSchoolLivingT)
+        data.params("@HHNBChildrenCompleteSchoolLivingF", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenCompleteSchoolLivingF)
+        data.params("@HHNBChildrenCompleteSchoolLivingM", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenCompleteSchoolLivingM)
+        data.params("@HHNBChildrenSchoolLivingT", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenSchoolLivingT)
+        data.params("@HHNBChildrenSchoolLivingF", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenSchoolLivingF)
+        data.params("@HHNBChildrenSchoolLivingM", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenSchoolLivingM)
+        data.params("@HHNBChildrenLivingT", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenLivingT)
+        data.params("@HHNBChildrenLivingF", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenLivingF)
+        data.params("@HHNBChildrenLivingM", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HHNBChildrenLivingM)
+        data.params("@PersonLivingHoushold", SqlDbType.NVarChar, 50, eFamily.tblInsuree.PersonLivingHoushold)
+        data.params("@FemaleLivingHoushold", SqlDbType.NVarChar, 50, eFamily.tblInsuree.FemaleLivingHoushold)
+        data.params("@MaleLivingHoushold", SqlDbType.NVarChar, 50, eFamily.tblInsuree.MaleLivingHoushold)
+        data.params("@LengthPresentLocation", SqlDbType.NVarChar, 50, eFamily.tblInsuree.LengthPresentLocation)
+        data.params("@HeadStatus", SqlDbType.NVarChar, 50, eFamily.tblInsuree.HeadStatus)
         data.ExecuteCommand()
         eFamily.FamilyID = data.sqlParameters("@FamilyID")
 
